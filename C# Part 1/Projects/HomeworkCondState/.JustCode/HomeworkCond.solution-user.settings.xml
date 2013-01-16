@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0.7" Timestamp="613e956c-353f-4a16-a269-38be713d78e6">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings>
+      <FilePath>
+        <Path>C:\Users\Nikolay\SkyDrive\My Documents\Telerik\Projects\C#\HomeworkCondState\ScoreBonus\ScoreBonus.cs</Path>
+        <ProjectFullName>C:\Users\Nikolay\SkyDrive\My Documents\Telerik\Projects\C#\HomeworkCondState\ScoreBonus\10.ScoreBonus.csproj</ProjectFullName>
+        <IgnoredElement>
+          <Column>7</Column>
+          <Text>The namespace of this type doesn't match the project default namespace &amp; directory</Text>
+          <Line>3</Line>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

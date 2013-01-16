@@ -1,0 +1,40 @@
+﻿body {
+    background-color: rgb(89,89,89);
+    font-family: Arial;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+strong {
+color:red;
+font-weight:700;
+}
+td {
+    line-height: 30px;
+}
+
+thead td {
+    color: rgb(182,171,171);
+    font-size: 1.5em;
+}
+
+.left {
+    text-align: left;
+    font-style: oblique;
+    color: white;
+}
+
+.right {
+    color: #F2DF8A;
+}
+
+.action {
+    color: #8995A1;
+}
+
+#answer {
+    font-weight: 700;
+}
