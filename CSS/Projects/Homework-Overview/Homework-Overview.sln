@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework-Overview", "Homework-Overview\Homework-Overview.csproj", "{787A3BE2-ABE2-4503-8EC0-C9936C28AFBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple CSS Ticket", "Homework-Overview\Simple CSS Ticket.csproj", "{787A3BE2-ABE2-4503-8EC0-C9936C28AFBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBook", "ContactBook\ContactBook.csproj", "{2563CD6A-F21D-4C40-BDD5-7709F57913CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{787A3BE2-ABE2-4503-8EC0-C9936C28AFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{787A3BE2-ABE2-4503-8EC0-C9936C28AFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{787A3BE2-ABE2-4503-8EC0-C9936C28AFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2563CD6A-F21D-4C40-BDD5-7709F57913CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2563CD6A-F21D-4C40-BDD5-7709F57913CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2563CD6A-F21D-4C40-BDD5-7709F57913CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2563CD6A-F21D-4C40-BDD5-7709F57913CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

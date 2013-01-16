@@ -1,0 +1,38 @@
+﻿body {
+    font-family:sans-serif;
+    font-size:medium;
+}
+
+table {
+border:1px;
+}
+tbody td {
+     padding:5px;
+   
+}
+thead td {
+     padding:3px;
+    background-color: #1ED536;
+    color: white;
+    
+}
+.odd
+{
+    background: #E9E6E6
+}
+.ContName {
+    width:150px;
+}
+.city {
+width:120px;
+}
+.flag {
+	width: 16px;
+	height: 11px;
+	background:url(./flags.png) no-repeat
+}
+
+.flag.flag-de {background-position: -16px 0}
+.flag.flag-gb {background-position: 0 -11px}
+.flag.flag-mx {background-position: -16px -11px}
+

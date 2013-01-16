@@ -1,47 +1,58 @@
-﻿body {
-    background-color: rgb(89,89,89);
+﻿body
+{
+    background-color: rgb(89, 89, 89);
     font-family: Arial;
 }
 
-table {
+table
+{
     margin-left: auto;
     margin-right: auto;
 }
-
-strong {
-color:red;
-font-weight:700;
-}
-td {
-    line-height: 28px;
-}
-#circle {
-    
-    display: inline;
-    background: #46DB4B;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-
-}
-
-thead td {
-    color: rgb(182,171,171);
+thead td
+{
+    color: rgb(145, 146, 173);
     font-size: 1.5em;
 }
+td
+{
+    line-height: 28px;
+    height: 33px;
+} 
 
-.left {
+strong
+{
+    color: red;
+    font-weight: 700;
+}
+
+#circle
+{
+    background: #66DB6A;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.left
+{
     text-align: left;
     font-style: oblique;
     color: white;
+   
 }
 
-.right {
-    color: #F2DF8A;
+.right
+{
+    color: #EDE2B4;
+    position: relative;
+    left: 40px;
+   
 }
 
-.action {
-    color: #8995A1;
+.action
+{
+    color: #B6B9BB;
 }
 
 #answer
