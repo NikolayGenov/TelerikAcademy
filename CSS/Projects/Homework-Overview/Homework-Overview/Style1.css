@@ -13,7 +13,7 @@ color:red;
 font-weight:700;
 }
 td {
-    line-height: 30px;
+    line-height: initial;
 }
 
 thead td {
@@ -35,6 +35,8 @@ thead td {
     color: #8995A1;
 }
 
-#answer {
+#answer
+{
     font-weight: 700;
+    color: #C07B00
 }
