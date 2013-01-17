@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2563CD6A-F21D-4C40-BDD5-7709F57913CA}</ProjectGuid>
+    <ProjectGuid>{8EE7306D-0C68-4246-BE1A-0C7ECAADC403}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ContactBook</RootNamespace>
-    <AssemblyName>ContactBook</AssemblyName>
+    <RootNamespace>RefactoringWebsite</RootNamespace>
+    <AssemblyName>RefactoringWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,11 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Contacts.html" />
-    <Content Include="flag-mx.png" />
-    <Content Include="german-flag.jpg" />
-    <Content Include="StyleContacts.css" />
-    <Content Include="uk-flag.jpg" />
+    <Content Include="homework-3.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +86,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:27716/</IISUrl>
+          <IISUrl>http://localhost:61535/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

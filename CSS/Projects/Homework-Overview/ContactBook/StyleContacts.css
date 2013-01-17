@@ -1,0 +1,70 @@
+﻿body
+{
+    font-family: sans-serif;
+    font-size: medium;
+}
+table
+{
+    border-spacing: 0px; 
+    border-bottom: 1px solid #CAC9C9;
+}
+tbody td
+{
+    padding: 7px;
+    padding-left: 8px; 
+}
+td
+{
+    border-collapse: collapse;
+    border-left: 1px solid #CAC9C9;
+}
+thead td
+{
+    padding: 3px;
+    padding-left: 7px; 
+    background-color: rgb(90, 200, 5);
+    color: white;
+    border-bottom: 1px solid rgb(60, 170, 40);
+    border-left: 1px solid rgb(60, 170, 40);
+    
+}
+.odd
+{
+    background: #ECECD8
+}
+.ContName
+{
+    width: 150px;
+}
+.city
+{
+    width: 120px;
+}
+.country
+{
+    width: 150px;
+}
+.isPromoted
+{
+    width: 100px;
+    border-right: 1px solid #CAC9C9;
+}
+.flag-uk
+{
+    background-image: url('uk-flag.jpg'); 
+    background-repeat: no-repeat;
+    padding-left: 35px; 
+}
+.flag-ge
+{
+    background-image: url('german-flag.jpg'); 
+    background-repeat: no-repeat;
+    padding-left: 35px; 
+}
+.flag-me
+{
+    background-image: url('flag-mx.png'); 
+    background-repeat: no-repeat;
+    padding-left: 35px; 
+}
+

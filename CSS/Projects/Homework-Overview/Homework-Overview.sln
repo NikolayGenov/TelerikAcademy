@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple CSS Ticket", "Homewo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBook", "ContactBook\ContactBook.csproj", "{2563CD6A-F21D-4C40-BDD5-7709F57913CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringWebsite", "RefactoringWebsite\RefactoringWebsite.csproj", "{8EE7306D-0C68-4246-BE1A-0C7ECAADC403}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{2563CD6A-F21D-4C40-BDD5-7709F57913CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2563CD6A-F21D-4C40-BDD5-7709F57913CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2563CD6A-F21D-4C40-BDD5-7709F57913CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE7306D-0C68-4246-BE1A-0C7ECAADC403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE7306D-0C68-4246-BE1A-0C7ECAADC403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE7306D-0C68-4246-BE1A-0C7ECAADC403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE7306D-0C68-4246-BE1A-0C7ECAADC403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

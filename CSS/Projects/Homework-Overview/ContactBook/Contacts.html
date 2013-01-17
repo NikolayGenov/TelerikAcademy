@@ -3,7 +3,7 @@
     <head>
         <title>Contacts</title>
         <style type="text/css">
-            @import "style2.css";
+            @import "StyleContacts.css";
         </style>
     </head>
     <body>
@@ -12,44 +12,51 @@
                 <tr>
                     <td class ="ContName">Contact name</td>
                     <td class ="city">City</td>
-                    <td>Country</td>
-                    <td>Is Promoted</td>
+                    <td class ="country">Country</td>
+                    <td class ="isPromoted">Is Promoted</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td class ="ContName">Maria Anders</td>
                     <td class ="city">Berlin</td>
-                    <td class ="country">Germany</td>
-                    <td>
+                    <td class ="country">
+                        <span class="flag-ge"></span>Germany
+                    </td>
+                    <td class ="isPromoted">
                         <input type="checkbox" disabled="disabled" />
                     </td>
                 </tr>
                 <tr class="odd">
                     <td class ="ContName">Ana Trujillo</td>
                     <td class ="city">México D.F.</td>
-                    <td class ="country">Mexico</td>
-                    <td>
+                    <td class ="country">
+                        <span class="flag-me"></span>Mexico
+                    </td>
+                    <td class ="isPromoted">
                         <input type="checkbox" disabled="disabled" />
                     </td>
                 </tr>
                 <tr>
                     <td class ="ContName">Antonio Moreno</td>
                     <td class ="city">México D.F.</td>
-                    <td class ="country">Mexico</td>
-                    <td>
+                    <td class ="country">
+                        <span class="flag-me"></span>Mexico
+                    </td>
+                    <td class ="isPromoted">
                         <input type="checkbox" disabled="disabled"  checked ="checked"  />
                     </td>
                 </tr>
                 <tr class="odd">
                     <td class ="ContName">Thomas Hardy</td>
-                    <td class ="city"><span class="flag-gb">&nbsp&nbsp&nbsp&nbsp</span>London</td>
-                    <td class ="country"><span class="flag-gb">UK</span></td>
-                    <td>
+                    <td class ="city">London</td>
+                    <td class ="country">
+                        <span class="flag-uk"></span>UK
+                    </td>
+                    <td class ="isPromoted">
                         <input type="checkbox" disabled="disabled"   />
                     </td>
                 </tr>
-
             </tbody>
         </table>
     </body>
