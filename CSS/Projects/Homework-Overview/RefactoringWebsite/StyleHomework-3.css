@@ -1,0 +1,67 @@
+﻿body {
+    text-align: justify;
+    background-color: rgb(169, 169, 169);
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+header h1 {
+    text-align: center;
+    color: rgb(250, 250, 210);
+    font-size: 3em;
+}
+
+nav {
+    text-align: center;
+}
+
+    nav a {
+        font-weight: bold;
+        color: rgb(250, 250, 210);
+    }
+
+    nav ul li:last-child {
+        text-decoration: underline;
+    }
+
+
+.current {
+    background-color: rgb(211, 211, 211);
+}
+
+ul {
+    list-style: none;
+    font-size: 1.6em;
+    color: rgb(250, 250, 210);
+}
+
+section h1 {
+    color: rgb(250, 250, 210);
+    font-size: 2em;
+}
+
+article h1, p, footer {
+    text-align: justify;
+}
+
+article p {
+    font-size: 1.2em;
+}
+
+article footer {
+    font-size: 0.8em;
+}
+
+    article footer a {
+        font-size: 0.9em;
+        color: black;
+    }
+
+
+footer {
+    font-size: 1.2em;
+    text-align: center;
+}

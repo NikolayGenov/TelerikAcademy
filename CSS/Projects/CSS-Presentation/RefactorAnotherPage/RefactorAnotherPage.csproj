@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8EE7306D-0C68-4246-BE1A-0C7ECAADC403}</ProjectGuid>
+    <ProjectGuid>{2C495C86-F5E7-4212-9756-CD79E0ECF160}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RefactoringWebsite</RootNamespace>
-    <AssemblyName>RefactoringWebsite</AssemblyName>
+    <RootNamespace>RefactorAnotherPage</RootNamespace>
+    <AssemblyName>RefactorAnotherPage</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,8 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="homework-3.html" />
-    <Content Include="StyleHomework-3.css" />
+    <Content Include="2. homework.css" />
+    <Content Include="2. homework.html" />
+    <Content Include="images\li-dot.png" />
+    <Content Include="images\Sample Logo.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,7 +89,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61535/</IISUrl>
+          <IISUrl>http://localhost:8402/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

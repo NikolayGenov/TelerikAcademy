@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLetter", "FirstLetter\FirstLetter.csproj", "{960BB5D5-E813-43EA-892A-077E6A712824}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactorAnotherPage", "RefactorAnotherPage\RefactorAnotherPage.csproj", "{2C495C86-F5E7-4212-9756-CD79E0ECF160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedDivs", "NestedDivs\NestedDivs.csproj", "{15781E4F-96DE-499D-8A33-66A97C8DEED5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{960BB5D5-E813-43EA-892A-077E6A712824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{960BB5D5-E813-43EA-892A-077E6A712824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{960BB5D5-E813-43EA-892A-077E6A712824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{960BB5D5-E813-43EA-892A-077E6A712824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C495C86-F5E7-4212-9756-CD79E0ECF160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C495C86-F5E7-4212-9756-CD79E0ECF160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C495C86-F5E7-4212-9756-CD79E0ECF160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C495C86-F5E7-4212-9756-CD79E0ECF160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15781E4F-96DE-499D-8A33-66A97C8DEED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15781E4F-96DE-499D-8A33-66A97C8DEED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15781E4F-96DE-499D-8A33-66A97C8DEED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15781E4F-96DE-499D-8A33-66A97C8DEED5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
