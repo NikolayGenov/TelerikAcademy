@@ -32,6 +32,7 @@ class PrintMatrix2
                 }
             }            
         }
+        //Print the result 
         for (int col = 0; col < n; col++)
         {
             for (int row = 0; row < n; row++)

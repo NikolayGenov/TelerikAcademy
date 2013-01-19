@@ -7,7 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.PrintMatrix-2", "PrintMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.PrintMatrix-3", "PrintMatrix3\01.PrintMatrix-3.csproj", "{2EBAEAB3-C676-469F-B1A5-C633AE1E8F9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectMatrixSquare", "RectMatrixSquare\RectMatrixSquare.csproj", "{1519F244-9BF5-4320-AF28-55BBC726A11F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.RectMatrixSquare", "RectMatrixSquare\2.RectMatrixSquare.csproj", "{1519F244-9BF5-4320-AF28-55BBC726A11F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.PrintMatrix-4", "PrintMatrix-4\01.PrintMatrix-4.csproj", "{A3D53EE2-F697-4E4B-AF79-6319163C002F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.SequencesInMatrix", "SequencesInMatrix\3.SequencesInMatrix.csproj", "{0CC0EADE-EDE8-4C94-8998-A2D7024100FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.FindLessOrEqToK", "FindLessOrEqToK\4.FindLessOrEqToK.csproj", "{D733D2C1-8817-4631-8B5B-DAB0C1F34F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.SortStringArray", "SortStringArray\5.SortStringArray.csproj", "{2E4589BA-AFEC-4E80-AD15-D411E204CE36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +39,22 @@ Global
 		{1519F244-9BF5-4320-AF28-55BBC726A11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1519F244-9BF5-4320-AF28-55BBC726A11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1519F244-9BF5-4320-AF28-55BBC726A11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D53EE2-F697-4E4B-AF79-6319163C002F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D53EE2-F697-4E4B-AF79-6319163C002F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D53EE2-F697-4E4B-AF79-6319163C002F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D53EE2-F697-4E4B-AF79-6319163C002F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC0EADE-EDE8-4C94-8998-A2D7024100FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC0EADE-EDE8-4C94-8998-A2D7024100FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC0EADE-EDE8-4C94-8998-A2D7024100FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC0EADE-EDE8-4C94-8998-A2D7024100FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D733D2C1-8817-4631-8B5B-DAB0C1F34F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D733D2C1-8817-4631-8B5B-DAB0C1F34F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D733D2C1-8817-4631-8B5B-DAB0C1F34F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D733D2C1-8817-4631-8B5B-DAB0C1F34F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E4589BA-AFEC-4E80-AD15-D411E204CE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E4589BA-AFEC-4E80-AD15-D411E204CE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E4589BA-AFEC-4E80-AD15-D411E204CE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E4589BA-AFEC-4E80-AD15-D411E204CE36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
