@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.FindLessOrEqToK", "FindLe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.SortStringArray", "SortStringArray\5.SortStringArray.csproj", "{2E4589BA-AFEC-4E80-AD15-D411E204CE36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.EqualNeighborsProblem", "EqualNeighborsProblem\7.EqualNeighborsProblem.csproj", "{B1503D81-B0E8-4CF2-A7EA-5FB3C4C9018A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{2E4589BA-AFEC-4E80-AD15-D411E204CE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E4589BA-AFEC-4E80-AD15-D411E204CE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E4589BA-AFEC-4E80-AD15-D411E204CE36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1503D81-B0E8-4CF2-A7EA-5FB3C4C9018A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1503D81-B0E8-4CF2-A7EA-5FB3C4C9018A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1503D81-B0E8-4CF2-A7EA-5FB3C4C9018A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1503D81-B0E8-4CF2-A7EA-5FB3C4C9018A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
