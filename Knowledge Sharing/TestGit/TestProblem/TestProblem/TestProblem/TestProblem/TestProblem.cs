@@ -13,10 +13,8 @@ class TestProblem
             sum *= mult;
             
         }
-        Console.WriteLine("sdfhdfhdr");
         Console.WriteLine(sum);
-        Console.WriteLine("getewgewgs");
-        Console.WriteLine("fsdgsdhgersgt");
+
         //Create a loop to add +1 to the sum mult times
 
         for (int i = 0; i < mult; i++)
