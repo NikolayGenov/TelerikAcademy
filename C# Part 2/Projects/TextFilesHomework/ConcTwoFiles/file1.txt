@@ -1,0 +1,6 @@
+This is
+text
+from
+file 1
+Still some text from file 1
+End of file 1.

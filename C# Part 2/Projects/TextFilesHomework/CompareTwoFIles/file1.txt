@@ -1,0 +1,20 @@
+SameLine a
+SameLine a
+SameLine a
+SameLine a
+SameLine a
+SameLine a
+DiffLine of text
+SameLine a
+SameLine a
+SameLine a
+SameLine a
+SameLine a
+SameLine a
+DiffLine of text
+DiffLine of text
+SameLine a
+SameLine a
+DiffLine of text
+DiffLine of text
+SameLine a

@@ -1,0 +1,8 @@
+Now this is file 2
+more text
+text from file2
+text
+spam spam spam
+spam
+spam
+End of file2.
