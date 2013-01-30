@@ -39,6 +39,5 @@ class PrintMatrix3
             }
             Console.WriteLine();
         }
-        
     }
 }

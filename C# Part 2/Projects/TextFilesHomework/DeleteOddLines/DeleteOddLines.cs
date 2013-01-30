@@ -33,6 +33,5 @@ class DeleteOddLines
             sameFileOutput.WriteLine(output);
         }
         Console.WriteLine("Done!");
-        
     }
 }

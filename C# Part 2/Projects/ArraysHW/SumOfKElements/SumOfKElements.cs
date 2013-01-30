@@ -23,7 +23,7 @@ class SumOfKElements
             {
                 int[] mask = new int[n];
                 sum = 0;
-                makeMask(n, k, i, mask);
+                MakeMask(n, k, i, mask);
                 for (int j = 0; j < n; j++)
                 {
                     sum += mask[j] * arr[j];
@@ -41,7 +41,7 @@ class SumOfKElements
         }
     }
 
-    private static void makeMask(int n, int k, int pos, int[] mask)
+    private static void MakeMask(int n, int k, int pos, int[] mask)
     {
         int i = 0;
         int temp = 0;

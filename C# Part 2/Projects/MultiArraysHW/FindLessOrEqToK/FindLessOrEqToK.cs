@@ -11,7 +11,7 @@ class FindLessOrEqToK
         int k = int.Parse(Console.ReadLine());
         int[] arr = new int[n];
         //Enter Numbers via method
-        EnterArray(n,ref arr);
+        EnterArray(n, ref arr);
         //Sort the numbers
         Array.Sort(arr);
         //Geting the returning value of the search in int
@@ -38,7 +38,7 @@ class FindLessOrEqToK
         }
     }
   
-    private static void EnterArray(int n,ref int[] arr)
+    private static void EnterArray(int n, ref int[] arr)
     {
         for (int i = 0; i < n; i++)
         {
@@ -47,4 +47,3 @@ class FindLessOrEqToK
         }
     }
 }
-

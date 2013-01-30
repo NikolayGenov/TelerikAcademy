@@ -66,7 +66,6 @@ class SequencesInMatrix
     private static List<string> CheckRow(int i, int j, string[,] matrix)
     {
         //Use a temp list where we store the output
-        
         List<string> rows = new List<string>();
         //Add the member we are checking 
         rows.Add(matrix[i, j]);
@@ -143,4 +142,3 @@ class SequencesInMatrix
         }
     }
 }
-

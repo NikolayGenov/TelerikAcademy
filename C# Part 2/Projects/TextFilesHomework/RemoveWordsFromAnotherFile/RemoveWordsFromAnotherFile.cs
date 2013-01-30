@@ -7,7 +7,6 @@ class RemoveWordsFromAnotherFile
 {
     static void Main()
     {
-      
         //Try to catch some exceptions if there are any
         try
         {
@@ -52,7 +51,6 @@ class RemoveWordsFromAnotherFile
         {
             Console.WriteLine("General Exception");
         }
-   
     }
   
     private static string MatchForWords(StreamReader words, string text)

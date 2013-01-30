@@ -15,10 +15,9 @@ class PrintMatrix4
         int row = -1, col = 0; 
         int direction = 1; //We use that var to keep track of our value and every 2 for loops we change it
         //Start the loop 
-        while (value < numberOfCells+1)
+        while (value < numberOfCells + 1)
         {
             //Prints the rows
-
             for (int i = 0; i < currentLength; i++)
             {
                 row += direction; // when direction is +  we get down from 0 to n , when (-) we print then the from upside down  

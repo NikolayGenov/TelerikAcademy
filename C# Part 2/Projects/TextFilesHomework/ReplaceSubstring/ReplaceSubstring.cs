@@ -11,7 +11,6 @@ class ReplaceSubstring
             //Writing  in another file
             using (StreamWriter output = new StreamWriter(@"../../output.txt"))
             {
-                
                 string line = text.ReadLine();
                 //Reading until the end of the file and for each line if we find start we just replace it it finish and write it 
                 while (line != null)

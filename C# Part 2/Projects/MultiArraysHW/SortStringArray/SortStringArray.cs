@@ -14,7 +14,7 @@ class SortStringArray
         //Print the result
         foreach (string item in arr)
         {
-            Console.Write(item + " " );
+            Console.Write(item + " ");
         }
         Console.WriteLine();
     }
@@ -36,7 +36,6 @@ class SortStringArray
             arrLengths[i] = arr[i].Length;
         }
         return arrLengths;
-        
     }
 
     private static void EnterArray(int n, ref string[] arr)
@@ -48,4 +47,3 @@ class SortStringArray
         }
     }
 }
-

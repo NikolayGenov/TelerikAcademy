@@ -19,7 +19,6 @@ class PrintMatrix2
                 {
                     value++;
                     arr[row, col] = value;
-                   
                 }
             }
             else
@@ -28,16 +27,15 @@ class PrintMatrix2
                 {
                     value++;
                     arr[row, col] = value;
-                   
                 }
-            }            
+            }
         }
         //Print the result 
         for (int col = 0; col < n; col++)
         {
             for (int row = 0; row < n; row++)
             {
-                 Console.Write("{0,3} ", arr[row, col]);
+                Console.Write("{0,3} ", arr[row, col]);
             }
             Console.WriteLine();
         }
