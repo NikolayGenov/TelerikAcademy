@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainPhone", "MainPhone\MainPhone.csproj", "{265A6E97-17B9-4DE9-9053-A6DABF2E4735}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phone", "MainPhone\Phone.csproj", "{265A6E97-17B9-4DE9-9053-A6DABF2E4735}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

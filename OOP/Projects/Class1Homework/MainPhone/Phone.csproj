@@ -42,8 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Phone.cs" />
+    <Compile Include="Calls\GSMCallHistoryTest.cs" />
+    <Compile Include="GSMClass\Battery.cs" />
+    <Compile Include="Calls\Call.cs" />
+    <Compile Include="Calls\CallHistory.cs" />
+    <Compile Include="GSMClass\Display.cs" />
+    <Compile Include="GSMClass\GSM.cs" />
+    <Compile Include="GSMClass\GSMTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
