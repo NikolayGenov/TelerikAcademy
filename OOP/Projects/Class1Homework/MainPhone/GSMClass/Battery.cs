@@ -74,7 +74,7 @@ namespace MainPhone.GsmClass
             this.HoursTalk = hoursTalk;
         }
 
-        //Overridin toString and saving the result in a string and then returting it to the GSM class
+        //Overriding toString and saving the result in a string and then returting it to the GSM class
         public override string ToString()
         {
             string text = null;

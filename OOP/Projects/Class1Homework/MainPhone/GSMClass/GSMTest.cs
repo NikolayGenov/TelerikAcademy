@@ -7,7 +7,7 @@ namespace MainPhone.GsmClass
         public GSMTest()
         {
         }
-        
+        //Taking as a param all the phones in array and just print them with the new ToString 
         public void PrintAllPhones(GSM[] phones)
         {
             foreach (GSM phone in phones)

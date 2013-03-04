@@ -9,6 +9,7 @@ namespace MainPhone.Calls
         private long? dialedNumber;
         private int? duration;
 
+        // Properties
         public long? DialedNumber
         {
             get
@@ -61,13 +62,14 @@ namespace MainPhone.Calls
             return diff;
         }
 
+        //constructor
         public Call(DateTime time, int? duration, long? dialedNumber)
         {
             this.Time = time;
             this.Duration = duration;
             this.DialedNumber = dialedNumber;
         }
-
+        //Overring once again
         public override string ToString()
         {
             string text = null;

@@ -7,6 +7,7 @@ namespace MainPhone.Calls
     public class CallHistory
     {
         private List<Call> callHistory = null;
+        //Using this counter to count the calls where we add or subs in the methods
         private uint callCount = 0;
 
         public CallHistory()
@@ -43,6 +44,7 @@ namespace MainPhone.Calls
 
         public Call GetLongestCall()
         {
+            //Using the compareTo 
             Call maxCall = this.callHistory.Max();
             return maxCall;
         }
@@ -50,6 +52,7 @@ namespace MainPhone.Calls
         public decimal CalculateMoney(decimal pricePerMinute)
         {
             int timeInSeconds = 0;
+            //Looping for each call and summing the time in seconds and then taking the constant to get the price
             foreach (Call call in callHistory)
             {
                 timeInSeconds += call.Duration.Value;
@@ -58,6 +61,7 @@ namespace MainPhone.Calls
             return total;
         }
 
+        //Overriding the method
         public override string ToString()
         {
             string text = null;
