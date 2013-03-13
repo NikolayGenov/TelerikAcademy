@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HotelManager.Person.Client" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgAIAAAAAAAA=</HashCode>
+      <FileName>Person\Client.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HotelManager.Person.Housekeeping" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Housekeeping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.Manager" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.Person" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.Personel" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAA=</HashCode>
+      <FileName>Person\Personel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HotelManager.Person.Receptionist" Collapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Receptionist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="HotelManager.Person.IComunicate" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAA=</HashCode>
+      <FileName>Person\IComunicate.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HotelManager.Person.IPay" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgAIAAAAAAAA=</HashCode>
+      <FileName>Person\IPay.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="HotelManager.Person.Languages" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAAAAAAAAgACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Languages.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
