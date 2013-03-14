@@ -36,9 +36,10 @@
 	<br />
 	<a href="#" onclick="onFindBiggerButtonClick()">Find bigger</a>
 	<div id="console">
-	</div>
+	</div><div>
 	<script src="scripts/js-console.js">	  
-	</script>		  
+	</script>	
+        </div>	  
 	<script>														 
 
 		function onFindBiggerButtonClick() {
@@ -49,8 +50,7 @@
 			if (bigger < second) {
 				bigger = second;
 			}
-
-			jsConsole.writeLine("the bigger is: " + bigger);
+            jsConsole.writeLine("the bigger is: " + bigger);
 		}											
 	</script>			  
 </body>
