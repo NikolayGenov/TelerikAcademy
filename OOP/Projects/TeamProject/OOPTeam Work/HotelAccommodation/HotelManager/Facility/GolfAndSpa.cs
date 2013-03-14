@@ -8,5 +8,9 @@ namespace HotelManager.Facility
 {
     public class GolfAndSpa : Hotel
     {
+        public GolfAndSpa(Category category) 
+            : base(category)
+        {
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace School
 {
@@ -34,6 +35,24 @@ namespace School
         public void RemoveTeacherFromClass(Teacher teacher)
         {
             this.listTeachers.Remove(teacher);
+        }
+        public override string ToString()
+        {
+            StringBuilder info = new StringBuilder();
+            foreach (Student student in listStudents)
+            {
+                info.AppendLine(student.ToString());
+            }
+            foreach (Teacher teacher in listTeachers)
+            {// TO DO
+                throw new NotImplementedException;
+                info.AppendLine(student.ToString());
+            }
+            if (this.Comment != null)
+            {
+                info.AppendLine("Comment about the student: " + this.Comment);
+            }
+            return info.ToString();
         }
     }
 }

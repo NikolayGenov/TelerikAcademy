@@ -14,5 +14,16 @@ namespace School
         {
             this.ClassID = classID;
         }
+
+        public override string ToString()
+        {
+            StringBuilder info = new StringBuilder();
+            info.AppendLine(string.Format("Student names: {0} {1}, ID:{2}", this.FirstName, this.LastName, this.ClassID));
+            if (this.Comment != null)
+            {
+                info.AppendLine("Comment about the student: " + this.Comment); 
+            }
+            return info.ToString();
+        }
     }
 }

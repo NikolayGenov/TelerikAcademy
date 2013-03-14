@@ -8,5 +8,9 @@ namespace HotelManager.Facility
 {
     public class SeaHotel : Hotel
     {
+        public SeaHotel(Category category) : 
+            base(category)
+        {
+        }
     }
 }
