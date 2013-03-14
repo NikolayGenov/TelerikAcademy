@@ -7,14 +7,14 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1DEC2D35-A788-4467-9BF5-12E44E5F8F5E}</ProjectGuid>
+    <ProjectGuid>4c29732f-b19d-4915-a226-98bbb7de63c3</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OperatorsExpressions</RootNamespace>
-    <AssemblyName>OperatorsExpressions</AssemblyName>
+    <RootNamespace>JS_HW_Cond_Statements</RootNamespace>
+    <AssemblyName>JS_HW_Cond_Statements</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -57,31 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1.IsOddOrEven.html" />
-    <Content Include="2.DivideBy7And5.html" />
-    <Content Include="3.RectangleArea.html" />
-    <Content Include="5.CheckBit.html" />
-    <Content Include="7.IsPrime.html" />
-    <Content Include="9.PointInShape.html" />
-    <Content Include="scripts\js-console.js" />
-    <Content Include="styles\js-console.css" />
-    <Content Include="styles\js-console.min.css" />
-    <Content Include="4.ThirdDigit7.html" />
-    <Content Include="8.TrapezoidArea.html" />
     <Content Include="Web.config" />
-    <Content Include="6.WithinCircle.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="styles\js-console.less" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -94,11 +73,12 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:31210/</IISUrl>
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

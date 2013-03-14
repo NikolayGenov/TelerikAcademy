@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Within Circle</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            var x = 4;
+            var y = 3;
+            var r = 5;
+            //Make the vars for point cordinates and radius
+          
+            //Print them and then use that condition to check if it's true or false
+            jsConsole.writeLine("x=" + x + " y=" + y + " Is that point within a circle with r=" + r + "? -->" + (((x * x) + (y * y)) <= (r * r)));
+            x = 10; y = 5; r = 15;
+            jsConsole.writeLine("x=" + x + " y=" + y + " Is that point within a circle with r=" + r + "? -->" + (((x * x) + (y * y)) <= (r * r)));
+            x = 5; y = 5; r = 3;
+            jsConsole.writeLine("x=" + x + " y=" + y + " Is that point within a circle with r=" + r + "? -->" + (((x * x) + (y * y)) <= (r * r)));
+            x = 15; y = 5; r = 17;
+            jsConsole.writeLine("x=" + x + " y=" + y + " Is that point within a circle with r=" + r + "? -->" + (((x * x) + (y * y)) <= (r * r)));
+            
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Is point in the shape</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            var r = 3;
+            var topLeft = 1
+            var topRight = topLeft + 6;
+            var botLeft = topLeft - 2;
+            var botRight = botLeft - 2;
+            var x = 1;
+            var y = 4;
+                
+            //Print the two points and then use that condition to check if it's true or false
+            //If it's in the circle and out of the rectangle
+            jsConsole.writeLine("x=" + x + " y=" + y + " Is that point within the shape" + "? -->" + (((((x - 1) * (x - 1)) + ((y - 1) * (y - 1))) <= (r * r)) && (!((x >= topLeft) && (x <= topRight)) && ((y <= botLeft) && (y >= botRight)))));
+            x = -1; y = -1;
+            jsConsole.writeLine("x=" + x + " y=" + y + " Is that point within the shape" + "? -->" + (((((x - 1) * (x - 1)) + ((y - 1) * (y - 1))) <= (r * r)) && (!((x >= topLeft) && (x <= topRight)) && ((y <= botLeft) && (y >= botRight)))));
+            x = 2; y = 2;
+            jsConsole.writeLine("x=" + x + " y=" + y + " Is that point within the shape" + "? -->" + (((((x - 1) * (x - 1)) + ((y - 1) * (y - 1))) <= (r * r)) && (!((x >= topLeft) && (x <= topRight)) && ((y <= botLeft) && (y >= botRight)))));
+            x = 0; y = -1;
+            jsConsole.writeLine("x=" + x + " y=" + y + " Is that point within the shape" + "? -->" + (((((x - 1) * (x - 1)) + ((y - 1) * (y - 1))) <= (r * r)) && (!((x >= topLeft) && (x <= topRight)) && ((y <= botLeft) && (y >= botRight)))));
+            
+        </script>
+    </body>
+</html>
+

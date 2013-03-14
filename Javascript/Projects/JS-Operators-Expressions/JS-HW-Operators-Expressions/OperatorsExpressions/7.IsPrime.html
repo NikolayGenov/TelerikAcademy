@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Is prime</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            var number = 78;
+            //Enter a number and check if a it can be divided with prime number
+            jsConsole.writeLine("number=" + number + " Is it prime ? -->" + ((number % 2 != 0) && (number % 3 != 0) && (number % 5 != 0) &&
+                                                                             (number % 7 != 0) || ((number == 2) || (number == 3) || (number == 5) || (number == 7))));
+            number = 19;
+            jsConsole.writeLine("number=" + number + " Is it prime ? -->" + ((number % 2 != 0) && (number % 3 != 0) && (number % 5 != 0) &&
+                                                                             (number % 7 != 0) || ((number == 2) || (number == 3) || (number == 5) || (number == 7))));
+            number = 24;
+            jsConsole.writeLine("number=" + number + " Is it prime ? -->" + ((number % 2 != 0) && (number % 3 != 0) && (number % 5 != 0) &&
+                                                                             (number % 7 != 0) || ((number == 2) || (number == 3) || (number == 5) || (number == 7))));
+            number = 23;
+            jsConsole.writeLine("number=" + number + " Is it prime ? -->" + ((number % 2 != 0) && (number % 3 != 0) && (number % 5 != 0) &&
+                                                                             (number % 7 != 0) || ((number == 2) || (number == 3) || (number == 5) || (number == 7))));
+        </script>
+    </body>
+</html>
