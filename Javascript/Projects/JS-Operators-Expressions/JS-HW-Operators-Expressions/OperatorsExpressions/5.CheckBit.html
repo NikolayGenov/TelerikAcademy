@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Check Bit</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            var number = 8;
+            //Create mask and move it to the position of the third bit 
+            var mask = 1;
+            mask = mask << 3;
+            //Then we compare with bitwise operator if the number and the mask give the mask 
+            //which is one at the position of the third bit
+            jsConsole.writeLine("number=" + number + " Is the third digit bit = 1 -->" + ((number & mask) == mask));
+            number = 16;
+            jsConsole.writeLine("number=" + number + " Is the third digit bit = 1 -->" + ((number & mask) == mask));
+            number = 13;
+            jsConsole.writeLine("number=" + number + " Is the third digit bit = 1 -->" + ((number & mask) == mask));
+            number = 534;
+            jsConsole.writeLine("number=" + number + " Is the third digit bit = 1 -->" + ((number & mask) == mask));
+            number = 52334;
+            jsConsole.writeLine("number=" + number + " Is the third digit bit = 1 -->" + ((number & mask) == mask));
+        </script>
+    </body>
+</html>
+
