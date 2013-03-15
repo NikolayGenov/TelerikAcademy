@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace School
+﻿namespace School
 {
     class Person : Comments
     {
+        //A base class for the student and the teacher
+        //Each person have First and last name
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
 
         public Person(string firstName, string lastName)
         {
-            
             this.FirstName = firstName;
             this.LastName = lastName;
         }

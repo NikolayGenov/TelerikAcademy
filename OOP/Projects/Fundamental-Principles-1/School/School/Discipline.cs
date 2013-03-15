@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace School
+﻿namespace School
 {
     class Discipline : Comments
     {
+        //We have a name,lectures and exercises and we can't make a new discipline before we pass everything about it
         public string Name { get; set; }
 
         public int NumberOfLectures { get; set; }
