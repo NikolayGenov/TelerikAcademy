@@ -45,8 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
+    <Compile Include="Facility\Category.cs" />
+    <Compile Include="Facility\FacilityException.cs" />
     <Compile Include="Facility\IAccommodate.cs" />
+    <Compile Include="Facility\Room.cs" />
+    <Compile Include="Facility\RoomKind.cs" />
     <Compile Include="Person\Housekeeping.cs" />
     <Compile Include="Person\IComunicate.cs" />
     <Compile Include="Person\IPay.cs" />
@@ -58,6 +61,7 @@
     <Compile Include="Facility\GolfAndSpa.cs" />
     <Compile Include="Facility\Hostel.cs" />
     <Compile Include="Facility\Hotel.cs" />
+    <Compile Include="Person\PersonException.cs" />
     <Compile Include="Start.cs" />
     <Compile Include="Facility\Motel.cs" />
     <Compile Include="Person\Person.cs" />

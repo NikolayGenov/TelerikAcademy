@@ -9,16 +9,9 @@ namespace HotelManager.Facility
 {
     public class Hotel : Facility
     {
-        public override ushort CheckIn(ICollection<Client> clients)
+        public Hotel(Category category) 
+            : base(category)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
-        }
-
-        public override decimal CheckOut(ushort roomNumber)
-        {
-            // TODO: Implement this method
-            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace HotelManager
+﻿namespace HotelManager.Facility
 {
     public enum Category
     {

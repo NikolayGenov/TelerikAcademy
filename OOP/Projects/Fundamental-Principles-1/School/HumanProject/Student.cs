@@ -8,9 +8,9 @@ namespace HumanProject
 {
     class Student : Human
     {
-        public byte Grade { get; set; }
+        public double Grade { get; set; }
 
-        public Student(string firstName, string lastName, byte grade) : base(firstName, lastName)
+        public Student(string firstName, string lastName, double grade) : base(firstName, lastName)
         {
             this.Grade = grade;
         }
@@ -18,7 +18,7 @@ namespace HumanProject
         public override string ToString()
         {
             StringBuilder info = new StringBuilder();
-            info.AppendLine(base.ToString());
+            info.Append(base.ToString());
             info.AppendLine("Grade: " + this.Grade);
             return info.ToString();
         }

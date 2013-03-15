@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using HotelManager.Person;
 
 namespace HotelManager.Person
 {
@@ -18,6 +16,24 @@ namespace HotelManager.Person
         public Receptionist(uint id, string name, decimal salary)
             : base(id, name, salary)
         {
+        }
+
+        public ushort CheckIn(ICollection<Client> clients)
+        {
+            if (this.WorkPlace == null)
+            {
+                throw new PersonException("I'm unemployed! Please hire me!");
+            }
+            return this.WorkPlace.CheckIn(clients);
+        }
+
+        public decimal CheckOut(ushort roomNumber)
+        {
+            if (this.WorkPlace == null)
+            {
+                throw new PersonException("I'm unemployed! Please hire me!");
+            }
+            return this.WorkPlace.CheckOut(roomNumber);
         }
 
         public event EventHandler WakeUpCall; //TODO implement the event
