@@ -3,28 +3,28 @@
   <Class Name="HotelManager.Person.Client" Collapsed="true">
     <Position X="0.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Client.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HotelManager.Person.Housekeeping" Collapsed="true">
+  <Class Name="HotelManager.Person.Housekeeping">
     <Position X="3" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Housekeeping.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HotelManager.Person.Manager" Collapsed="true">
+  <Class Name="HotelManager.Person.Manager">
     <Position X="1" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HotelManager.Person.Person">
     <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgACAAAAAAAAAAAAAAAAIAQAACAEAAgAgAIAAAAAAgA=</HashCode>
+      <HashCode>AgACAAAAAAAAAAAAAAAAIQQAACAEAAgAgAIAAAAAAgA=</HashCode>
       <FileName>Person\Person.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -32,7 +32,7 @@
   <Class Name="HotelManager.Person.Personel" Collapsed="true">
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgCAAAAAAACAAAAAAAAAAAAAAAAAAAAgAAACAAAA=</HashCode>
+      <HashCode>AAAAgCAAIAAAAAAAAAAAAAAAAAAACAAAAAgAAACAAAA=</HashCode>
       <FileName>Person\Personel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -40,7 +40,7 @@
   <Class Name="HotelManager.Person.Receptionist">
     <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABCAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Receptionist.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -62,7 +62,7 @@
   <Interface Name="HotelManager.Person.IPay" Collapsed="true">
     <Position X="9.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAgAIAAAAAAAA=</HashCode>
       <FileName>Person\IPay.cs</FileName>
     </TypeIdentifier>
   </Interface>
