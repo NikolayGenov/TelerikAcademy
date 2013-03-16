@@ -19,7 +19,7 @@ namespace AcademyPopcorn
         {
             this.TrailLife = trailLife;
         }
-
+        
         public override IEnumerable<GameObject> ProduceObjects()
         {
             List<TrailObject> listOfTail = new List<TrailObject>();

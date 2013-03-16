@@ -17,11 +17,22 @@ namespace AcademyPopcorn
             int startRow = 3;
             int startCol = 2;
             int endCol = WorldCols - 2;
-
+            
             for (int i = startCol; i < endCol; i++)
             {
                 Block currBlock = new Block(new MatrixCoords(startRow, i));
-
+                engine.AddObject(currBlock);
+            }
+            for (int i = startCol; i < endCol; i++)
+            {
+                //Adding a ExplodingBlock aka bomb here
+                if (i == 18)
+                {
+                    ExplodingBlock bomb = new ExplodingBlock(new MatrixCoords(startRow + 1, i));
+                    engine.AddObject(bomb);
+                    continue;
+                }
+                Block currBlock = new Block(new MatrixCoords(startRow + 1, i));
                 engine.AddObject(currBlock);
             }
             //Task 1
@@ -40,7 +51,6 @@ namespace AcademyPopcorn
             }
             for (int i = startCol - 1; i < endCol; i++)
             {
-                //Check that again
                 Block indeBlock = new IndestructibleBlock(new MatrixCoords(startRow - 1, i));
 
                 engine.AddObject(indeBlock);
@@ -53,26 +63,28 @@ namespace AcademyPopcorn
             engine.AddObject(startMsg);
             //End of Task 5
 
-            //Task 6
+            //Task 7
             Ball theBall = new MeteoriteBall(new MatrixCoords(WorldRows / 2, 0),
                 new MatrixCoords(-1, 1));
             engine.AddObject(theBall);
-            //End of task 6
+            //End of task 7
 
-            for (int i = startCol + 6; i < endCol / 2; i++)
+            //Task 9  - UnpassableBlock added
+            for (int i = startCol + 5; i < endCol-17; i++)
             {
-                //Check that again
-                Block unpassBlock = new UnpassableBlock(new MatrixCoords(startRow +3, i));
+                Block unpassBlock = new UnpassableBlock(new MatrixCoords(startRow + 9, i));
 
                 engine.AddObject(unpassBlock);
             }
-
-            Ball unstopBall = new UnstoppableBall(new MatrixCoords(WorldRows / 2, 0 +4),
+            
+            //Adding unstoppable Ball to the game at some position
+            //When the ball destroys more than it should - it's from the colision detection
+            Ball unstopBall = new UnstoppableBall(new MatrixCoords(20,  5),
                 new MatrixCoords(-1, 1));
             engine.AddObject(unstopBall);
+            //End of task 9
 
             Racket theRacket = new Racket(new MatrixCoords(WorldRows - 1, WorldCols / 2), RacketLength);
-
             engine.AddObject(theRacket);
         }
 

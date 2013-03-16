@@ -9,8 +9,7 @@ namespace AcademyPopcorn
     {
         public new const string CollisionGroupString = "ball";
 
-        public Ball(MatrixCoords topLeft, MatrixCoords speed)
-            : base(topLeft, new char[,] { { 'o' } }, speed)
+        public Ball(MatrixCoords topLeft, MatrixCoords speed) : base(topLeft, new char[,] { { 'o' } }, speed)
         {
         }
 
@@ -18,7 +17,7 @@ namespace AcademyPopcorn
         {
             return otherCollisionGroupString == "racket" || otherCollisionGroupString == "block";
         }
-
+        
         public override string GetCollisionGroupString()
         {
             return Ball.CollisionGroupString;

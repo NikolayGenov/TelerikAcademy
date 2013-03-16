@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace AcademyPopcorn
 {
+    //Task 8
     class UnstoppableBall : Ball
     {
         public new const string CollisionGroupString = "unstoppableBall";
+
         public UnstoppableBall(MatrixCoords topLeft, MatrixCoords speed) : base(topLeft, speed)
         {
             this.body[0, 0] = '0';
@@ -25,10 +27,10 @@ namespace AcademyPopcorn
 
         public override bool CanCollideWith(string otherCollisionGroupString)
         {
-            return otherCollisionGroupString == "block" ||
-                otherCollisionGroupString == "racket" ||
-                   otherCollisionGroupString == "indestructibleBlock" ||
-                   otherCollisionGroupString == "unpassableBlock" ;
+            return otherCollisionGroupString == Block.CollisionGroupString ||
+                   otherCollisionGroupString == Racket.CollisionGroupString ||
+                   otherCollisionGroupString == IndestructibleBlock.CollisionGroupString ||
+                   otherCollisionGroupString == UnpassableBlock.CollisionGroupString ;
         }
 
         public override string GetCollisionGroupString()

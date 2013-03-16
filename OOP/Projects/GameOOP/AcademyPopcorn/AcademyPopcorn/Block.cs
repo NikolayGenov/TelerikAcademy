@@ -9,15 +9,12 @@ namespace AcademyPopcorn
     {
         public new const string CollisionGroupString = "block";
 
-        public Block(MatrixCoords topLeft)
-            : base(topLeft, new char[,] { { '#' } })
+        public Block(MatrixCoords topLeft) : base(topLeft, new char[,] { { '#' } })
         {
-
         }
 
         public override void Update()
         {
-            
         }
 
         public override bool CanCollideWith(string otherCollisionGroupString)
