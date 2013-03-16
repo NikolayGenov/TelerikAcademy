@@ -14,9 +14,9 @@ namespace AcademyPopcorn
         List<GameObject> staticObjects;
         Racket playerRacket;
 
-        public int TimeToSleep { get; set; }
+        public int TimeToSleep { get; set; } //Task 2
 
-        public Engine(IRenderer renderer, IUserInterface userInterface, int timeToSleep =500)
+        public Engine(IRenderer renderer, IUserInterface userInterface, int timeToSleep =500) //Task 2
         {
             this.renderer = renderer;
             this.userInterface = userInterface;
@@ -59,10 +59,11 @@ namespace AcademyPopcorn
 
         private void AddRacket(GameObject obj)
         {
-            //TODO: we should remove the previous racket from this.allObjects
             this.playerRacket = obj as Racket;
+            //Task 3
             //Find and the remove from all the object the previous racket 
             this.allObjects.RemoveAll((pos) => pos is Racket);
+            //End of Task 3
             this.AddStaticObject(obj);
         }
 
@@ -82,7 +83,7 @@ namespace AcademyPopcorn
             {
                 this.renderer.RenderAll();
 
-                System.Threading.Thread.Sleep(TimeToSleep);
+                System.Threading.Thread.Sleep(TimeToSleep); //Task 2
 
                 this.userInterface.ProcessInput();
 

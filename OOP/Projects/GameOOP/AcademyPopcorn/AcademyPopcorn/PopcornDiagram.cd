@@ -94,6 +94,13 @@
       <FileName>Racket.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="AcademyPopcorn.ShootRacketEngine" Collapsed="true">
+    <Position X="17.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShootRacketEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="AcademyPopcorn.ICollidable" Collapsed="true">
     <Position X="15.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>

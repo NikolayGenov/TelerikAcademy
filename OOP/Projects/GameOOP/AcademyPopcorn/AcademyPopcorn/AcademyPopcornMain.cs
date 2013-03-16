@@ -24,7 +24,7 @@ namespace AcademyPopcorn
 
                 engine.AddObject(currBlock);
             }
-            //Sides
+            //Task 1
             for (int i = startCol; i < endCol; i++)
             {
                 //Start from 0 where is the start of the matrix
@@ -45,11 +45,32 @@ namespace AcademyPopcorn
 
                 engine.AddObject(indeBlock);
             }
-            Ball theBall = new Ball(new MatrixCoords(WorldRows / 2, 0),
-                new MatrixCoords(-1, 1));
+            //End of task 1
 
+            //Task 5
+            char[,] startChar = { { 'M', 'o', 'v', 'e', ' ', 'w', 'i', 't', 'h', ' ', '\'', 'a', '\'', ' ', 'a', 'n', 'd', ' ', '\'', 'd', '\'' } };
+            TrailObject startMsg = new TrailObject(new MatrixCoords(0, 0), startChar, 20);
+            engine.AddObject(startMsg);
+            //End of Task 5
+
+            //Task 6
+            Ball theBall = new MeteoriteBall(new MatrixCoords(WorldRows / 2, 0),
+                new MatrixCoords(-1, 1));
             engine.AddObject(theBall);
-           
+            //End of task 6
+
+            for (int i = startCol + 6; i < endCol / 2; i++)
+            {
+                //Check that again
+                Block unpassBlock = new UnpassableBlock(new MatrixCoords(startRow +3, i));
+
+                engine.AddObject(unpassBlock);
+            }
+
+            Ball unstopBall = new UnstoppableBall(new MatrixCoords(WorldRows / 2, 0 +4),
+                new MatrixCoords(-1, 1));
+            engine.AddObject(unstopBall);
+
             Racket theRacket = new Racket(new MatrixCoords(WorldRows - 1, WorldCols / 2), RacketLength);
 
             engine.AddObject(theRacket);
@@ -59,8 +80,8 @@ namespace AcademyPopcorn
         {
             IRenderer renderer = new ConsoleRenderer(WorldRows, WorldCols);
             IUserInterface keyboard = new KeyboardInterface();
-            int timeToSleep = 200;
-            Engine gameEngine = new Engine(renderer, keyboard, timeToSleep);
+            int timeToSleep = 200;                                                   //Task 2
+            Engine gameEngine = new Engine(renderer, keyboard, timeToSleep);         //Task 2
 
             keyboard.OnLeftPressed += (sender, eventInfo) =>
             {
