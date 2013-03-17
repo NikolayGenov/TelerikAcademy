@@ -5,12 +5,13 @@ using System.Text;
 
 namespace HotelManager.Person
 {
-    public class Person : IPay
+    public abstract class Person : IPay
     {
         private uint id; //must be unique
-        private string name;
 
-        private static List<uint> identifiers = new List<uint>();
+        public string Name { get; set; }
+
+        private static readonly List<uint> identifiers = new List<uint>();
 
         private decimal wallet;
 
@@ -24,11 +25,12 @@ namespace HotelManager.Person
             {
                 if (value < 0)
                 {
-                    throw new PersonException("I am broked! Not enough money!");
+                    throw new PersonException("I am broke! Not enough money!");
                 }
                 this.wallet = value;
             }
         }
+
         public uint Id
         {
             get
@@ -39,31 +41,20 @@ namespace HotelManager.Person
             {
                 if (identifiers.IndexOf(value) != -1)
                 {
-                    throw new ArgumentException("This id is already in the list!");
+                    throw new ArgumentException("This ID is already in the list!");
                 }
                 identifiers.Add(value);
                 this.id = value;
             }
         }
 
-        public string Name
-        {
-            get
-            {
-                return this.name;
-            }
-            set
-            {
-                this.name = value;
-            }
-        }
-
-        public Person(uint id, string name)
+        public Person(uint id, string name, decimal wallet)
         {
             this.Id = id;
             this.Name = name;
+            this.Wallet = wallet;
         }
-
+        
         public void CollectMoney(decimal ammount)
         {
             this.Wallet += ammount;
@@ -73,7 +64,7 @@ namespace HotelManager.Person
         {
             return ammount >= this.Wallet;
         }
-
+        
         public decimal PayMoney(decimal ammount)
         {
             this.Wallet -= ammount;

@@ -11,21 +11,19 @@ namespace HotelManager.Person
     {
         public ICollection<Languages> CollOfLanguages { get; set; }
 
-        protected const Languages BaseLanguage = Languages.EN;
         private const string PhraseToTranslate = "How are you today?";
 
         public Facility.Facility WorkPlace { get; set; }
 
         public decimal Salary { get; set; }
 
-        public Personel(uint id, string name) : base(id, name)
-        {
-        }
+        protected const Languages BaseLanguage = Languages.EN;
 
-        public Personel(uint id, string name, decimal salary) : base(id, name)
+        public Personel(uint id, string name, decimal salary) : base(id, name, salary)
         {
             this.Salary = salary;
             this.WorkPlace = null;
+            this.Wallet += salary;
         }
 
         public string Welcome(Languages langCode)

@@ -21,13 +21,13 @@ namespace HotelManager
             recepOne.CollOfLanguages.Add(Languages.BG);
             
             // Creating client
-            Client clientOne = new Client(456, "Georgi Iliev");
+            Client clientOne = new Client(456, "Georgi Iliev",0.0m);
            
             //IComunicate test
             TestComunications(recepOne);
             ////IPay test
             //Comment because of testing
-            /*
+           
             Console.WriteLine("IPay test:");
             Console.WriteLine(clientOne.Name + "'s balance: " + clientOne.Ballance());
             clientOne.CollectMoney(165.98M);
@@ -43,6 +43,7 @@ namespace HotelManager
             Room room2 = new Room(RoomKind.Sgl, 1);
             hotelOne.CreateRoom(room2, 3);
             Manager manager = new Manager(1245, "Petar Petrov", 2350);
+            //Housekeeping maid1 = new Housekeeping(104324, "Gosho", 0m);
             Housekeeping maid = new Housekeeping(5469, "Kaka Sijka", 150);
             hotelOne.HirePersonel(manager); // Managers can be hired only by Hotels
             manager.HirePersonel(recepOne); // Other personel can be hired by Managers
@@ -64,7 +65,6 @@ namespace HotelManager
             maid.CleanRoom(inRoom1); //inRoom2 will remain unclean :) 
             Console.WriteLine("List of rooms after checkout:");
             Console.WriteLine(hotelOne.ListRooms());
-            */
         }
   
         private static void TestComunications(Receptionist recep)

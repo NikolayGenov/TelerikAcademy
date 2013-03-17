@@ -33,7 +33,7 @@ namespace HotelManager.Person
             }
             return this.WorkPlace.CheckOut(roomNumber);
         }
-      
+        
         public event EventHandler WakeUpCall; //TODO implement the event
     }
 }

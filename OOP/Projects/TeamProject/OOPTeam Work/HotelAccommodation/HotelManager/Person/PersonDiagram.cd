@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="HotelManager.Person.Client" Collapsed="true">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Client.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HotelManager.Person.Housekeeping">
-    <Position X="4.25" Y="3.25" Width="1.5" />
+  <Class Name="HotelManager.Person.Housekeeping" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Housekeeping.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HotelManager.Person.Manager">
-    <Position X="1.75" Y="3.25" Width="1.5" />
+    <Position X="6.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HotelManager.Person.Person" Collapsed="true">
+  <Class Name="HotelManager.Person.Person">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgACAAAAAAAAAAAAAAAAIQQAACAEAAgAgAIAAAAAAgA=</HashCode>
@@ -29,23 +29,23 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="HotelManager.Person.Personel" Collapsed="true">
-    <Position X="4.25" Y="1.75" Width="1.5" />
+  <Class Name="HotelManager.Person.Personel">
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgCAAIAAAAAAAAAAAAAAAAAAACAAAAAgAAACAAAA=</HashCode>
+      <HashCode>AAAAgCAAIAAAAAAAAAAAAAAAAAAAaEAAAAgAAASAAAA=</HashCode>
       <FileName>Person\Personel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="HotelManager.Person.Receptionist">
-    <Position X="6.5" Y="3" Width="1.5" />
+  <Class Name="HotelManager.Person.Receptionist" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABCAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Receptionist.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HotelManager.Person.PersonException" Collapsed="true">
-    <Position X="9.5" Y="3.5" Width="1.5" />
+    <Position X="8.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\PersonException.cs</FileName>
@@ -53,21 +53,21 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="HotelManager.Person.IComunicate" Collapsed="true">
-    <Position X="9.5" Y="1.5" Width="1.5" />
+    <Position X="8.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAA=</HashCode>
       <FileName>Person\IComunicate.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="HotelManager.Person.IPay" Collapsed="true">
-    <Position X="9.5" Y="2.5" Width="1.5" />
+    <Position X="8.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAgAIAAAAAAAA=</HashCode>
       <FileName>Person\IPay.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="HotelManager.Person.Languages" Collapsed="true">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAACAAAAAAAAAAAAgACAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Languages.cs</FileName>

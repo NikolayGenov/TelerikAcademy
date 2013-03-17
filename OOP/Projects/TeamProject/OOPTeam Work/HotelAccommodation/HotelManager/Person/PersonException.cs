@@ -9,26 +9,22 @@ namespace HotelManager.Person
 {
     class PersonException : Exception, ISerializable
     {
-        public PersonException()
-            : base()
+        public PersonException() : base()
         {
             // Add implementation.
         }
 
-        public PersonException(string message)
-            : base(message)
+        public PersonException(string message) : base(message)
         {
             // Add implementation.
         }
 
-        public PersonException(string message, Exception inner)
-            :base(message, inner)
+        public PersonException(string message, Exception inner) : base(message, inner)
         {
             // Add implementation.
         }
 
-        protected PersonException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
+        protected PersonException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }
