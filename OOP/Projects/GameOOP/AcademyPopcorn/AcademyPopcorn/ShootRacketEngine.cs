@@ -11,7 +11,6 @@ namespace AcademyPopcorn
         public ShootRacketEngine(IRenderer renderer, IUserInterface userInterface, int timeToSleep) : base(renderer, userInterface, timeToSleep)
         {
         }
-
-
+        //Create method ShootPlayerRacket 
     }
 }
