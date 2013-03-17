@@ -32,6 +32,13 @@ namespace AcademyPopcorn
                     engine.AddObject(bomb);
                     continue;
                 }
+                //Adding a gift here
+                if (i == endCol - 2)
+                {
+                    GiftBlock gift = new GiftBlock(new MatrixCoords(startRow + 1, i));
+                    engine.AddObject(gift);
+                    continue;
+                }
                 Block currBlock = new Block(new MatrixCoords(startRow + 1, i));
                 engine.AddObject(currBlock);
             }
@@ -70,7 +77,7 @@ namespace AcademyPopcorn
             //End of task 7
 
             //Task 9  - UnpassableBlock added
-            for (int i = startCol + 5; i < endCol-17; i++)
+            for (int i = startCol + 5; i < endCol - 17; i++)
             {
                 Block unpassBlock = new UnpassableBlock(new MatrixCoords(startRow + 9, i));
 
@@ -79,7 +86,7 @@ namespace AcademyPopcorn
             
             //Adding unstoppable Ball to the game at some position
             //When the ball destroys more than it should - it's from the colision detection
-            Ball unstopBall = new UnstoppableBall(new MatrixCoords(20,  5),
+            Ball unstopBall = new UnstoppableBall(new MatrixCoords(20, 5),
                 new MatrixCoords(-1, 1));
             engine.AddObject(unstopBall);
             //End of task 9
