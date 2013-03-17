@@ -1,23 +1,28 @@
 ﻿using System;
 using System.Linq;
 using System.Net;
+using System.Text;
 using HotelManager.Facility;
+using System.Collections.Generic;
 
 namespace HotelManager.Person
 {
     public class Personel : Person, IComunicate
     {
-        private const Languages BaseLanguage = Languages.EN;
+        public ICollection<Languages> CollOfLanguages { get; set; }
+
+        protected const Languages BaseLanguage = Languages.EN;
+        private const string PhraseToTranslate = "How are you today?";
+
         public Facility.Facility WorkPlace { get; set; }
+
         public decimal Salary { get; set; }
 
-        public Personel(uint id, string name) 
-            : base(id, name)
+        public Personel(uint id, string name) : base(id, name)
         {
         }
 
-        public Personel(uint id, string name, decimal salary)
-            : base(id, name)
+        public Personel(uint id, string name, decimal salary) : base(id, name)
         {
             this.Salary = salary;
             this.WorkPlace = null;
@@ -104,6 +109,31 @@ namespace HotelManager.Person
                 }
             }
             return result;
+        }
+
+        public string Speak(Languages langCode)
+        {
+            StringBuilder text = new StringBuilder();
+            text.AppendLine(Welcome(langCode));
+            text.AppendLine(SayIt(langCode, PhraseToTranslate));
+            text.AppendLine(GoodBye(langCode));
+            return text.ToString();
+        }
+
+        public ICollection<Languages> IsAbleToSpeakIn()
+        {
+            return this.CollOfLanguages;
+        }
+        
+        public string CanSpeak()
+        {
+            StringBuilder infoLang = new StringBuilder();
+            infoLang.Append("Press :");
+            foreach (var lang in CollOfLanguages)
+            {
+                infoLang.AppendFormat(" {0} for {1} ", (int)lang, lang);
+            }
+            return infoLang.ToString();
         }
     }
 }

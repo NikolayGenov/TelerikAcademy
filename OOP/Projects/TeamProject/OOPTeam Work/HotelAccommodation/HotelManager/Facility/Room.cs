@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace HotelManager.Facility
 {
-    public class Room
+    public class Room : ICloneable
     {
         public ushort RoomNumber { get; set; }
+
         public RoomKind Kind { get; set; }
+
         public byte NumberOfBeds { get; set; }
+
         public bool IsFree { get; set; }
+
         public bool IsCleaned { get; set; }
+
         public decimal Bill { get; set; }
 
         public Room()
@@ -25,11 +30,14 @@ namespace HotelManager.Facility
             this.Bill = 0;
         }
 
-        public Room(RoomKind kind, byte numberOfBeds)
-            : this()
+        public Room(RoomKind kind, byte numberOfBeds) : this()
         {
             this.Kind = kind;
             this.NumberOfBeds = numberOfBeds;
+        }
+        public object Clone()
+        {
+            return this.MemberwiseClone();      // call clone method
         }
     }
 }

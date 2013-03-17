@@ -2,9 +2,9 @@
 {
     public enum Languages //set of languages to comunicate in
     {
-        BG,
-        EN,
+        EN = 1,
+        RU,
         DE,
-        RU
+        BG
     }
 }

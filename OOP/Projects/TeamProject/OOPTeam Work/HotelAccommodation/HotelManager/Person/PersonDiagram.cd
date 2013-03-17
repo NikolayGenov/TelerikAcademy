@@ -8,21 +8,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="HotelManager.Person.Housekeeping">
-    <Position X="3" Y="3.25" Width="1.5" />
+    <Position X="4.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Housekeeping.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HotelManager.Person.Manager">
-    <Position X="1" Y="3.25" Width="1.5" />
+    <Position X="1.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HotelManager.Person.Person">
-    <Position X="7.25" Y="0.5" Width="1.5" />
+  <Class Name="HotelManager.Person.Person" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgACAAAAAAAAAAAAAAAAIQQAACAEAAgAgAIAAAAAAgA=</HashCode>
       <FileName>Person\Person.cs</FileName>
@@ -30,7 +30,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="HotelManager.Person.Personel" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
+    <Position X="4.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgCAAIAAAAAAAAAAAAAAAAAAACAAAAAgAAACAAAA=</HashCode>
       <FileName>Person\Personel.cs</FileName>
@@ -38,7 +38,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="HotelManager.Person.Receptionist">
-    <Position X="5" Y="3.25" Width="1.5" />
+    <Position X="6.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABCAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Receptionist.cs</FileName>
