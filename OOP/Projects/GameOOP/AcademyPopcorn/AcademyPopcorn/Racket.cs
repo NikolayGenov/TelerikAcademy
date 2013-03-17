@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace AcademyPopcorn
 {
@@ -9,9 +7,9 @@ namespace AcademyPopcorn
     {
         public new const string CollisionGroupString = "racket";
 
-        public int Width {get; protected set;}
+        public int Width { get; protected set; }
 
-        public Racket(MatrixCoords topLeft, int width) : base(topLeft, new char[,]{{'='}})
+        public Racket(MatrixCoords topLeft, int width) : base(topLeft, new char[,] { { '=' } })
         {
             this.Width = width;
             this.body = GetRacketBody(this.Width);

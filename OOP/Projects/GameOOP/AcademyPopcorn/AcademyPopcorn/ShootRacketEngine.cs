@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace AcademyPopcorn
 {
@@ -11,6 +8,14 @@ namespace AcademyPopcorn
         public ShootRacketEngine(IRenderer renderer, IUserInterface userInterface, int timeToSleep) : base(renderer, userInterface, timeToSleep)
         {
         }
-        //Create method ShootPlayerRacket 
+
+        //Task 13
+        public void ShootPlayerRacket()
+        {
+            if (this.playerRacket is ShootingRacket)
+            {
+                (this.playerRacket as ShootingRacket).ProduceShot();
+            }
+        }
     }
 }

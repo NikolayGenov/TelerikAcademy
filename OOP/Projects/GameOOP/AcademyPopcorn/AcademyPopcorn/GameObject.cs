@@ -11,6 +11,7 @@ namespace AcademyPopcorn
         public const string CollisionGroupString = "object";
 
         protected MatrixCoords topLeft;
+
         public MatrixCoords TopLeft
         {
             get

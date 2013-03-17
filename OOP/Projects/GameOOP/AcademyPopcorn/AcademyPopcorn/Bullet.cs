@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AcademyPopcorn
 {
-    class Bullet : MovingObject
+    //Task 13
+    public class Bullet : MovingObject
     {
         public static MatrixCoords VectorUp = new MatrixCoords(-1, 0);
 
@@ -27,10 +24,10 @@ namespace AcademyPopcorn
                 this.IsDestroyed = true;
             }
         }
+
         public override string GetCollisionGroupString()
         {
             return Ball.CollisionGroupString;
         }
-        //To DO  - to  finish that class
     }
 }

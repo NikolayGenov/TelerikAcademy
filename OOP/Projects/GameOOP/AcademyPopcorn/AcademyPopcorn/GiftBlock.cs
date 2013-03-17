@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AcademyPopcorn
 {
@@ -11,7 +9,7 @@ namespace AcademyPopcorn
     {
         public GiftBlock(MatrixCoords topLeft) : base(topLeft)
         {
-            this.body[0, 0] = '&';
+            this.body[0, 0] = '▲';
         }
        
         public override IEnumerable<GameObject> ProduceObjects()

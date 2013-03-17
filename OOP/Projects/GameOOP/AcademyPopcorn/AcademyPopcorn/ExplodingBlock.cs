@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AcademyPopcorn
 {
@@ -22,6 +20,7 @@ namespace AcademyPopcorn
         {
             if (isActive)
             {
+                //Add in every possible direction
                 List<Shrapnel> shrapnels = new List<Shrapnel>();
                 shrapnels.Add(new Shrapnel(this.TopLeft, new char[,] { { '¤' } }, new MatrixCoords(0, 1)));
                 shrapnels.Add(new Shrapnel(this.TopLeft, new char[,] { { '¤' } }, new MatrixCoords(0, -1)));

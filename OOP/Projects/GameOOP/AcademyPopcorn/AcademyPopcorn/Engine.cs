@@ -12,9 +12,9 @@ namespace AcademyPopcorn
         List<GameObject> allObjects;
         List<MovingObject> movingObjects;
         List<GameObject> staticObjects;
-        Racket playerRacket;
+        public Racket playerRacket;
 
-        public int TimeToSleep { get; set; } //Task 2
+        public int TimeToSleep { get; set; }//Task 2
 
         public Engine(IRenderer renderer, IUserInterface userInterface, int timeToSleep =500) //Task 2
         {

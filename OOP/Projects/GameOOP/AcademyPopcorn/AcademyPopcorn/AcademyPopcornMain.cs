@@ -99,9 +99,11 @@ namespace AcademyPopcorn
         {
             IRenderer renderer = new ConsoleRenderer(WorldRows, WorldCols);
             IUserInterface keyboard = new KeyboardInterface();
-            int timeToSleep = 200;                                                   //Task 2
-            Engine gameEngine = new Engine(renderer, keyboard, timeToSleep);         //Task 2
-
+            int timeToSleep = 200;       //Task 2
+            //Because it inherit Engine we can do that and add the method ShootPlayerRacket to it to produce bullets
+            //Task 13
+            ShootRacketEngine gameEngine = new ShootRacketEngine(renderer, keyboard, timeToSleep);
+        
             keyboard.OnLeftPressed += (sender, eventInfo) =>
             {
                 gameEngine.MovePlayerRacketLeft();
@@ -111,10 +113,13 @@ namespace AcademyPopcorn
             {
                 gameEngine.MovePlayerRacketRight();
             };
-
+            keyboard.OnActionPressed += (sender, eventInfo) =>
+            {
+                //Task 13
+                gameEngine.ShootPlayerRacket();
+            };
+            
             Initialize(gameEngine);
-
-            //
 
             gameEngine.Run();
         }
