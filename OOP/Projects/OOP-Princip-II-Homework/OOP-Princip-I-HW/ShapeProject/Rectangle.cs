@@ -1,5 +1,4 @@
-﻿
-namespace ShapeProject
+﻿namespace ShapeProject
 {
     public class Rectangle : Shape
     {
@@ -7,6 +6,7 @@ namespace ShapeProject
         {
         }
 
+        //override of the class to return some actual value
         public override double CalculateSurface()
         {
             return this.Width * this.Height;

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ShapeProject
+﻿namespace ShapeProject
 {
     public abstract class Shape
     {
+        //The base class with abstract method
         public double Height { get; set; }
 
         public double Width { get; set; }
