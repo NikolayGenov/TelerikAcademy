@@ -8,8 +8,6 @@ namespace HotelManager.Facility
 {
     public abstract class Facility : IAccommodate
     {
-        public event EventHandler CleanRoom; //TODO implement event
-
         public ICollection<Personel> Personel { get; set; }
        
         //Polymorphism (this collection is keeping managers, receptionists, housekeepers, etc.)
@@ -177,12 +175,12 @@ namespace HotelManager.Facility
             }
         }
 
-        public void RoomCleaner()
+        public void RoomCleaner(ushort clientID)
         {
             var queryRoom =
                            from room in this.Rooms
                            where !(room.IsCleaned ||
-                                   (this.TakenRooms.Contains(room)))
+                                   (this.TakenRooms.Contains(room)) && (room.RoomNumber == clientID))
                            select room;
             if (queryRoom.Count() == 0)
             {

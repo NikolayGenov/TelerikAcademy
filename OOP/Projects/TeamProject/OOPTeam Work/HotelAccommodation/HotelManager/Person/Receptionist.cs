@@ -34,6 +34,7 @@ namespace HotelManager.Person
                 throw new PersonException("I'm unemployed! Please hire me!");
             }
             return this.WorkPlace.CheckOut(client);
+            
         }
 
         public bool GiveRoom(ICollection<Client> clients)
@@ -60,6 +61,10 @@ namespace HotelManager.Person
             if (CheckOut(client))
             {
                 info.AppendFormat("The client was checked out successfully").AppendLine();
+                if (this.RoomCleanEvent != null)
+                {
+                    this.RoomCleanEvent(this, new RoomEventArgs((ushort)client.Id));
+                }
             }
             else
             {
@@ -84,28 +89,30 @@ namespace HotelManager.Person
             return info.ToString();
         }
         //Method used to triger the event
-        //public void WakeUpCall(ushort timer, Client requestor)
-        //{
-        //    this.WakeupCallEvent += new Receptionist.CustomEventHandler(AlarmClock);
-        //    if (this.WakeupCallEvent != null)
-        //    {
-        //        this.WakeupCallEvent(this, new WakeupEventArgs(timer, requestor.Name));
-        //    }
-        //}
-        ////Method called by the event
-        //public void AlarmClock(Receptionist sender, WakeupEventArgs e)
-        //{
-        //    Console.WriteLine("Wakeup call requested after {0} hours",e.Timer);
-        //    string name = e.ClientName;
-        //    DateTime currentDate = DateTime.Now;
-        //    currentDate = currentDate.AddHours((double)e.Timer);
-        //    ushort start = e.Timer;
-        //    Thread.Sleep(start * 1000);
-        //    Console.WriteLine("Wakeup Mr {0} it is {1:t}", name,currentDate);
-        //}
-        ////Delegate for custom event
-        //public delegate void CustomEventHandler(Receptionist re, WakeupEventArgs e);
-        ////Custom event
-        //public event CustomEventHandler WakeupCallEvent;
+        public void WakeUpCall(ushort timer, Client requestor)
+        {
+            this.WakeupCallEvent += new Receptionist.CustomEventHandler(AlarmClock);
+            if (this.WakeupCallEvent != null)
+            {
+                this.WakeupCallEvent(this, new WakeupEventArgs(timer, requestor.Name));
+            }
+        }
+        //Method called by the event
+        public void AlarmClock(Receptionist sender, WakeupEventArgs e)
+        {
+            Console.WriteLine("Wakeup call requested after {0} hours",e.Timer);
+            string name = e.ClientName;
+            DateTime currentDate = DateTime.Now;
+            currentDate = currentDate.AddHours((double)e.Timer);
+            ushort start = e.Timer;
+            Thread.Sleep(start * 1000);
+            Console.WriteLine("Wakeup Mr {0} it is {1:t}", name,currentDate);
+        }
+        //Delegate for custom event
+        public delegate void CustomEventHandler(Receptionist re, WakeupEventArgs e);
+        public delegate void RoomEventHandle(Receptionist re, RoomEventArgs e);
+        //Custom event
+        public event CustomEventHandler WakeupCallEvent;
+        public event RoomEventHandle RoomCleanEvent; 
     }
 }

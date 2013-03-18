@@ -30,8 +30,9 @@ namespace HotelManager
             //TestComunications(recepOne);
             ////IPay test
             //Comment because of testing
-            //Test Wakeup event
-            // recepOne.WakeUpCall(8, clientOne);
+            
+            //Wakeup event
+            //recepOne.WakeUpCall(8, clientOne);
 
             Console.WriteLine("Enter to continue");
             Console.ReadKey();
@@ -80,8 +81,10 @@ namespace HotelManager
             //Console.WriteLine(hotelOne.ListRooms());
          
             //CHECK OUT
+            maid.Subscribe(recepOne);
             Console.WriteLine( recepOne.TryCheckOutRoom(clientOne));
-            maid.CleanRoom(); //inRoom2 will remain unclean :) 
+            
+            //maid.CleanRoom(); //inRoom2 will remain unclean :) 
             // maid.CleanRoom(); // can't clrean because it's not empty
             //Console.WriteLine("List of rooms after checkout:");
             Console.WriteLine(hotelOne.ListRooms());

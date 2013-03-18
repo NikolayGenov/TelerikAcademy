@@ -3,14 +3,14 @@
   <Class Name="HotelManager.Person.Client" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAAAAEAAIE=</HashCode>
       <FileName>Person\Client.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HotelManager.Person.Housekeeping" Collapsed="true">
     <Position X="6.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person\Housekeeping.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -39,8 +39,20 @@
   </Class>
   <Class Name="HotelManager.Person.Receptionist" Collapsed="true">
     <Position X="6.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="HotelManager.Person.Receptionist.CustomEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Person\Receptionist.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="HotelManager.Person.Receptionist.RoomEventHandle" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Person\Receptionist.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAgABAABABAAAAAIAABAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Person\Receptionist.cs</FileName>
     </TypeIdentifier>
   </Class>
