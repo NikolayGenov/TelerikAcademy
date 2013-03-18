@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 namespace ShapeProject
 {
     public class Triangle : Shape
@@ -11,7 +7,7 @@ namespace ShapeProject
         {
         }
 
-        public double CalculateSurface()
+        public override double CalculateSurface()
         {
             return this.Width * this.Height;
         }

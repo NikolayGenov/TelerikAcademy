@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeProject", "ShapeProject\ShapeProject.csproj", "{06FC1122-5A1A-44EE-8E7A-3D362BB72C66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.ShapeProject", "ShapeProject\1.ShapeProject.csproj", "{06FC1122-5A1A-44EE-8E7A-3D362BB72C66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

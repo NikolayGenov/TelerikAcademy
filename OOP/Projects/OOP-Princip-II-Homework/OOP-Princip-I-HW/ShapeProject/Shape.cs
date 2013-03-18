@@ -7,42 +7,16 @@ namespace ShapeProject
 {
     public abstract class Shape
     {
-        private double width;
-        private double height;
-        
+        public double Height { get; set; }
+
+        public double Width { get; set; }
+
         public Shape(double width, double height)
         {
             this.Width = width;
             this.Height = height;
         }
 
-        public double Height
-        {
-            get
-            {
-                return this.height;
-            }
-            set
-            {
-                this.height = value;
-            }
-        }
-
-        public double Width
-        {
-            get
-            {
-                return this.width;
-            }
-            set
-            {
-                this.width = value;
-            }
-        }
-
-        public virtual double CalculateSurface()
-        {
-            return this.Height * this.Width;
-        }
+        public abstract double CalculateSurface();
     }
 }
