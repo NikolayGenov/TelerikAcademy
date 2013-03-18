@@ -7,11 +7,15 @@ using HotelManager.Person;
 
 namespace HotelManager.Facility
 {
+    //student hostel ?
     public class Hostel : Facility
     {
-        public Hostel(Category category) 
-            : base(category)
+        public byte NumberOfCookingRooms { get; private set; }
+
+        //number of rooms for students ?
+        public Hostel(Category category, byte numberOfCookingRooms = 1) : base(category)
         {
+            this.NumberOfCookingRooms = numberOfCookingRooms;
         }
     }
 }

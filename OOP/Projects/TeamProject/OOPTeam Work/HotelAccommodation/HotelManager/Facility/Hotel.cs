@@ -9,9 +9,11 @@ namespace HotelManager.Facility
 {
     public class Hotel : Facility
     {
-        public Hotel(Category category) 
-            : base(category)
+        public byte NumberOfPools { get; private set; }
+
+        public Hotel(Category category, byte numberOfPools =1) : base(category)
         {
+            this.NumberOfPools = numberOfPools;
         }
     }
 }

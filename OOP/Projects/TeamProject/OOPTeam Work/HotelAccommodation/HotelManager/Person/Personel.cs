@@ -9,6 +9,7 @@ namespace HotelManager.Person
 {
     public class Personel : Person, IComunicate
     {
+         public static uint ID = 1000;
         public ICollection<Languages> CollOfLanguages { get; set; }
 
         private const string PhraseToTranslate = "How are you today?";
@@ -19,8 +20,9 @@ namespace HotelManager.Person
 
         protected const Languages BaseLanguage = Languages.EN;
 
-        public Personel(uint id, string name, decimal salary) : base(id, name, salary)
+        public Personel(string name, decimal salary) : base(name, salary)
         {
+            this.Id = ID++;
             this.Salary = salary;
             this.WorkPlace = null;
             this.Wallet += salary;

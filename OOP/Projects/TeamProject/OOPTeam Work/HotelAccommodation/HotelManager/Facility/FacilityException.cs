@@ -12,19 +12,16 @@ namespace HotelManager.Facility
         public FacilityException()
             : base()
         {
-            // Add implementation.
         }
 
         public FacilityException(string message)
             : base(message)
         {
-            // Add implementation.
         }
 
         public FacilityException(string message, Exception inner)
             :base(message, inner)
         {
-            // Add implementation.
         }
 
         protected FacilityException(SerializationInfo info, StreamingContext context)

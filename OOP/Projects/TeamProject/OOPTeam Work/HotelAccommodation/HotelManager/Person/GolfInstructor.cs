@@ -8,8 +8,9 @@ namespace HotelManager.Person
 {
     class GolfInstructor : Personel
     {
-        public GolfInstructor(uint id, string name, decimal salary) 
-            : base(id, name, salary)
+      
+
+        public GolfInstructor(string name, decimal salary) : base(name, salary)
         {
         }
 

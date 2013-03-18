@@ -72,18 +72,21 @@ namespace HotelManager.Facility
             return info.ToString();
         }
 
-        //public virtual void RentRoom(ICollection<Room> rooms, Receptionist recep, Client client, RoomPrice price)
-        //{
-        //    if (client.RequestMoney(client.PayForRoom((decimal)price)))
-        //    {
-        //        Console.WriteLine("test");
-        //    }
-        //    else
-        //    {
-        //        //Client can't PAY
-        //    }
-        //}
-
+        public string ListTakenRooms()
+        {
+            StringBuilder info = new StringBuilder();
+            info.AppendLine("List of taken rooms");
+            foreach (var room in this.TakenRooms)
+            {
+                info.AppendLine("Room number: " + room.RoomNumber);
+                info.AppendLine("Room kind: " + room.Kind);
+                //  info.AppendFormat("Room is {0}\n", room.IsFree ? "free" : "occupied");
+                // info.AppendFormat("Room is {0}\n", room.IsCleaned ? "cleaned" : "not cleaned");
+                info.AppendLine(new string('-', 20));
+            }
+            return info.ToString();
+        }
+        
         public virtual Room CheckIn(ICollection<Person.Client> clients)
         {
             var queryRoom =
@@ -111,31 +114,36 @@ namespace HotelManager.Facility
             //When room is CheckedIn - it becomes NOT free and NOT clean
             selectedRoom.IsFree = false;
             selectedRoom.IsCleaned = false;
-            selectedRoom.Bill = 0;
+      
             return selectedRoom;
         }
 
-        public virtual decimal CheckOut(Client client)
+        public virtual bool CheckOut(Client client)
         {
-            decimal bill = 0;
             var queryRoom =
                            from room in this.TakenRooms
                            where client.Id == room.RoomNumber
                            select room;
             if (queryRoom.Count() == 0)
             {
-                throw new FacilityException("There is client like that in this room !");
+                try
+                {
+                    throw new FacilityException("There is client like that in this room !");
+                }
+                catch
+                {
+                    return false;
+                }
             }
             Room selectedRoom = queryRoom.First();
             selectedRoom.IsCleaned = false;
             // Invoke event CleanRoom(roomnumber)
             selectedRoom.IsFree = true;
-            bill = selectedRoom.Bill;
+            client = null;
+            this.TakenRooms.Remove(selectedRoom);
             // FIX BILL THING - remove it somehow
             //****************************
-            selectedRoom.Bill = 0;
-            return bill;
-            //****************************
+            return true;
         }
         
         public string GetPersonalByType(Type personalType) //Polymorhism implementation (can return list of one category personel or all personel)
@@ -169,15 +177,16 @@ namespace HotelManager.Facility
             }
         }
 
-        public void RoomCleaner(ushort roomNumber)
+        public void RoomCleaner()
         {
             var queryRoom =
                            from room in this.Rooms
-                           where room.RoomNumber == roomNumber
+                           where !(room.IsCleaned ||
+                                   (this.TakenRooms.Contains(room)))
                            select room;
             if (queryRoom.Count() == 0)
             {
-                throw new FacilityException("There is no room with room number " + roomNumber);
+                throw new FacilityException("The room is taken or it's already clean ");
             }
             Room selectedRoom = queryRoom.First();
             selectedRoom.IsCleaned = true;

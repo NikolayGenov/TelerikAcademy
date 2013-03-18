@@ -5,7 +5,9 @@ namespace HotelManager.Person
 {
     public class Manager : Personel
     {
-        public Manager(uint id, string name, decimal salary) : base(id, name, salary)
+     
+
+        public Manager(string name, decimal salary) : base(name, salary)
         {
         }
 

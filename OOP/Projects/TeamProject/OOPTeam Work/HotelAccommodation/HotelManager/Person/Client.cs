@@ -12,11 +12,12 @@ namespace HotelManager.Person
         public byte EducationLevel { get; set; }
 
         public RoomKind RoomToRent { get; private set; }
-
+        
         //Make person ID not so unique and that can be given to corresponding number of the room
         //****************************
-        public Client(uint id, string name, decimal wallet, RoomKind room = RoomKind.Single) : base(id, name, wallet)
+        public Client(string name, decimal wallet, RoomKind room = RoomKind.Single) : base(name, wallet)
         {
+            this.Id = 0;
             this.EducationLevel = 0;
             this.RoomToRent = room;
         }
@@ -27,10 +28,15 @@ namespace HotelManager.Person
             return pricePerRoom * (int)RoomToRent;
         }
 
+        public decimal CanPayForRoom(decimal pricePerRoom)
+        {
+            return pricePerRoom * (int)RoomToRent;
+        }
+
         public bool RequestRentRoom(RoomPrice price)
         {
             bool canPay = false;
-            if (this.RequestMoney(this.PayForRoom((decimal)price)))
+            if (this.RequestMoney(this.CanPayForRoom((decimal)price)))
             {
                 canPay = true;
                 return canPay; 

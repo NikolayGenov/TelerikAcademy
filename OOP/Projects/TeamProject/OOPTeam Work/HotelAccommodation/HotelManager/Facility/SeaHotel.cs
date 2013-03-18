@@ -8,9 +8,12 @@ namespace HotelManager.Facility
 {
     public class SeaHotel : Hotel
     {
-        public SeaHotel(Category category) : 
-            base(category)
+        //Prop unique for seahotels
+        //beach sides ? Number of sea side spots ?
+
+        public SeaHotel(Category category, byte numberOfPools) : base(category, numberOfPools)
         {
+
         }
     }
 }

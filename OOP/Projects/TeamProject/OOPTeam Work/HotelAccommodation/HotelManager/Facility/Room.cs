@@ -18,8 +18,7 @@ namespace HotelManager.Facility
 
         public bool IsCleaned { get; set; }
 
-        public decimal Bill { get; set; }
-
+        
         public Room()
         {
             this.RoomNumber = 0;
@@ -27,14 +26,14 @@ namespace HotelManager.Facility
             this.NumberOfBeds = 0;
             this.IsFree = true;
             this.IsCleaned = true;
-            this.Bill = 0;
+        
             //Or PAY THE BILL instead of paying at check in
         }
 
-        public Room(RoomKind kind, byte numberOfBeds) : this()
+        public Room(RoomKind kind) : this()
         {
             this.Kind = kind;
-            this.NumberOfBeds = numberOfBeds;
+            this.NumberOfBeds = (byte)kind;
         }
         public object Clone()
         {

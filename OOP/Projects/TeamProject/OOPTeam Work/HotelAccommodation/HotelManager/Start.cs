@@ -14,59 +14,81 @@ namespace HotelManager
         {
             //const decimal PricePerRoom = 93M;
             // Creating Receptionist
-            Receptionist recepOne = new Receptionist(123, "Penka", 600);
+            Receptionist recepOne = new Receptionist("Penka", 600);
             
             //  recepOne.CollOfLanguages.Add(Languages.EN);
             //  recepOne.CollOfLanguages.Add(Languages.RU);
             //  recepOne.CollOfLanguages.Add(Languages.DE);
             recepOne.CollOfLanguages.Add(Languages.BG);
-            
-            // Creating client
-            Client clientOne = new Client(456, "Georgi Iliev", 165.98M);
-           
-            //COMMENTED - WORKING FOR NOW :)
-                    ////IComunicate test
-                    //TestComunications(recepOne);
-                    //////IPay test
-                    ////Comment because of testing
 
+            // Creating client
+            Client clientOne = new Client("Georgi Iliev", 165.98M,RoomKind.Double);
+            Client clientTwo = new Client("Georgi Georgiev", 250.98M, RoomKind.Single);
+
+            ////COMMENTED - WORKING FOR NOW :)
+            ////IComunicate test
+            //TestComunications(recepOne);
+            ////IPay test
+            //Comment because of testing
+            //Test Wakeup event
+            // recepOne.WakeUpCall(8, clientOne);
+
+            Console.WriteLine("Enter to continue");
+            Console.ReadKey();
             Console.WriteLine("IPay test:");
             Console.WriteLine(clientOne.Name + "'s balance " + clientOne.Ballance());
             recepOne.CollectMoney(clientOne.PayForRoom((decimal)RoomPrice.Single));
             Console.WriteLine(recepOne.Name + "'s balance, after CollectMoney(): " + recepOne.Ballance());
             Console.WriteLine(clientOne.Name + "'s balance, after PayMoney(): " + clientOne.Ballance());
             // Create hotel, personel and client
-            Hotel hotelOne = new Hotel(Category.FiveStar);
+            Hotel hotelOne = new Hotel(Category.FiveStar, numberOfPools: 3);
+            SeaHotel seaHotel = new SeaHotel(Category.FourStar, 10);//fix this
             //When creating a room we should set it as free, clean and some beds inside
-            Room room1 = new Room(RoomKind.Double, 2);
+           
+            Room room1 = new Room(RoomKind.Triple);
             hotelOne.CreateRoom(room1, 3);
-            Room room2 = new Room(RoomKind.Single, 1);
-            
+            Room room2 = new Room(RoomKind.Single);
+            Room room3 = new Room(RoomKind.Double);
             hotelOne.CreateRoom(room2, 3);
             hotelOne.TakenRooms = new List<Room>();
-            Manager manager = new Manager(1245, "Petar Petrov", 2350);
+          
+            Manager manager = new Manager("Petar Petrov", 2350);
             //Housekeeping maid1 = new Housekeeping(104324, "Gosho", 0m);
-            Housekeeping maid = new Housekeeping(5469, "Kaka Sijka", 150);
+            Housekeeping maid = new Housekeeping("Kaka Sijka", 150);
             hotelOne.HirePersonel(manager); // Managers can be hired only by Hotels
             manager.HirePersonel(recepOne); // Other personel can be hired by Managers
             manager.HirePersonel(maid);
-            Console.WriteLine();
+            
+            Console.ReadLine();
             Console.WriteLine("Get all Receptionists:");
             Console.WriteLine(hotelOne.GetPersonalByType(typeof(Receptionist)));
             Console.WriteLine("Get all Personel:");
             Console.WriteLine(hotelOne.GetPersonalByType(typeof(Personel)));
             List<Client> clients = new List<Client>();
             clients.Add(clientOne);
+            clients.Add(clientOne);
+           
+            //CHECK IN
+            Console.WriteLine(recepOne.TryGivingRoom(clients));
             //IAccommodate test
-            recepOne.GiveRoom(clients, RoomPrice.Single);
-            //  recepOne.CheckIn(clients);
-            Console.WriteLine("List of rooms after checkin:");
+            //  recepOne.GiveRoom(clients );
+            //recepOne.GiveRoom(clients);
+            
+            Console.ReadLine();
+            Console.WriteLine(hotelOne.ListTakenRooms());
+            //Console.WriteLine("List of rooms after checkin:");
+            //Console.WriteLine(hotelOne.ListRooms());
+         
+            //CHECK OUT
+            Console.WriteLine( recepOne.TryCheckOutRoom(clientOne));
+            maid.CleanRoom(); //inRoom2 will remain unclean :) 
+            // maid.CleanRoom(); // can't clrean because it's not empty
+            //Console.WriteLine("List of rooms after checkout:");
             Console.WriteLine(hotelOne.ListRooms());
-            recepOne.CheckOut(clientOne);
-            //  recepOne.CheckOut(inRoom2);
-            // maid.CleanRoom(inRoom1); //inRoom2 will remain unclean :) 
-            Console.WriteLine("List of rooms after checkout:");
-            Console.WriteLine(hotelOne.ListRooms());
+
+            Console.ReadLine();
+            Console.WriteLine("The End!");
+            Console.ReadLine();
         }
   
         private static void TestComunications(Receptionist recep)
@@ -94,5 +116,12 @@ namespace HotelManager
                 Console.WriteLine("Excuse me, I can't translate this. No connection to my brain!");
             }
         }
+        //public static void CreatingSomeOtherObjects()
+        //{
+        //    Client chichkoTrevichko = new Client(7777, "Chichko Trevichko", 5000m); //Creating client.
+        //    Chalet alekoHut = new Chalet(Category.FourStar); //Creating chalet.
+        //    chichkoTrevichko.EducationLevel = 5; //Education level type byte?
+        //    alekoHut.CheckIn
+        //}
     }
 }

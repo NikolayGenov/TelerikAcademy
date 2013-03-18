@@ -9,9 +9,12 @@ namespace HotelManager.Facility
 {
     public class Chalet : Facility
     {
-        public Chalet(Category category) 
-            : base(category)
+        //Ski lifts available ?
+        public byte NumberOfSkiLifts { get; private set; }
+
+        public Chalet(Category category, byte numberOfSkiLifts =0) : base(category)
         {
+            this.NumberOfSkiLifts = numberOfSkiLifts;
         }
     }
 }

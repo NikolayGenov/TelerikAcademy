@@ -37,20 +37,21 @@ namespace HotelManager.Person
             {
                 return this.id;
             }
-             set
+            set
             {
-                if (identifiers.IndexOf(value) != -1)
-                {
-                    throw new ArgumentException("This ID is already in the list!");
-                }
+                //To DO 
+                //if (identifiers.IndexOf(value) != -1)
+                //{
+                //    throw new ArgumentException("This ID is already in the list!");
+                //}
                 identifiers.Add(value);
                 this.id = value;
             }
         }
 
-        public Person(uint id, string name, decimal wallet)
+        public Person(string name, decimal wallet)
         {
-            this.Id = id;
+            //this.Id = id;
             this.Name = name;
             this.Wallet = wallet;
         }
@@ -62,7 +63,6 @@ namespace HotelManager.Person
 
         public bool RequestMoney(decimal ammount)
         {
-
             return ammount <= this.Wallet;
         }
         

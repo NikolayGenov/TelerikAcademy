@@ -8,18 +8,17 @@ namespace HotelManager.Person
 {
     public class Housekeeping : Personel
     {
-        
-        public Housekeeping(uint id, string name, decimal salary) : base(id, name, salary)
+        public Housekeeping(string name, decimal salary) : base(name, salary)
         {
         }
 
-        public void CleanRoom(ushort roomNumber) //must be invoked through CleanRoom event. An instance of Housekeeping must be its subscriber
+        public void CleanRoom() //must be invoked through CleanRoom event. An instance of Housekeeping must be its subscriber
         {
             if (this.WorkPlace == null)
             {
                 throw new PersonException("I'm unemployed! Please hire me!");
             }
-            this.WorkPlace.RoomCleaner(roomNumber);
+            this.WorkPlace.RoomCleaner();
         }
     }
 }
