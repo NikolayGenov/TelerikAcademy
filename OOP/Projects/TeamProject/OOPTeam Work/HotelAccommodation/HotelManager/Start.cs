@@ -12,6 +12,7 @@ namespace HotelManager
     {
         static void Main()
         {
+            //const decimal PricePerRoom = 93M;
             // Creating Receptionist
             Receptionist recepOne = new Receptionist(123, "Penka", 600);
             
@@ -21,27 +22,28 @@ namespace HotelManager
             recepOne.CollOfLanguages.Add(Languages.BG);
             
             // Creating client
-            Client clientOne = new Client(456, "Georgi Iliev",0.0m);
+            Client clientOne = new Client(456, "Georgi Iliev", 165.98M);
            
-            //IComunicate test
-            TestComunications(recepOne);
-            ////IPay test
-            //Comment because of testing
-           
+            //COMMENTED - WORKING FOR NOW :)
+                    ////IComunicate test
+                    //TestComunications(recepOne);
+                    //////IPay test
+                    ////Comment because of testing
+
             Console.WriteLine("IPay test:");
-            Console.WriteLine(clientOne.Name + "'s balance: " + clientOne.Ballance());
-            clientOne.CollectMoney(165.98M);
-            Console.WriteLine(clientOne.Name + "'s balance, after CollectMoney(): " + clientOne.Ballance());
-            recepOne.CollectMoney(clientOne.PayMoney(93M));
+            Console.WriteLine(clientOne.Name + "'s balance " + clientOne.Ballance());
+            recepOne.CollectMoney(clientOne.PayForRoom((decimal)RoomPrice.Single));
             Console.WriteLine(recepOne.Name + "'s balance, after CollectMoney(): " + recepOne.Ballance());
             Console.WriteLine(clientOne.Name + "'s balance, after PayMoney(): " + clientOne.Ballance());
             // Create hotel, personel and client
             Hotel hotelOne = new Hotel(Category.FiveStar);
             //When creating a room we should set it as free, clean and some beds inside
-            Room room1 = new Room(RoomKind.Dbl, 2);
+            Room room1 = new Room(RoomKind.Double, 2);
             hotelOne.CreateRoom(room1, 3);
-            Room room2 = new Room(RoomKind.Sgl, 1);
+            Room room2 = new Room(RoomKind.Single, 1);
+            
             hotelOne.CreateRoom(room2, 3);
+            hotelOne.TakenRooms = new List<Room>();
             Manager manager = new Manager(1245, "Petar Petrov", 2350);
             //Housekeeping maid1 = new Housekeeping(104324, "Gosho", 0m);
             Housekeeping maid = new Housekeeping(5469, "Kaka Sijka", 150);
@@ -56,13 +58,13 @@ namespace HotelManager
             List<Client> clients = new List<Client>();
             clients.Add(clientOne);
             //IAccommodate test
-            ushort inRoom1 = recepOne.CheckIn(clients);
-            ushort inRoom2 = recepOne.CheckIn(clients);
+            recepOne.GiveRoom(clients, RoomPrice.Single);
+            //  recepOne.CheckIn(clients);
             Console.WriteLine("List of rooms after checkin:");
             Console.WriteLine(hotelOne.ListRooms());
-            recepOne.CheckOut(inRoom1);
-            recepOne.CheckOut(inRoom2);
-            maid.CleanRoom(inRoom1); //inRoom2 will remain unclean :) 
+            recepOne.CheckOut(clientOne);
+            //  recepOne.CheckOut(inRoom2);
+            // maid.CleanRoom(inRoom1); //inRoom2 will remain unclean :) 
             Console.WriteLine("List of rooms after checkout:");
             Console.WriteLine(hotelOne.ListRooms());
         }

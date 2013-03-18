@@ -37,7 +37,7 @@ namespace HotelManager.Person
             {
                 return this.id;
             }
-            private set
+             set
             {
                 if (identifiers.IndexOf(value) != -1)
                 {
@@ -62,7 +62,8 @@ namespace HotelManager.Person
 
         public bool RequestMoney(decimal ammount)
         {
-            return ammount >= this.Wallet;
+
+            return ammount <= this.Wallet;
         }
         
         public decimal PayMoney(decimal ammount)

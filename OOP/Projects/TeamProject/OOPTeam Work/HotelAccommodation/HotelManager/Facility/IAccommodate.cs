@@ -7,7 +7,7 @@ namespace HotelManager.Facility
 {
     interface IAccommodate
     {
-        ushort CheckIn(ICollection<Client> clients); //returns Room Number in which clients were accomodated
-        decimal CheckOut(ushort roomNumber); // returns ammount of money if some services are not paid
+        Room CheckIn(ICollection<Client> clients); //returns Room Number in which clients were accomodated
+        decimal CheckOut(Client client); // returns ammount of money if some services are not paid
     }
 }

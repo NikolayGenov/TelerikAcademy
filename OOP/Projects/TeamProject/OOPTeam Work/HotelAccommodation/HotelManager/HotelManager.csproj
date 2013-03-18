@@ -47,9 +47,12 @@
   <ItemGroup>
     <Compile Include="Facility\Category.cs" />
     <Compile Include="Facility\FacilityException.cs" />
+    <Compile Include="Facility\GolfFacility.cs" />
     <Compile Include="Facility\IAccommodate.cs" />
     <Compile Include="Facility\Room.cs" />
     <Compile Include="Facility\RoomKind.cs" />
+    <Compile Include="Facility\RoomPrice.cs" />
+    <Compile Include="Person\GolfInstructor.cs" />
     <Compile Include="Person\Housekeeping.cs" />
     <Compile Include="Person\IComunicate.cs" />
     <Compile Include="Person\IPay.cs" />

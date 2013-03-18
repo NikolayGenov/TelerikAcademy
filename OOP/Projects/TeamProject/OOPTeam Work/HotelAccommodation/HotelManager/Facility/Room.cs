@@ -28,6 +28,7 @@ namespace HotelManager.Facility
             this.IsFree = true;
             this.IsCleaned = true;
             this.Bill = 0;
+            //Or PAY THE BILL instead of paying at check in
         }
 
         public Room(RoomKind kind, byte numberOfBeds) : this()

@@ -8,9 +8,11 @@ namespace HotelManager.Facility
 {
     public class GolfAndSpa : Hotel
     {
-        public GolfAndSpa(Category category) 
+        public GolfFacility GolfField { get; set; }
+        public GolfAndSpa(Category category, GolfFacility golfField) 
             : base(category)
         {
+            this.GolfField = golfField;
         }
     }
 }

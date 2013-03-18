@@ -2,9 +2,9 @@
 {
     public enum RoomKind
     {
-        Sgl,
-        Dbl,
-        Tpl,
-        Apt
+        Single=1,
+        Double,
+        Triple,
+        Apartment
     }
 }
