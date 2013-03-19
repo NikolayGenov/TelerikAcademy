@@ -11,9 +11,9 @@ namespace HotelManager
             //Creating some Clients
             Client firstClient = new Client("Jim Morrison", 203.54M,RoomKind.Double);
             Client secondClient = new Client("Ruppert Wane", 1882.33M, RoomKind.Single);
-            Client thirdClient = new Client("Ann Smith", 4022.09M, RoomKind.Triple);
+            Client thirdClient = new Client("Ann Smith", 4022.09M, RoomKind.Double);
             Client fourtClient = new Client("Martin Oliver", 1020.77M, RoomKind.Single);
-            Client fifthClient = new Client("Gennifer Green", 7233.12M, RoomKind.Apartment);
+            Client fifthClient = new Client("Gennifer Green", 7233.12M, RoomKind.Triple);
           
             //Creating some facilities
             Hotel hotelRome = new Hotel("Hotel Rome",Category.FourStar, numberOfPools: 3);
@@ -120,8 +120,8 @@ namespace HotelManager
             
             //Add some clients
             spaAndGolfPravec.Clients.Add(thirdClient);
-            spaAndGolfPravec.Clients.Add(fifthClient);
             spaAndGolfPravec.Clients.Add(fourtClient);
+            spaAndGolfPravec.Clients.Add(fifthClient);
 
             //Print some personel
             Console.WriteLine("Some personel:");
@@ -137,6 +137,9 @@ namespace HotelManager
             //Check IN all the clients
             Console.WriteLine(receptionistPenka.TryGivingRooms());
 
+            //Golf instuctor teaching client
+            Console.WriteLine(golfInstructor.EducateClient(fourtClient)); 
+            
             Console.WriteLine("After Check in :");
             Console.WriteLine("{0}'s balance: {1}", spaAndGolfPravec.FacilityName, spaAndGolfPravec.Finance);
             Console.WriteLine("{0}'s balance: {1}\n", thirdClient.Name, thirdClient.Ballance());

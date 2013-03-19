@@ -37,7 +37,7 @@ namespace HotelManager.Facility
         
         public void CreateRoom(Room room, ushort numberToCreate = 1)
         {
-            Room oldRoom = room;           
+            Room oldRoom = new Room(room.Kind);        
             ushort roomNumber = (this.Rooms.Count > 0) ? Rooms.Last().RoomNumber : (ushort)0;
             oldRoom.RoomNumber = roomNumber;
             for (int i = 0; i < numberToCreate; i++)

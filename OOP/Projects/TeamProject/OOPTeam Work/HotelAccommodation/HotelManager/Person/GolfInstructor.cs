@@ -1,4 +1,6 @@
-﻿namespace HotelManager.Person
+﻿using System.Text;
+
+namespace HotelManager.Person
 {
     class GolfInstructor : Personel
     {
@@ -6,9 +8,10 @@
         {
         }
 
-        public void EducateClient(Client cl)
+        public string EducateClient(Client client)
         {
-            cl.EducationLevel++;
+            client.EducationLevel++;
+            return string.Format("{0} has educated client {1} to level {2} of golf", this.Name, client.Name, client.EducationLevel);
         }
     }
 }
