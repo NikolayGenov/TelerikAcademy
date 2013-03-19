@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelManager.Facility
 {
@@ -12,13 +8,12 @@ namespace HotelManager.Facility
 
         public RoomKind Kind { get; set; }
 
-        public byte NumberOfBeds { get; set; }
+        public int NumberOfBeds { get; set; }
 
         public bool IsFree { get; set; }
 
         public bool IsCleaned { get; set; }
 
-        
         public Room()
         {
             this.RoomNumber = 0;
@@ -26,18 +21,17 @@ namespace HotelManager.Facility
             this.NumberOfBeds = 0;
             this.IsFree = true;
             this.IsCleaned = true;
-        
-            //Or PAY THE BILL instead of paying at check in
         }
 
         public Room(RoomKind kind) : this()
         {
-            this.Kind = kind;
-            this.NumberOfBeds = (byte)kind;
+            this.Kind = kind;      
+            this.NumberOfBeds = (int)(double)kind / (int)RoomKind.Single;
         }
+
         public object Clone()
         {
-            return this.MemberwiseClone();      // call clone method
+            return this.MemberwiseClone();     
         }
     }
 }

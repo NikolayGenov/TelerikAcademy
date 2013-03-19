@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using HotelManager;
-
-namespace HotelManager.Facility
+﻿namespace HotelManager.Facility
 {
     public class GolfAndSpa : Hotel
     {
         public GolfFacility GolfField { get; set; }
 
-        public GolfAndSpa(Category category, GolfFacility golfField, byte numberOfPools) : base(category, numberOfPools)
+        public GolfAndSpa(string facilityName, Category category, GolfFacility golfField, byte numberOfPools) : base(facilityName, category, numberOfPools)
         {
             this.GolfField = golfField;
         }

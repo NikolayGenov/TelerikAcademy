@@ -16,13 +16,23 @@ namespace HotelManager.Facility
 
         public ICollection<Room> TakenRooms { get; set; }
 
+        public ICollection<Client> Clients { get; set; }
+
+        public decimal Finance { get; set; }
+
+        public string FacilityName { get; set; }
+
         public Category Category { get; private set; }
         
-        public Facility(Category category)
+        public Facility(string facilityName, Category category)
         {
+            this.FacilityName = facilityName;
+            this.Finance = 0m;
             this.Category = category;
             this.Personel = new List<Personel>();
             this.Rooms = new List<Room>();
+            this.TakenRooms = new List<Room>();
+            this.Clients = new List<Client>();
         }
         
         public void CreateRoom(Room room, ushort numberToCreate = 1)
@@ -39,6 +49,11 @@ namespace HotelManager.Facility
                 this.Rooms.Add(oldRoom);                
                 oldRoom.RoomNumber++;
             }
+        }
+
+        public void AddRoomsToFacility(Room room, ushort numberToCreate = 1)
+        {
+            this.CreateRoom(room, numberToCreate);
         }
 
         public void RemoveRoom(ushort roomNumber)
@@ -59,6 +74,7 @@ namespace HotelManager.Facility
         public string ListRooms()
         {
             StringBuilder info = new StringBuilder();
+            info.AppendLine("List of all rooms: ").AppendLine();
             foreach (var room in this.Rooms)
             {
                 info.AppendLine("Room number: " + room.RoomNumber);
@@ -73,30 +89,28 @@ namespace HotelManager.Facility
         public string ListTakenRooms()
         {
             StringBuilder info = new StringBuilder();
-            info.AppendLine("List of taken rooms");
+            info.AppendLine("List of taken rooms: ").AppendLine();
             foreach (var room in this.TakenRooms)
             {
                 info.AppendLine("Room number: " + room.RoomNumber);
                 info.AppendLine("Room kind: " + room.Kind);
-                //  info.AppendFormat("Room is {0}\n", room.IsFree ? "free" : "occupied");
-                // info.AppendFormat("Room is {0}\n", room.IsCleaned ? "cleaned" : "not cleaned");
                 info.AppendLine(new string('-', 20));
             }
             return info.ToString();
         }
-        
-        public virtual Room CheckIn(ICollection<Person.Client> clients)
+
+        public virtual Room CheckIn(Client client)
         {
+            //Using LINQ to selecte the room needed for check-in
             var queryRoom =
                            from room in this.Rooms
-                           where room.IsFree && room.IsCleaned && room.Kind == clients.First().RoomToRent
-                //Check again
+                           where room.IsFree && room.IsCleaned && room.Kind == client.RoomToRent
                            select room;
             if (queryRoom.Count() == 0)
             {
                 queryRoom =
                            from room in this.Rooms
-                           where room.IsFree && room.IsCleaned && (int)room.Kind > (int)clients.First().RoomToRent
+                           where room.IsFree && room.IsCleaned && (int)room.Kind > (int)client.RoomToRent
                            select room;
             }
             if (queryRoom.Count() == 0)
@@ -104,20 +118,17 @@ namespace HotelManager.Facility
                 throw new FacilityException("No free rooms!");
             }
             Room selectedRoom = queryRoom.First();
-            //!!!!!!!!!
-            //CHECK THAT !!!
-
-            clients.First().Id = selectedRoom.RoomNumber;
-
+            client.Id = selectedRoom.RoomNumber;
             //When room is CheckedIn - it becomes NOT free and NOT clean
             selectedRoom.IsFree = false;
             selectedRoom.IsCleaned = false;
-      
             return selectedRoom;
+            //Returns the room
         }
 
         public virtual bool CheckOut(Client client)
         {
+            //Returns bool if the room is checked-out successfully
             var queryRoom =
                            from room in this.TakenRooms
                            where client.Id == room.RoomNumber
@@ -134,13 +145,13 @@ namespace HotelManager.Facility
                 }
             }
             Room selectedRoom = queryRoom.First();
+            //Room is setted to free but not clean
             selectedRoom.IsCleaned = false;
-            // Invoke event CleanRoom(roomnumber)
             selectedRoom.IsFree = true;
             client = null;
+            //Delete the client
+            //Remove the room from the list of taken rooms
             this.TakenRooms.Remove(selectedRoom);
-            // FIX BILL THING - remove it somehow
-            //****************************
             return true;
         }
         
@@ -160,13 +171,13 @@ namespace HotelManager.Facility
             return sb.ToString();
         }
 
-        public void HirePersonel(Personel person)
+        public virtual void HirePersonel(Personel person)
         {
             this.Personel.Add(person);
             person.WorkPlace = this;
         }
 
-        public void ReleasePersonel(uint id)
+        public virtual void ReleasePersonel(uint id)
         {
             foreach (var person in this.Personel.Where(x => x.Id == id))
             {
@@ -175,12 +186,12 @@ namespace HotelManager.Facility
             }
         }
 
-        public void RoomCleaner(ushort clientID)
+        public void RoomCleaner(ushort roomNumber)
         {
             var queryRoom =
                            from room in this.Rooms
                            where !(room.IsCleaned ||
-                                   (this.TakenRooms.Contains(room)) && (room.RoomNumber == clientID))
+                                   (this.TakenRooms.Contains(room))) && (room.RoomNumber == roomNumber)
                            select room;
             if (queryRoom.Count() == 0)
             {
@@ -188,6 +199,11 @@ namespace HotelManager.Facility
             }
             Room selectedRoom = queryRoom.First();
             selectedRoom.IsCleaned = true;
+        }
+
+        public void CollectMoney(decimal ammount)
+        {
+            this.Finance += ammount;
         }
     }
 }

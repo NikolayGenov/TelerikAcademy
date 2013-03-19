@@ -51,7 +51,6 @@
     <Compile Include="Facility\IAccommodate.cs" />
     <Compile Include="Facility\Room.cs" />
     <Compile Include="Facility\RoomKind.cs" />
-    <Compile Include="Facility\RoomPrice.cs" />
     <Compile Include="Person\GolfInstructor.cs" />
     <Compile Include="Person\Housekeeping.cs" />
     <Compile Include="Person\IComunicate.cs" />
@@ -74,6 +73,7 @@
     <Compile Include="Facility\SeaHotel.cs" />
     <Compile Include="Facility\Chalet.cs" />
     <Compile Include="Person\Receptionist.cs" />
+    <Compile Include="TestClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

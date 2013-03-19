@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using HotelManager.Person;
-using HotelManager.Facility;
+﻿using HotelManager.Facility;
 
 namespace HotelManager.Person
 {
@@ -11,32 +6,30 @@ namespace HotelManager.Person
     {
         public byte EducationLevel { get; set; }
 
-        public RoomKind RoomToRent { get; private set; }
+        public RoomKind RoomToRent { get; set; }
         
-        //Make person ID not so unique and that can be given to corresponding number of the room
-        //****************************
-        public Client(string name, decimal wallet, RoomKind room = RoomKind.Single) : base(name, wallet)
+        public Client(string name, decimal wallet, RoomKind room) : base(name, wallet)
         {
             this.Id = 0;
             this.EducationLevel = 0;
             this.RoomToRent = room;
         }
 
-        public decimal PayForRoom(decimal pricePerRoom)
+        public decimal PayForRoom()
         {
-            this.Wallet -= pricePerRoom * (int)RoomToRent;
-            return pricePerRoom * (int)RoomToRent;
+            this.Wallet -= (decimal)this.RoomToRent;
+            return (decimal)this.RoomToRent;
+        }
+        
+        public decimal CanPayForRoom()
+        {
+            return (decimal)this.RoomToRent;
         }
 
-        public decimal CanPayForRoom(decimal pricePerRoom)
-        {
-            return pricePerRoom * (int)RoomToRent;
-        }
-
-        public bool RequestRentRoom(RoomPrice price)
+        public bool RequestRentRoom(RoomKind price)
         {
             bool canPay = false;
-            if (this.RequestMoney(this.CanPayForRoom((decimal)price)))
+            if (this.RequestMoney(this.CanPayForRoom()))
             {
                 canPay = true;
                 return canPay; 

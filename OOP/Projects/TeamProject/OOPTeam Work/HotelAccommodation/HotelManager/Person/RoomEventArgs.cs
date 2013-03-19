@@ -5,11 +5,12 @@ namespace HotelManager.Person
 {
     public class RoomEventArgs
     {
+        //Class to parse parameters with event
         public ushort ClientID { get ; set ; }
 
-        public RoomEventArgs(ushort client)
+        public RoomEventArgs(ushort clientId)
         {
-            ClientID = client;
+            ClientID = clientId;
         }
     }
 }

@@ -2,9 +2,9 @@
 {
     public enum RoomKind
     {
-        Single=1,
-        Double,
-        Triple,
-        Apartment
+        Single = 50,
+        Double = 100,
+        Triple = 150,
+        Apartment = 200
     }
 }

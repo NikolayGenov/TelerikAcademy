@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using HotelManager.Facility;
+
 
 namespace HotelManager.Person
 {
@@ -11,23 +8,22 @@ namespace HotelManager.Person
         public Housekeeping(string name, decimal salary) : base(name, salary)
         {
         }
+
         //Subscribe for events
-        public void Subscribe(Receptionist m)
+        public void WaitingForOders(Receptionist recep)
         {
-            m.RoomCleanEvent += new Receptionist.RoomEventHandle(this.CleanRoom);
-            Console.WriteLine("Waiting for Orders");
+            recep.RoomCleanEvent += new Receptionist.RoomEventHandle(this.CleanRoom);
         }
-        public void CleanRoom(Receptionist sender, RoomEventArgs e) //must be invoked through CleanRoom event. An instance of Housekeeping must be its subscriber
+
+        public void CleanRoom(Receptionist recepSender, RoomEventArgs client) 
         {
-            ushort client = e.ClientID;
-            Console.WriteLine("Ok i am going to clean the room");
+            //Because the room number matches the client ID
+            ushort roomNumber = client.ClientID;
             if (this.WorkPlace == null)
             {
                 throw new PersonException("I'm unemployed! Please hire me!");
             }
-            this.WorkPlace.RoomCleaner(client);
-            Console.WriteLine("Room cleaned");
+            this.WorkPlace.RoomCleaner(roomNumber);
         }
-        
     }
 }

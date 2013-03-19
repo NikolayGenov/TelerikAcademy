@@ -1,99 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="HotelManager.Facility.Facility">
-    <Position X="4.5" Y="0.75" Width="1.5" />
+  <Class Name="HotelManager.Facility.Chalet" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAQABAAAAAIAAAACBBAAQAAAEAAAEACAGAA=</HashCode>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facility\Chalet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Facility.Facility" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQABAAAAAIAgAACBBAAQAAAEAAAEACAGAA=</HashCode>
       <FileName>Facility\Facility.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="HotelManager.Facility.Chalet">
-    <Position X="6.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Facility\Chalet.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="HotelManager.Facility.Hostel">
-    <Position X="6.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Facility\Hostel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="HotelManager.Facility.Hotel">
-    <Position X="2.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Facility\Hotel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="HotelManager.Facility.Motel">
-    <Position X="2.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Facility\Motel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="HotelManager.Facility.GolfAndSpa">
-    <Position X="0.5" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Facility\GolfAndSpa.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="HotelManager.Facility.SeaHotel">
-    <Position X="0.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Facility\SeaHotel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="HotelManager.Facility.FacilityException" Collapsed="true">
-    <Position X="8.5" Y="3.75" Width="1.5" />
+  <Class Name="HotelManager.Facility.FacilityException" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Facility\FacilityException.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="HotelManager.Facility.Room" Collapsed="true">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+  <Class Name="HotelManager.Facility.GolfAndSpa" Collapsed="true">
+    <Position X="22" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAIAAAABAAAAAAAAAIAAAAAAAAAAQAAAAAAAEABA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facility\GolfAndSpa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Facility.Hostel" Collapsed="true">
+    <Position X="19.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facility\Hostel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Facility.Hotel" Collapsed="true">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facility\Hotel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Facility.Motel" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facility\Motel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Facility.Room" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAABAAAAAAAAAIAAAAAAAAAAQAAAAAAAEABA=</HashCode>
       <FileName>Facility\Room.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HotelManager.Facility.SeaHotel" Collapsed="true">
+    <Position X="24.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Facility\SeaHotel.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Struct Name="HotelManager.Facility.GolfFacility" Collapsed="true">
-    <Position X="0.5" Y="1.25" Width="1.5" />
+    <Position X="26.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAACAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>Facility\GolfFacility.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="HotelManager.Facility.IAccommodate" Collapsed="true">
-    <Position X="8.5" Y="2.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="26.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Facility\IAccommodate.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="HotelManager.Facility.Category" Collapsed="true">
-    <Position X="8.5" Y="2" Width="1.5" />
+    <Position X="26.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAABAAAAAAAAAAAAAAIAAAAQAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Facility\Category.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="HotelManager.Facility.RoomKind" Collapsed="true">
-    <Position X="8.5" Y="1.25" Width="1.5" />
+    <Position X="28.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAEAAAAAEAAAAAAAAAAAAAAAAgAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAAEAQAAAAAA=</HashCode>
       <FileName>Facility\RoomKind.cs</FileName>
     </TypeIdentifier>
   </Enum>

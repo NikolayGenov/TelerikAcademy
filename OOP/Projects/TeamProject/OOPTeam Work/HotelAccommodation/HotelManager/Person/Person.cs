@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace HotelManager.Person
 {
     public abstract class Person : IPay
     {
-        private uint id; //must be unique
+        private uint id; 
 
         public string Name { get; set; }
 
@@ -39,11 +37,6 @@ namespace HotelManager.Person
             }
             set
             {
-                //To DO 
-                //if (identifiers.IndexOf(value) != -1)
-                //{
-                //    throw new ArgumentException("This ID is already in the list!");
-                //}
                 identifiers.Add(value);
                 this.id = value;
             }
@@ -60,7 +53,7 @@ namespace HotelManager.Person
         {
             this.Wallet += ammount;
         }
-
+        
         public bool RequestMoney(decimal ammount)
         {
             return ammount <= this.Wallet;

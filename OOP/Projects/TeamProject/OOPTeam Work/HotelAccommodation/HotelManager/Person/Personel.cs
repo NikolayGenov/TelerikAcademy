@@ -2,14 +2,14 @@
 using System.Linq;
 using System.Net;
 using System.Text;
-using HotelManager.Facility;
 using System.Collections.Generic;
 
 namespace HotelManager.Person
 {
     public class Personel : Person, IComunicate
     {
-         public static uint ID = 1000;
+        public static uint ID = 100000;
+
         public ICollection<Languages> CollOfLanguages { get; set; }
 
         private const string PhraseToTranslate = "How are you today?";
@@ -109,6 +109,15 @@ namespace HotelManager.Person
                 }
             }
             return result;
+        }
+
+        public void AddLanguages(params Languages[] lang)
+        {
+            //AddingLanguages
+            foreach (var langueage in lang)
+            {
+                this.CollOfLanguages.Add(langueage);
+            }
         }
 
         public string Speak(Languages langCode)

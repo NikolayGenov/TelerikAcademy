@@ -1,44 +1,17 @@
 ﻿using System;
-using System.Linq;
 
 namespace HotelManager.Person
 {
     public class WakeupEventArgs : EventArgs
     {
-        //Class to parse parameters with event
-        private ushort timer;
-        private string clientName;
-        public string ClientName
+        public ushort Timer { get; set; }
+        
+        public string ClientName { get; set; }
+        
+        public WakeupEventArgs(ushort timer, string clientName)
         {
-            get
-            {
-                return clientName;
-            }
-            set
-            {
-                clientName = value;
-            }
-        }
-
-        public ushort Timer
-        {
-            get
-            {
-                return timer;
-            }
-            set
-            {
-                timer = value;
-            }
-        }
-
-        public WakeupEventArgs(ushort argument, string name)
-        {
-            timer = argument;
-            clientName = name;
+            this.Timer = timer;
+            this.ClientName = clientName;
         }
     }
 }
-
-    
-
