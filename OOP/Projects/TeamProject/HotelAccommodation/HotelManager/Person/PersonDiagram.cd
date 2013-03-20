@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HotelManager.Person.Client" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACCAAAAAAAAAAAAEAAIE=</HashCode>
+      <FileName>Person\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.GolfInstructor" Collapsed="true">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\GolfInstructor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.Housekeeping" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Person\Housekeeping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.Manager" Collapsed="true">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.Person" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAAAAAAAAIQQAACAAAAgAgAIAAAAAAgA=</HashCode>
+      <FileName>Person\Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HotelManager.Person.Personel" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEEAgCAAIAAAgAAAAAAAAAAAAAAAKAAAAAhAAASAAAA=</HashCode>
+      <FileName>Person\Personel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HotelManager.Person.PersonException" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\PersonException.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="HotelManager.Person.Receptionist" Collapsed="true">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgABAABABAAAAAIAEBAAAAAAAEAAAAEAAAAAAAA=</HashCode>
+      <FileName>Person\Receptionist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.RoomEventArgs" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\RoomEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotelManager.Person.WakeupEventArgs" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAEAAA=</HashCode>
+      <FileName>Person\WakeupEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="HotelManager.Person.IComunicate" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhAAACAAAA=</HashCode>
+      <FileName>Person\IComunicate.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HotelManager.Person.IPay" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAgAIAAAAAAAA=</HashCode>
+      <FileName>Person\IPay.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="HotelManager.Person.Languages" Collapsed="true">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAAAAAAAAgACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Languages.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
