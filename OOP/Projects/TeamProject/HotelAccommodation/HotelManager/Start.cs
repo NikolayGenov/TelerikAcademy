@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            //Uniт test
+            //Test all the things
             TestClass.GeneralTest();
         }
     }
