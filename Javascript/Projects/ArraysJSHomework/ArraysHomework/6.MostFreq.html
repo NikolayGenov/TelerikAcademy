@@ -53,7 +53,9 @@
                 var size = arr.length;
                 var value, maxValue;
                 if (size > 0) { //Sort the array;
-                    arr.sort();
+                    arr.sort(function sortNumber(a, b) {
+                        return a - b;
+                    });
                     var item = arr[0], maxItem = arr[0], times = 1, maxTimes = 0; //Declaring the vars with the first value of the new sorted array
                     for (var i = 0; i < size - 1; i++) {
                         if (arr[i] == arr[i + 1])

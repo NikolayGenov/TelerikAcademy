@@ -57,21 +57,23 @@
                 var size = arr.length;
                
                 if (size > 0) {
-                   arr= arr.sort();
+                    arr = arr.sort(function sortNumber(a, b) {
+                        return a - b;
+                    });
                     var pos = BinSearch(arr, element, size);
                     if (pos != -1) {
-                        jsConsole.writeLine("The element is on position on: " + pos +" in the sorted array");
+                        jsConsole.writeLine("The element is on position on: " + pos + " in the sorted array");
                     }
                     else {
-                        jsConsole.writeLine("The element not found" );
+                        jsConsole.writeLine("The element not found");
                     }
                 }
             }
             function BinSearch(arr, element, size) {   //We should move only between min and max where max is the size of the array-1 (those are index values)
                 var min = 0, max = size - 1, mid = 0;
-                jsConsole.writeLine("Sorted array: " +arr);
+                jsConsole.writeLine("Sorted array: " + arr);
                 while (max >= min) {//Looping until we find the first occurrence
-                    mid = min + (max - min) / 2; //Changing the mid point every
+                    mid = parseInt(min + (max - min) / 2); //Changing the mid point every
                     if (element == arr[mid]) {   //if the element is found return it
                         return mid;
                     }
@@ -90,4 +92,3 @@
     </body>
 </html>
 
-            
