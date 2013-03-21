@@ -36,14 +36,14 @@
         <input type="text" id="tb-readseq"/>
         <br />
 
-        <a href="#" onclick="onSelectionButtonClick()">Sort By selection sort</a>
+        <a href="#" onclick="onFindSeqButtonClick()">Find most frequent number </a>
         <div id="console">
         </div>
         <script src="scripts/js-console.js">	  
         </script>
         <script>
 
-            function onSelectionButtonClick() {
+            function onFindSeqButtonClick() {
                 var n = jsConsole.read("#tb-readseq");
                 var arrayAsString = n.split(",");
                 var arr = new Array(arrayAsString.length);
@@ -51,36 +51,33 @@
                     arr[i] = parseInt(arrayAsString[i]);
                 }
                 var size = arr.length;
-                var  value, maxValue;
-                if (size > 0) {
-                    var minIndex, temp;
-        
-                    //Selection sort
+                var value, maxValue;
+                if (size > 0) { //Sort the array;
+                    arr.sort();
+                    var item = arr[0], maxItem = arr[0], times = 1, maxTimes = 0; //Declaring the vars with the first value of the new sorted array
                     for (var i = 0; i < size - 1; i++) {
-                        minIndex = i; //Taking the index of the element and the comparing with the next
-            
-                        for (var j = i + 1; j < size; j++) {
-                            //If we find a smaller element we asign it to minIndex
-                            if (arr[j] < arr[minIndex]) {
-                                minIndex = j;
-                            }
+                        if (arr[i] == arr[i + 1])
+                        //looping in the array and checking if the 2 values are equal and if they are
+                        //inc the times var with 1 and save it in another var
+                        {
+                            times++;
+                            item = arr[i];
                         }
-                        //If we have found a smaller we just swap the two values 
-                        if (minIndex != i) {
-                            temp = arr[minIndex];
-                            arr[minIndex] = arr[i];
-                            arr[i] = temp;
+                        else // if they are different make times equal to 1 again
+                        {
+                            times = 1;
+                        }
+                        if (times > maxTimes) // if we have the same items 2 or more times there is a maxItem and MaxTimes were we save the result
+                        {
+                            maxItem = item;
+                            maxTimes = times;
                         }
                     }
-                    for (var i = 0; i < arr.length; i++) {
-
-                        jsConsole.write(arr[i] +" ");
-                    }
-                    jsConsole.writeLine("");
+                    //Print out the result
+                    jsConsole.writeLine("Most Frequent Item: " + maxItem + " Times : " + maxTimes);
                 }
             }
         </script>
     </body>
 </html>
-
-            
+        
