@@ -15,9 +15,11 @@
 
 		self.write = function jsConsoleWrite(text) {
 			var textLine = document.createElement("span");
-			textLine.innerHTML = text;
-			textArea.appendChild(textLine);
-			consoleElement.scrollTop = consoleElement.scrollHeight;
+			if (text != undefined && text != "") {
+				textLine.innerHTML = text;
+				textArea.appendChild(textLine);
+				consoleElement.scrollTop = consoleElement.scrollHeight;
+			}
 		}
 
 		self.writeLine = function jsConsoleWriteLine(text) {
@@ -47,5 +49,5 @@
 
 		return self;
 	}
-	jsConsole = new createJsConsole("#console");
+	jsConsole = new createJsConsole("#js-console");
 }).call(this);

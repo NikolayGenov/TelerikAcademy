@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>JS Console - Example</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+        <style>
+            input[type=text]
+            {
+                border: 1px solid black;
+                padding: 5px 15px;
+                background-color: black;
+                color: white;
+                font-family: Consolas; 
+                margin-bottom: 5px;
+            }
+            
+            a
+            {
+                color: black;
+                border: 1px solid black;
+                padding: 5px 15px; 
+                text-decoration: none; 
+                display: inline-block; 
+                margin: 15px 0;
+            }
+            
+            a:hover
+            {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+
+        <a href="#" onclick="onFindMinAndMaxButtonClick()">Find Smallest and Largest</a>
+        <div id="console">
+        </div>
+        <script src="scripts/js-console.js">	  
+        </script>
+        <script>
+
+            function onFindMinAndMaxButtonClick() {
+                //Looping in all properties in document
+                var maxProp;
+                var minProp;
+                var takeFirst = true;
+                for (var propEnter in document) {
+                    if (takeFirst) {
+                        maxProp = propEnter.toString().toLowerCase();
+                        minProp = propEnter.toString().toLowerCase();
+                        takeFirst = false;
+                    }
+                    var prop = propEnter.toString().toLowerCase();
+                    for (var i = 0; i < minProp.length ; i++) {
+                        if (prop[i] >= maxProp[i]) {
+                            maxProp = prop;
+                            break;
+                        }
+                        else if (prop[i] <= minProp[i]) {
+                            minProp = prop;
+                            break;
+                        }
+                    }
+                }
+                jsConsole.writeLine("The min property is: " + minProp);
+                jsConsole.writeLine("The max property is: " + maxProp);
+                jsConsole.writeLine("");
+            }            
+        </script>
+    </body>
+</html>
