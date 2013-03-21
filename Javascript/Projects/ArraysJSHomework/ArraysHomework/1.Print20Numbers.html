@@ -32,37 +32,23 @@
         </style>
     </head>
     <body>
-        <label for="tb-digit">Enter Numbers separated by coma: </label>
-        <input type="text" id="tb-digit"/>
-        <br />
 
-        <a href="#" onclick="onFindMinAndMaxButtonClick()">Print to N</a>
+        <a href="#" onclick="onShowNumbersButtonClick()">Print to Numbers</a>
         <div id="console">
         </div>
         <script src="scripts/js-console.js">	  
         </script>
         <script>
 
-            function onFindMinAndMaxButtonClick() {
-                var n = jsConsole.read("#tb-digit");
-                var arr = n.split(",");
-                //Check if there are any elements
-                if (arr.length >= 1) {
-                    var max = parseInt(arr[0]);
-                    var min = parseInt(arr[0]);
-                    for (var i = 0; i < arr.length; i++) {
-                        var number = parseInt(arr[i]);
-                        if (number > max) {
-                            max = number;
-                        }
-                        if (number < min) {
-                            min = number;
-                        }
-                    }
-                    jsConsole.writeLine("The min number is: " + min);
-                    jsConsole.writeLine("The max number is: " + max);
-                    jsConsole.writeLine("");
+            function onShowNumbersButtonClick() {
+                var arr = new Array();
+                jsConsole.writeLine("Numbers are:");
+                //Going through the array and printing the values
+                for (var i = 0; i < 20 ; i++) {
+                    arr[i] = i * 5;
+                    jsConsole.write(arr[i] + " ");
                 }
+                jsConsole.writeLine("");
             }
         </script>
     </body>

@@ -1,0 +1,91 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>JS Console - Example</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+        <style>
+            input[type=text]
+            {
+                border: 1px solid black;
+                padding: 5px 15px;
+                background-color: black;
+                color: white;
+                font-family: Consolas; 
+                margin-bottom: 5px;
+            }
+            
+            a
+            {
+                color: black;
+                border: 1px solid black;
+                padding: 5px 15px; 
+                text-decoration: none; 
+                display: inline-block; 
+                margin: 15px 0;
+            }
+            
+            a:hover
+            {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="tb-readseq">Enter Numbers separated by coma: </label>
+        <input type="text" id="tb-readseq"/>
+        <br />
+
+        <a href="#" onclick="onFindSeqButtonClick()">Find maximal increasing sequence </a>
+        <div id="console">
+        </div>
+        <script src="scripts/js-console.js">	  
+        </script>
+        <script>
+
+            function onFindSeqButtonClick() {
+                var n = jsConsole.read("#tb-readseq");
+                var arrayAsString = n.split(",");
+                var arr = new Array(arrayAsString.length);
+                for (var i = 0; i < arrayAsString.length; i++) {
+                    arr[i] = parseInt(arrayAsString[i]);
+                }
+                var arrayLength = arr.length;
+                var counter = 1, maxCounter = 1, value, maxValue, index = 0;
+                if (arrayLength > 0) {
+                    maxValue = arr[arrayLength - 1]; //if there isn't sequence longer than one it takes the last one
+                    value = arr[0];
+
+                    //For loop for the each step and if conditions to compare the values and if they are the same inc the counter and store the value
+                    for (var i = 0; i < arrayLength - 1; i++) {
+                        if (arr[i] < arr[i + 1]) {
+                            value = arr[i + 1];
+                            counter++;
+                        }
+                        else {
+                            counter = 1;
+                        }
+                        if (counter >= maxCounter) {
+                            index = i + 1;
+                            maxValue = value;
+                            maxCounter = counter;
+                        }
+                    }
+                    if (maxCounter > 1) // print if there is more than 2 numbers 
+                    {
+                        //Print out the result as a sequence
+                        //Takes the index from the array and print the numbers
+                        jsConsole.write("The max sequence is : ");
+                        for (var i = index - maxCounter + 1; i <= index; i++) {
+                            jsConsole.write(arr[i] + " ");
+                        }
+                        jsConsole.writeLine("");
+                    }
+                    else {
+                        jsConsole.writeLine("There are less than 2 increasing numbers");
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
