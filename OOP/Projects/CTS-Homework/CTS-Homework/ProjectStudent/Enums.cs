@@ -22,7 +22,7 @@
         SofiaUniversity,
         YaleUniversity,
         UniversityofChicago,
-        Princeton University
+        PrincetonUniversity
     }
 
     public enum Faculties
@@ -35,7 +35,7 @@
         FacultyOfGeologyAndGeography,
         FacultyOfHistory,
         FacultyOfJournalismAndMassCommunication,
-        FacultyOfLaw,
+        FacultyOfComputerScience,
         FacultyOfMathematicsAndInformatics,
         FacultyOfPhilosophy,
         FacultyOfPhysics,

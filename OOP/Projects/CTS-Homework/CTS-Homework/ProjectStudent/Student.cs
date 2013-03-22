@@ -1,45 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-/*Define a class Student, which contains data about a student – 
-* first, middle and last name, SSN, permanent address, mobile phone 
-* e-mail, course, specialty, university, faculty. Use an enumeration 
-* for the specialties, universities and faculties. Override the standard methods, 
-* inherited by  System.Object: Equals(), ToString(), GetHashCode() and 
-* operators == and !=.
-*/
 namespace ProjectStudent
 {
-    class Student : IComparable<Student>
+    class Student : IComparable<Student>, ICloneable
     {
+        //Properties
         public string FirstName { get; private set; }
-
         public string MiddleName { get; private set; }
-
         public string LastName { get; private set; }
-
-        public string SSN { get; private set; }
-
+        public string SSN { get; private set; }//This number is unique
         public string PermanentAddress { get; private set; }
-
-        public string MobilePhone { get; private set; }
-
+        public string MobilePhone { get; set; }
         public string Email { get; private set; }
-
         public byte Course { get; set; }
-
         public Universities University { get; private set; }
-
         public Specialties Specialty { get; private set; }
-
         public Faculties Faculty { get; private set; }
         
         //Countructor
         public Student(string firstName, string middleName, string lastName, string ssn, string permanentAddress, string mobilePhone,
-            string email, byte course, Universities university, Specialties specialty, Faculties faculty)
+            string email, byte course, Universities university, Faculties faculty, Specialties specialty)
         {
             this.FirstName = firstName;
             this.MiddleName = middleName;
@@ -50,10 +32,30 @@ namespace ProjectStudent
             this.Email = email;
             this.Course = course;
             this.University = university;
-            this.Specialty = specialty;
             this.Faculty = faculty;
+            this.Specialty = specialty;
         }
 
+        //Cloning by creating a new Student and get the same info 
+        public object Clone()
+        {
+            Student cloneStundent =
+                new Student(
+                    this.FirstName,
+                    this.MiddleName,
+                    this.LastName,
+                    this.SSN,
+                    this.PermanentAddress,
+                    this.MobilePhone,
+                    this.Email,
+                    this.Course,
+                    this.University,
+                    this.Faculty,
+                    this.Specialty); 
+                   
+            return cloneStundent;
+        }
+        
         public int CompareTo(Student otherStudent)
         {
             //Comparing them by SSN
@@ -63,14 +65,26 @@ namespace ProjectStudent
                 return 0;
             }
             else
-            {//TO DO
-                //TO DO
-                 //var students =new Student[] { this, otherStudent };
-                 //    students.OrderBy(
+            { 
+                var students = new Student[] { this, otherStudent }.OrderBy(x => x.FirstName).ThenBy(x => x.MiddleName).ThenBy(x => x.LastName).ThenBy(x => x.SSN);
+                var student = students.First();
+                bool result = this.Equals(student);
+                return result ? -1 : 1;
             }
-            throw new NotImplementedException();
         }
 
+        //Overiding operators
+        public static bool operator ==(Student studentOne, Student studentTwo)
+        {
+            return studentOne.Equals(studentTwo);
+        }
+
+        public static bool operator !=(Student studentOne, Student studentTwo)
+        {
+            return !studentOne.Equals(studentTwo);
+        }
+
+        //and equals 
         public override bool Equals(object compareStudentAsObj)
         {
             //Becase the SSN must be unique for each person
@@ -88,6 +102,7 @@ namespace ProjectStudent
         {
             //Add all the info about the student and return is as a string
             StringBuilder infoStudent = new StringBuilder();
+            infoStudent.AppendLine("Student info: "); 
             infoStudent.AppendFormat("Name : {0} {1} {2}", this.FirstName, this.MiddleName, this.LastName).AppendLine();
             infoStudent.AppendFormat("Social Security Number: {0}", this.SSN).AppendLine();
             infoStudent.AppendFormat("Mobile phone number {0} , E-mail: {1}", this.MobilePhone, this.Email).AppendLine();
