@@ -36,10 +36,16 @@ namespace BitArrayProject
             {
                 if (position >= 0 && position < 64)
                 {
-                    //First we set the digit to 1
-                    this.ulongNumber |= (ulong)(1 << position);
-                    //And then change it to whatever tha value's value is - 1 or 0
-                    this.ulongNumber &= (ulong)(value << position);
+                    if (value == 1)
+                    {
+                        //Place 1 to that position
+                        this.ulongNumber |= (ulong)(1 << position);
+                    }
+                    else
+                    {
+                        //Reverse it and place 0 to that position
+                        this.ulongNumber &= (ulong)~(1 << position);
+                    }
                 }
                 else
                 {
@@ -92,6 +98,11 @@ namespace BitArrayProject
         public IEnumerator GetEnumerator()
         {
             return this.GetEnumerator();
+        }
+
+        public override string ToString()
+        {
+            return ulongNumber.ToString();
         }
 
         public override int GetHashCode()
