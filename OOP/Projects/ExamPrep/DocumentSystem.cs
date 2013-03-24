@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace DocumentSystem
 {
@@ -130,27 +131,27 @@ namespace DocumentSystem
 
         private static void AddPdfDocument(string[] attributes)
         {
-            AddDocument(new PDFDoc(), attributes);
+            AddDocument(new PDFDocument(), attributes);
         }
 
         private static void AddWordDocument(string[] attributes)
         {
-            AddDocument(new WordDoc(), attributes);
+            AddDocument(new WordDocument(), attributes);
         }
 
         private static void AddExcelDocument(string[] attributes)
         {
-            AddDocument(new ExcelDoc(), attributes);
+            AddDocument(new ExcelDocument(), attributes);
         }
 
         private static void AddAudioDocument(string[] attributes)
         {
-            AddDocument(new Audio(), attributes);
+            AddDocument(new AudioDocument(), attributes);
         }
 
         private static void AddVideoDocument(string[] attributes)
         {
-            AddDocument(new Video(), attributes);
+            AddDocument(new VideoDocument(), attributes);
         }
 
         private static void ListDocuments()
@@ -225,7 +226,7 @@ namespace DocumentSystem
             {
                 if (doc is IEncryptable)
                 {
-                    ((IEncryptable)doc).Decrypt();
+                    ((IEncryptable)doc).Encrypt();
                     documentFound = true;
                 }
             }
@@ -244,16 +245,19 @@ namespace DocumentSystem
             bool documentFound = false;
             foreach (var doc in documents)
             {
-                if (doc is IEditable)
+                if (doc.Name == name)
                 {
-                    ((IEditable)doc).ChangeContent(content);
-                    Console.WriteLine("Document content changed: " + doc.Name);
+                    if (doc is IEditable)
+                    {
+                        ((IEditable)doc).ChangeContent(content);
+                        Console.WriteLine("Document content changed: " + doc.Name);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Document is not editalbe: " + doc.Name);
+                    }
+                    documentFound = true;
                 }
-                else
-                {
-                    Console.WriteLine("Document is not editalbe: " + doc.Name);
-                }
-                documentFound = true;
             }
             if (documentFound == false)
             {
@@ -279,6 +283,321 @@ namespace DocumentSystem
             {
                 Console.WriteLine("Document has no name");
             }
+        }
+    }
+
+    public class AudioDocument : MultimediaDocs
+    {
+        public int? SampleRate { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "samplerate")
+            {
+                this.SampleRate = int.Parse(value);
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+            output.Add(new KeyValuePair<string, object>("samplerate", this.SampleRate));
+        }
+    }
+
+    public abstract class Document : IDocument
+    {
+        public string Content { get; protected set; }
+
+        public string Name { get; protected set; }
+
+        public virtual void LoadProperty(string key, string value)
+        {
+            if (key == "name")
+            {
+                this.Name = value;
+            }
+            else if (key == "content")
+            {
+                this.Content = value;
+            }
+            else
+            {
+                throw new ArgumentException("INVALID KEY");
+            }
+        }
+
+        public virtual void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            output.Add(new KeyValuePair<string, object>("name", this.Name));
+            output.Add(new KeyValuePair<string, object>("content", this.Content));
+        }
+
+        public override string ToString()
+        {
+            StringBuilder info = new StringBuilder();
+            List<KeyValuePair<string, object>> prop = new List<KeyValuePair<string, object>>();
+            this.SaveAllProperties(prop);
+            prop.Sort((a, b) => a.Key.CompareTo(b.Key));
+            info.Append(GetType().Name);
+            info.Append("[");
+            bool first = true;
+            foreach (var pro in prop)
+            {
+                if (pro.Value != null)
+                {
+                    if (!first)
+                    {
+                        info.Append(";");
+                    }
+                    info.AppendFormat("{0}={1}", pro.Key, pro.Value);
+                    first = false;
+                }
+            }
+            info.Append("]");
+            return info.ToString();
+        }
+    }
+
+    public abstract class EncryptableBinaryDoc : BinaryDocument, IEncryptable
+    {
+        private bool isEncrypted = false;
+
+        public bool IsEncrypted
+        {
+            get
+            {
+                return this.isEncrypted;
+            }
+        }
+
+        public void Encrypt()
+        {
+            this.isEncrypted = true;
+        }
+
+        public void Decrypt()
+        {
+            this.isEncrypted = false;
+        }
+
+        public override string ToString()
+        {
+            if (this.isEncrypted)
+            {
+                return String.Format("{0}[encrypted]", this.GetType().Name);
+            }
+            else
+            {
+                return base.ToString();
+            }
+        }
+    }
+
+    public class PDFDocument : EncryptableBinaryDoc
+    {
+        public int? NumberOfPages { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "pages")
+            {
+                this.NumberOfPages = int.Parse(value);
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+            output.Add(new KeyValuePair<string, object>("pages", this.NumberOfPages));
+        }
+    }
+
+    public class TextDocument : Document, IEditable
+    {
+        public string Charset { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "charset")
+            {
+                this.Charset = value;
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+            output.Add(new KeyValuePair<string, object>("charset", this.Charset));
+        }
+
+        public void ChangeContent(string newContent)
+        {
+            this.Content = newContent;
+        }
+    }
+
+    public class VideoDocument : MultimediaDocs
+    {
+        public double? FrameRate { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "framerate")
+            {
+                this.FrameRate = double.Parse(value);
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+            output.Add(new KeyValuePair<string, object>("framerate", this.FrameRate));
+        }
+    }
+
+    public class ExcelDocument : OfficeDocuments
+    {
+        public int? NumberOfRows { get; set; }
+
+        public int? NumberOfCols { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "rows")
+            {
+                this.NumberOfRows = int.Parse(value);
+            }
+            else if (key == "cols")
+            {
+                this.NumberOfCols = int.Parse(value);
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+            output.Add(new KeyValuePair<string, object>("rows", this.NumberOfRows));
+
+            output.Add(new KeyValuePair<string, object>("cols", this.NumberOfCols));
+        }
+    }
+
+    public class WordDocument : OfficeDocuments, IEditable
+    {
+        public int? NumberOfCharacters { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "chars")
+            {
+                this.NumberOfCharacters = int.Parse(value);
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+
+            output.Add(new KeyValuePair<string, object>("chars", this.NumberOfCharacters));
+        }
+
+        public void ChangeContent(string newContent)
+        {
+            this.Content = newContent;
+        }
+    }
+
+    public abstract class BinaryDocument : Document
+    {
+        public long? Size { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "size")
+            {
+                this.Size = long.Parse(value);
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+            output.Add(new KeyValuePair<string, object>("size", this.Size));
+        }
+    }
+
+    public abstract class MultimediaDocs : BinaryDocument
+    {
+        public int? Length { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "length")
+            {
+                this.Length = int.Parse(value);
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+            output.Add(new KeyValuePair<string, object>("length", this.Length));
+        }
+    }
+
+    public abstract class OfficeDocuments : EncryptableBinaryDoc
+    {
+        public string Version { get; set; }
+
+        public override void LoadProperty(string key, string value)
+        {
+            if (key == "version")
+            {
+                this.Version = value;
+            }
+            else
+            {
+                base.LoadProperty(key, value);
+            }
+        }
+
+        public override void SaveAllProperties(IList<KeyValuePair<string, object>> output)
+        {
+            base.SaveAllProperties(output);
+            output.Add(new KeyValuePair<string, object>("version", this.Version));
         }
     }
 }
