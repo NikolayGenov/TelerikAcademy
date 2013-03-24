@@ -1,170 +1,284 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public interface IDocument
+namespace DocumentSystem
 {
-	string Name { get; }
-	string Content { get; }
-	void LoadProperty(string key, string value);
-	void SaveAllProperties(IList<KeyValuePair<string, object>> output);
-	string ToString();
-}
-
-public interface IEditable
-{
-	void ChangeContent(string newContent);
-}
-
-public interface IEncryptable
-{
-	bool IsEncrypted { get; }
-	void Encrypt();
-	void Decrypt();
-}
-
-public class DocumentSystem
-{
-    static void Main()
+    public interface IDocument
     {
-        IList<string> allCommands = ReadAllCommands();
-        ExecuteCommands(allCommands);
+        string Name { get; }
+
+        string Content { get; }
+
+        void LoadProperty(string key, string value);
+
+        void SaveAllProperties(IList<KeyValuePair<string, object>> output);
+
+        string ToString();
     }
 
-    private static IList<string> ReadAllCommands()
+    public interface IEditable
     {
-        List<string> commands = new List<string>();
-        while (true)
+        void ChangeContent(string newContent);
+    }
+
+    public interface IEncryptable
+    {
+        bool IsEncrypted { get; }
+
+        void Encrypt();
+
+        void Decrypt();
+    }
+
+    public class DocumentSystem
+    {
+        private static IList<IDocument> documents = new List<IDocument>();
+
+        static void Main()
         {
-            string commandLine = Console.ReadLine();
-            if (commandLine == "")
+            IList<string> allCommands = ReadAllCommands();
+            ExecuteCommands(allCommands);
+        }
+
+        private static IList<string> ReadAllCommands()
+        {
+            List<string> commands = new List<string>();
+            while (true)
             {
-                // End of commands
-                break;
+                string commandLine = Console.ReadLine();
+                if (commandLine == "")
+                {
+                    // End of commands
+                    break;
+                }
+                commands.Add(commandLine);
             }
-            commands.Add(commandLine);
+            return commands;
         }
-        return commands;
-    }
 
-    private static void ExecuteCommands(IList<string> commands)
-    {
-        foreach (var commandLine in commands)
+        private static void ExecuteCommands(IList<string> commands)
         {
-            int paramsStartIndex = commandLine.IndexOf("[");
-            string cmd = commandLine.Substring(0, paramsStartIndex);
-            int paramsEndIndex = commandLine.IndexOf("]");
-            string parameters = commandLine.Substring(
-                paramsStartIndex + 1, paramsEndIndex - paramsStartIndex - 1);
-            ExecuteCommand(cmd, parameters);
+            foreach (var commandLine in commands)
+            {
+                int paramsStartIndex = commandLine.IndexOf("[");
+                string cmd = commandLine.Substring(0, paramsStartIndex);
+                int paramsEndIndex = commandLine.IndexOf("]");
+                string parameters = commandLine.Substring(
+                    paramsStartIndex + 1, paramsEndIndex - paramsStartIndex - 1);
+                ExecuteCommand(cmd, parameters);
+            }
         }
-    }
 
-    private static void ExecuteCommand(string cmd, string parameters)
-    {
-        string[] cmdAttributes = parameters.Split(
-            new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-        if (cmd == "AddTextDocument")
+        private static void ExecuteCommand(string cmd, string parameters)
         {
-            AddTextDocument(cmdAttributes);
+            string[] cmdAttributes = parameters.Split(
+                new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            if (cmd == "AddTextDocument")
+            {
+                AddTextDocument(cmdAttributes);
+            }
+            else if (cmd == "AddPDFDocument")
+            {
+                AddPdfDocument(cmdAttributes);
+            }
+            else if (cmd == "AddWordDocument")
+            {
+                AddWordDocument(cmdAttributes);
+            }
+            else if (cmd == "AddExcelDocument")
+            {
+                AddExcelDocument(cmdAttributes);
+            }
+            else if (cmd == "AddAudioDocument")
+            {
+                AddAudioDocument(cmdAttributes);
+            }
+            else if (cmd == "AddVideoDocument")
+            {
+                AddVideoDocument(cmdAttributes);
+            }
+            else if (cmd == "ListDocuments")
+            {
+                ListDocuments();
+            }
+            else if (cmd == "EncryptDocument")
+            {
+                EncryptDocument(parameters);
+            }
+            else if (cmd == "DecryptDocument")
+            {
+                DecryptDocument(parameters);
+            }
+            else if (cmd == "EncryptAllDocuments")
+            {
+                EncryptAllDocuments();
+            }
+            else if (cmd == "ChangeContent")
+            {
+                ChangeContent(cmdAttributes[0], cmdAttributes[1]);
+            }
+            else
+            {
+                throw new InvalidOperationException("Invalid command: " + cmd);
+            }
         }
-        else if (cmd == "AddPDFDocument")
-        {
-            AddPdfDocument(cmdAttributes);
-        }
-        else if (cmd == "AddWordDocument")
-        {
-            AddWordDocument(cmdAttributes);
-        }
-        else if (cmd == "AddExcelDocument")
-        {
-            AddExcelDocument(cmdAttributes);
-        }
-        else if (cmd == "AddAudioDocument")
-        {
-            AddAudioDocument(cmdAttributes);
-        }
-        else if (cmd == "AddVideoDocument")
-        {
-            AddVideoDocument(cmdAttributes);
-        }
-        else if (cmd == "ListDocuments")
-        {
-            ListDocuments();
-        }
-        else if (cmd == "EncryptDocument")
-        {
-            EncryptDocument(parameters);
-        }
-        else if (cmd == "DecryptDocument")
-        {
-            DecryptDocument(parameters);
-        }
-        else if (cmd == "EncryptAllDocuments")
-        {
-            EncryptAllDocuments();
-        }
-        else if (cmd == "ChangeContent")
-        {
-            ChangeContent(cmdAttributes[0], cmdAttributes[1]);
-        }
-        else
-        {
-            throw new InvalidOperationException("Invalid command: " + cmd);
-        }
-    }
-  
-    private static void AddTextDocument(string[] attributes)
-    {
-        // TODO
-    }
 
-    private static void AddPdfDocument(string[] attributes)
-    {
-        // TODO
-    }
+        private static void AddTextDocument(string[] attributes)
+        {
+            AddDocument(new TextDocument(), attributes);
+        }
 
-    private static void AddWordDocument(string[] attributes)
-    {
-        // TODO
-    }
+        private static void AddPdfDocument(string[] attributes)
+        {
+            AddDocument(new PDFDoc(), attributes);
+        }
 
-    private static void AddExcelDocument(string[] attributes)
-    {
-        // TODO
-    }
+        private static void AddWordDocument(string[] attributes)
+        {
+            AddDocument(new WordDoc(), attributes);
+        }
 
-    private static void AddAudioDocument(string[] attributes)
-    {
-        // TODO
-    }
+        private static void AddExcelDocument(string[] attributes)
+        {
+            AddDocument(new ExcelDoc(), attributes);
+        }
 
-    private static void AddVideoDocument(string[] attributes)
-    {
-        // TODO
-    }
+        private static void AddAudioDocument(string[] attributes)
+        {
+            AddDocument(new Audio(), attributes);
+        }
 
-    private static void ListDocuments()
-    {
-        // TODO
-    }
+        private static void AddVideoDocument(string[] attributes)
+        {
+            AddDocument(new Video(), attributes);
+        }
 
-    private static void EncryptDocument(string name)
-    {
-        // TODO
-    }
+        private static void ListDocuments()
+        {
+            if (documents.Count > 0)
+            {
+                foreach (var doc in documents)
+                {
+                    Console.WriteLine(doc);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No documents found");
+            }
+        }
 
-    private static void DecryptDocument(string name)
-    {
-        // TODO
-    }
+        private static void EncryptDocument(string name)
+        {
+            bool documentFound = false;
+            foreach (var doc in documents)
+            {
+                if (doc.Name == name)
+                {
+                    if (doc is IEncryptable)
+                    {
+                        ((IEncryptable)doc).Encrypt();
+                        Console.WriteLine("Document encrypted: " + name);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Document does not support encryption: " + name);
+                    }
+                    documentFound = true;
+                }
+            }
+            if (!documentFound)
+            {
+                Console.WriteLine("Document not found: " + name);
+            }
+        }
 
-    private static void EncryptAllDocuments()
-    {
-        // TODO
-    }
+        private static void DecryptDocument(string name)
+        {
+            bool documentFound = false;
+            foreach (var doc in documents)
+            {
+                if (doc.Name == name)
+                {
+                    if (doc is IEncryptable)
+                    {
+                        ((IEncryptable)doc).Decrypt();
+                        Console.WriteLine("Document decrypted: " + name);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Document does not support decryption: " + name);
+                    }
+                    documentFound = true;
+                }
+            }
+            if (!documentFound)
+            {
+                Console.WriteLine("Document not found: " + name);
+            }
+        }
 
-    private static void ChangeContent(string name, string content)
-    {
-        // TODO
+        private static void EncryptAllDocuments()
+        {
+            bool documentFound = false;
+            foreach (var doc in documents)
+            {
+                if (doc is IEncryptable)
+                {
+                    ((IEncryptable)doc).Decrypt();
+                    documentFound = true;
+                }
+            }
+            if (documentFound)
+            {
+                Console.WriteLine("All documents encrypted");
+            }
+            else
+            {
+                Console.WriteLine("No encryptable documents found");
+            }
+        }
+
+        private static void ChangeContent(string name, string content)
+        {
+            bool documentFound = false;
+            foreach (var doc in documents)
+            {
+                if (doc is IEditable)
+                {
+                    ((IEditable)doc).ChangeContent(content);
+                    Console.WriteLine("Document content changed: " + doc.Name);
+                }
+                else
+                {
+                    Console.WriteLine("Document is not editalbe: " + doc.Name);
+                }
+                documentFound = true;
+            }
+            if (documentFound == false)
+            {
+                Console.WriteLine("Document not found: " + name);
+            }
+        }
+
+        private static void AddDocument(IDocument doc, string[] attrs)
+        {
+            foreach (var attr in attrs)
+            {
+                string[] keysValues = attr.Split('=');
+                string key = keysValues[0];
+                string value = keysValues[1];
+                doc.LoadProperty(key, value);
+            }
+            if (doc.Name != null)
+            {
+                documents.Add(doc);
+                Console.WriteLine("Document added: " + doc.Name);
+            }
+            else
+            {
+                Console.WriteLine("Document has no name");
+            }
+        }
     }
 }

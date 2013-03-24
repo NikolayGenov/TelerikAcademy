@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DocumentSystem
 {
-    class Program
+    public class EncryptableBinary
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

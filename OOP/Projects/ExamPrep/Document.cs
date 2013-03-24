@@ -38,7 +38,7 @@ namespace DocumentSystem
             StringBuilder info = new StringBuilder();
             List<KeyValuePair<string, object>> prop = new List<KeyValuePair<string, object>>();
             this.SaveAllProperties(prop);
-            prop.Sort((a, b) => a.Key.CompareTo(b));
+            prop.Sort((a, b) => a.Key.CompareTo(b.Key));
             info.Append(GetType().Name);
             info.Append("[");
             bool first = true;
