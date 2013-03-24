@@ -254,7 +254,7 @@ namespace DocumentSystem
                     }
                     else
                     {
-                        Console.WriteLine("Document is not editalbe: " + doc.Name);
+                        Console.WriteLine("Document is not editable: " + doc.Name);
                     }
                     documentFound = true;
                 }
