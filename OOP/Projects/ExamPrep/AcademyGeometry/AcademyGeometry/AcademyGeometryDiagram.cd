@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="GeometryAPI.Vector">
+  <Class Name="GeometryAPI.Vector" Collapsed="true">
     <Position X="2" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAGACABAIAAAAAAAAAAQAAAEMAACA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GeometryAPI.Vector3D">
+  <Class Name="GeometryAPI.Vector3D" Collapsed="true">
     <Position X="4.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgQAAAABAAAAAEYAUAAAAAAAAABAAAAAAAAMACYAE=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GeometryAPI.Figure">
-    <Position X="4.25" Y="0.5" Width="1.5" />
+  <Class Name="GeometryAPI.Figure" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAICAQAAAAAABEAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -23,14 +23,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="GeometryAPI.Vertex" Collapsed="true">
-    <Position X="2" Y="3.75" Width="1.5" />
+    <Position X="4" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GeometryAPI.LineSegment" Collapsed="true">
-    <Position X="4.25" Y="3.75" Width="1.5" />
+    <Position X="7" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABEAAAAAAACAAAAAAAAAAIAEAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -38,7 +38,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="GeometryAPI.Triangle" Collapsed="true">
-    <Position X="6.5" Y="3.75" Width="1.5" />
+    <Position X="1.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAAsAEAAAA=</HashCode>
       <FileName>Program.cs</FileName>

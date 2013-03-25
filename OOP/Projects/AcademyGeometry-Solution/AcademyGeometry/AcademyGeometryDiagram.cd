@@ -30,7 +30,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GeometryAPI.LineSegment" Collapsed="true">
-    <Position X="4.25" Y="3.75" Width="1.5" />
+    <Position X="4.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABEAAAAAAACAAAAAAAAAAIAEAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -38,7 +38,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="GeometryAPI.Triangle" Collapsed="true">
-    <Position X="6.5" Y="3.75" Width="1.5" />
+    <Position X="7" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAAsAEAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -59,6 +59,29 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="GeometryAPI.Circle" Collapsed="true">
+    <Position X="7" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeometryAPI.Cylinder" Collapsed="true">
+    <Position X="2" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAQAAAAACAICAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GeometryAPI.AdvancedFigureController" Collapsed="true">
+    <Position X="9" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="GeometryAPI.ITransformable" Collapsed="true">
     <Position X="9" Y="4" Width="1.5" />
     <TypeIdentifier>
@@ -74,7 +97,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="GeometryAPI.IAreaMeasurable" Collapsed="true">
-    <Position X="9" Y="3.25" Width="1.5" />
+    <Position X="9" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
