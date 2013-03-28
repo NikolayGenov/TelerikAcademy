@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Functions - Find Youngest Person</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <a href="#" class="js-console-btn" onclick="MainFunc()">Find Youngest Person test</a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+            function MainFunc() {
+                var people = [
+                    {firstname : "Gosho", lastname: "Petrov", age: 32}, 
+                    {firstname : "Bay", lastname: "Ivan", age: 81},
+                    {firstname : "Niki", lastname: "Kostov", age: 11},
+                    {firstname : "Svetlin", lastname: "Nakov", age: 39},
+                    {firstname : "Bay", lastname: "Gosho", age: 34}
+                ];
+                var youngestPerson = FindYoungestPerson(people);
+                jsConsole.writeLine("The youngest person is " + youngestPerson.firstname +
+                                    " " + youngestPerson.lastname + " and his age is: " + youngestPerson.age);
+            }
+            function FindYoungestPerson(people) {
+                if (people.length > 0) {
+                    var minimalAge = people[0].age;
+                    var youngestPerson = people[0];
+                    
+                    for (var i = 0; i < people.length; i++) {
+                        if (people[i].age < minimalAge) {
+                            minimalAge = people[i].age;
+                            youngestPerson = people[i];
+                        }
+                    }
+                } 
+                return youngestPerson;
+                
+            }
+        </script>
+    </body>
+</html>
+        

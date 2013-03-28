@@ -60,8 +60,9 @@
     <Content Include="1.Shapes.html" />
     <Content Include="2.AttachMethod.html" />
     <Content Include="3.DeepCopying.html" />
-    <Content Include="ContainsProp.html" />
+    <Content Include="4.ContainsProp.html" />
     <Content Include="Web.config" />
+    <Content Include="5.YoungestPerson.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
