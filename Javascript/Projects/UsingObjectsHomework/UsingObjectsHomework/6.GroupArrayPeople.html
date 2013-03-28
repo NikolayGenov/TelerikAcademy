@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Functions -Group array of people</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <a href="#" class="js-console-btn" onclick="MainFunc()">Run Group array test</a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+            function MainFunc() {
+                //Predefined array
+                var people = [
+                    { firstname: "Gosho", lastname: "Petrov", age: 32 },
+                    { firstname: "Bay", lastname: "Ivan", age: 81 },
+                    { firstname: "Niki", lastname: "Kostov", age: 11 },
+                    { firstname: "Svetlin", lastname: "Nakov", age: 39 },
+                    { firstname: "Bay", lastname: "Gosho", age: 34 }
+                ];
+                //Some tests
+                var PeopleGroupedByAge = GroupByProp(people, "age");
+                jsConsole.writeLine("Grouped by age");
+                for (var i = 0; i < PeopleGroupedByAge.length; i++) {
+                    jsConsole.writeLine("Index " + i + ": " + PeopleGroupedByAge[i]);
+                }
+                jsConsole.writeLine("----------------------");
+
+                var PeopleGroupedByFN = GroupByProp(people, "firstname");
+                jsConsole.writeLine("Grouped by first name");
+                for (var i = 0; i < PeopleGroupedByFN.length; i++) {
+                    jsConsole.writeLine("Index " + i + ": " + PeopleGroupedByFN[i]);
+                }
+                jsConsole.writeLine("----------------------");
+            }
+            function GroupByProp(objects, prop) {
+                var groupedObjects = new Array();
+                //looping in the whole object array
+                for (var i = 0; i < objects.length; i++) {
+                    for (var property in objects[i]) {
+                        if (property == prop) {
+                            groupedObjects.push(objects[i][property]);
+                        }
+                    }
+                }
+                //Return the new array
+                return groupedObjects;
+            }            
+        </script>
+    </body>
+</html>
