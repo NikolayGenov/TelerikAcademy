@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Functions - Attach remove</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <a href="#" class="js-console-btn" onclick="MainFunc()">Remove Elements Test</a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+            Array.prototype.remove = function (element) {
+                //for each positiong check and then use splice
+                for (var i = 0; i < this.length; i++) 
+                    if (this[i] == element) 
+                        this.splice(i, 1);
+            }
+            function MainFunc() {
+                var testArray = [1, 2, 1, 4, 1, 3, 4, 1, 111, 3, 2, 1, "1"];
+                //Set the array and print it
+                jsConsole.writeLine(testArray);
+                var elementToBeRemoved = 1;
+                //remove the number 1
+                testArray.remove(elementToBeRemoved);
+                //Print after
+                jsConsole.writeLine("After:");
+                jsConsole.writeLine(testArray);
+            }        
+        </script>
+    </body>
+</html>
+            
