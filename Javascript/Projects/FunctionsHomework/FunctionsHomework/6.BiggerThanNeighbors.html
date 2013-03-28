@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Functions - Find if greater than neighbors</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+        <label for="tb-numbers">Enter numbers separated by comma: </label>
+        <input id="tb-numbers" type="text" class="js-console-input" />
+        <br />
+        <label for="tb-key">Enter position (neither first, nor number)(starts from 0): </label>
+        <input id="tb-key" type="text" class="js-console-input"/>
+        <a href="#" class="js-console-btn" onclick="checkPostionOnButtonClick()">Check position </a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+            function checkPostionOnButtonClick() {
+                var numbers = jsConsole.read("#tb-numbers");
+                var arr = numbers.split(",");
+                var position = jsConsole.readInteger("#tb-key");
+
+                //Check if there are any elements
+                if (position > 0 && position < arr.length - 1) {
+                    jsConsole.writeLine("The number at that position is greater than it's neighbors: " + (CheckElement(position, arr)));
+                }
+                else {
+                    jsConsole.writeLine("The position is not valid");
+                }
+                jsConsole.writeLine("----------------");
+            }
+            function CheckElement(pos, array) {
+                if ((array[pos - 1] < array[pos]) && (array[pos] > array[pos + 1])) {
+                    return true;
+                }
+                return false;
+            }            
+        </script>    </body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Functions - Number of times in array</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+        <label for="tb-numbers">Enter numbers separated by comma: </label>
+        <input id="tb-numbers" type="text" class="js-console-input" />
+        <br />
+        <label for="tb-key">Search number: </label>
+        <input id="tb-key" type="text" class="js-console-input" />
+
+        <a href="#" class="js-console-btn" onclick="FindNumberOfTimes()">Find Number Of Times</a>
+        <a href="#" class="js-console-btn" onclick="TestFunction()">Use test function</a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            function FindNumberOfTimes() {
+                //Get the array of numbers and the key number to search
+                var numbers = jsConsole.read("#tb-numbers");
+                var arr = numbers.split(',');
+                var key = jsConsole.readInteger("#tb-key");
+                    
+                //Call the function and save the result in a var
+                FindAndPrintResult(key, arr);
+            }
+            function TestFunction() {
+                //Predefined test fucntion
+                var array = [4, 5, 6, 7, 8, 34, 5, 3, 4, 4, 5, 6, 3];
+                var keyNumber = 4;
+                jsConsole.writeLine("Array: [" + array + "]");
+                FindAndPrintResult(keyNumber, array);
+            }
+            function FindAndPrintResult(key, arr) {
+                var numberOfTimes = CountNumberOfTimes(key, arr);
+                if (numberOfTimes != 0) {
+                    jsConsole.writeLine("The number " + key + " is found " + numberOfTimes + " times in the array");
+                }
+                else {
+                    jsConsole.writeLine("The number is not found in the array");
+                }
+                jsConsole.writeLine("----------------");
+            }
+            function CountNumberOfTimes(key, arr) {
+                var counter = 0;
+                //Looping in the array and compare each value with the key value
+                for (var i = 0; i < arr.length; i++) {
+                    if (key == arr[i])
+                        counter++;
+                }
+                return counter;
+            }
+        </script>
+    </body>
+</html>

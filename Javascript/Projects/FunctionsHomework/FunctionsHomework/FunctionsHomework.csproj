@@ -61,6 +61,9 @@
     <Content Include="2.ReverseDigits.html" />
     <Content Include="3.SearchWord.html" />
     <Content Include="4.CountDivs.html" />
+    <Content Include="6.BiggerThanNeighbors.html" />
+    <Content Include="7.FindBigger.html" />
+    <Content Include="5.TimesInArray.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
