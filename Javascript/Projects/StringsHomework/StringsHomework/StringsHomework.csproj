@@ -60,8 +60,11 @@
     <Content Include="1.ReverseString.html" />
     <Content Include="2.Brackets.html" />
     <Content Include="3.SubstringFound.html" />
-    <Content Include="CasingStrings.html" />
+    <Content Include="4.CasingStrings.html" />
+    <Content Include="6.ExtractHTML.html" />
+    <Content Include="7.ParseURL.html" />
     <Content Include="Web.config" />
+    <Content Include="5.WhiteSpaces.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Strings - 7</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <a href="#" class="js-console-btn" onclick="onBtnClick()">Extract URL</a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            function onBtnClick() {
+                var input = "http://www.devbg.org/forum/index.php";
+               
+                var urlInfo = ExtractURL(input);
+                jsConsole.writeLine("protocol: " + urlInfo['protocol']);
+                jsConsole.writeLine("server: " + urlInfo['server']);
+                jsConsole.writeLine("resource: " + urlInfo['resource']);
+                
+                jsConsole.writeLine("---------------------");
+            }
+            
+            function ExtractURL(input) {
+                var result = '';
+                var twoSlashes = input.indexOf("//"); //Taking the index of the two slashes in after the protocol
+                var singleSlash = input.indexOf("/", twoSlashes + 3); //and then the slash after them
+                var protocol = input.substr(0, twoSlashes - 1); //Protocol is found from the start and before the index of the two slashes
+                var server = input.substr(twoSlashes + 2, singleSlash - (twoSlashes + 2)); //the server is after the two slashes 2 from there and it's length can be calculated by this simple formula
+                var resource = input.substr(singleSlash); //Everything after that is resources
+                //Return as JSON
+                return {
+                    protocol: protocol,
+                    server: server,
+                    resource: resource
+                };
+            }
+        </script>
+    </body>
+</html>
