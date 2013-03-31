@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Strings - 1</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <a href="#" class="js-console-btn" onclick="onBtnClick()">Reverse</a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            function onBtnClick() {
+                var test = "sample string";
+                var test2 = "gnirts elpmas";
+                jsConsole.writeLine(Reverse(test));
+                jsConsole.writeLine(Reverse(test2));
+            }
+            function Reverse(input) {
+                var resultStr = '';
+                var i = 0;
+                for (i = 0; i < input.length; i++) {
+                    resultStr += input[input.length - i - 1];
+                }
+                return resultStr;
+            }
+        </script>
+    </body>
+</html>

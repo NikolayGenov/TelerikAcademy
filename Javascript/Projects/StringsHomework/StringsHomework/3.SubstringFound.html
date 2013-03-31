@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Strings - 3</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <a href="#" class="js-console-btn" onclick="onBtnClick()">SubString in a String test</a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            function onBtnClick() {
+                var test = "We are living in an yellow submarine.We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
+                var keyWord = "in";
+                jsConsole.writeLine(test);
+                jsConsole.writeLine("Number of times of '"+ keyWord +"' : ");
+                jsConsole.writeLine(CountSubstring(test, keyWord));
+            }
+            function CountSubstring(input, keyWord) {
+                var position = -1;
+                var counter = 0;
+                //Make it to lower
+                input = input.toLowerCase();
+                //Loop until we can't find it anymore
+                while (input.indexOf(keyWord, position + 1) != -1) {
+                    //When we find it we save the position and add to the counter
+                    position = input.indexOf(keyWord, position + 1);
+                    counter++;
+                }
+                return counter;
+            }
+        </script>
+    </body>
+</html>
