@@ -15,27 +15,28 @@
                 var input = "We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>ANYTHING</lowcase> else.";        
                 
                 jsConsole.writeLine(input);
+                input = input.replace(/<mixcase>(.*?)<\/mixcase>/g, makeMix);
                 input = input.replace(/<upcase>(.*?)<\/upcase>/g, makeUpper);              
                 input = input.replace(/<lowcase>(.*?)<\/lowcase>/g, makeLower);               
-                input = input.replace(/<mixcase>(.*?)<\/mixcase>/g, makeMix);            
+            
                 jsConsole.writeLine(input);
                 jsConsole.writeLine("---------------------");
             }
             
-            function makeUpper(match) {
-                return match.toUpperCase();
+            function makeUpper(found) {
+                return found.toUpperCase();
             }
-            function makeLower(match) {
-                return match.toLowerCase();
+            function makeLower(found) {
+                return found.toLowerCase();
             }
-            function makeMix(match) {
+            function makeMix(found) {
                 var output = '';
-                for (var i = 0; i < match.length; i++) {
+                for (var i = 0; i < found.length; i++) {
                     if (Math.round(Math.random())) {
-                        output += match[i].toLowerCase();
+                        output += found[i].toLowerCase();
                     }
                     else {
-                        output += match[i].toUpperCase();
+                        output += found[i].toUpperCase();
                     }
                 }
                 return output;

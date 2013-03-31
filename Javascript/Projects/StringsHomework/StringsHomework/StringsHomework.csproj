@@ -63,6 +63,10 @@
     <Content Include="4.CasingStrings.html" />
     <Content Include="6.ExtractHTML.html" />
     <Content Include="7.ParseURL.html" />
+    <Content Include="8.ReplaceTagURL.html" />
+    <Content Include="9.ExtractEmail.html" />
+    <Content Include="10.Palindromes.html" />
+    <Content Include="11.Placeholders.html" />
     <Content Include="Web.config" />
     <Content Include="5.WhiteSpaces.html" />
   </ItemGroup>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Strings - 10</title>
+        <link href="styles/js-console.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <a href="#" class="js-console-btn" onclick="onBtnClick()">Use Placeholders</a>
+        <div id="js-console"></div>
+        <script src="scripts/js-console.js"></script>
+        <script>
+
+            function onBtnClick() {
+                var format = "{0}, {1}, {0} text {2}";
+                var str = stringFormat(format, 1, "Pesho", "Gosho");
+                
+                jsConsole.writeLine(format);
+                jsConsole.writeLine(str);
+                jsConsole.writeLine("---------------------");
+            }
+          
+            function stringFormat(input) {
+                for (var i = 0; i < input.length ; i++) {
+                    var pattern = new RegExp("[{]" + i + "[}]", "gi");
+                    input = input.replace(pattern, arguments[1 + i]);
+                }
+                return input;
+            }
+        </script>
+    </body>
+</html>
+
