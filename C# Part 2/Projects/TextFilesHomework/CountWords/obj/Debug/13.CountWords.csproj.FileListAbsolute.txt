@@ -1,1 +1,0 @@
-C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Projects\TextFilesHomework\CountWords\bin\Debug\CountWords.exe.config

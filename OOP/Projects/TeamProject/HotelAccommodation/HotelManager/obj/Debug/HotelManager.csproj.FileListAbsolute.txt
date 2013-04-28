@@ -1,6 +1,0 @@
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\TeamProject\HotelAccommodation\HotelManager\bin\Debug\HotelManager.exe.config
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\TeamProject\HotelAccommodation\HotelManager\bin\Debug\HotelManager.exe
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\TeamProject\HotelAccommodation\HotelManager\bin\Debug\HotelManager.pdb
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\TeamProject\HotelAccommodation\HotelManager\obj\Debug\HotelManager.csprojResolveAssemblyReference.cache
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\TeamProject\HotelAccommodation\HotelManager\obj\Debug\HotelManager.exe
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\TeamProject\HotelAccommodation\HotelManager\obj\Debug\HotelManager.pdb

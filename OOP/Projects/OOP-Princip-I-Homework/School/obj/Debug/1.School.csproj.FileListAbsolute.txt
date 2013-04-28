@@ -1,6 +1,0 @@
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\School\bin\Debug\School.exe.config
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\School\bin\Debug\School.exe
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\School\bin\Debug\School.pdb
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\School\obj\Debug\1.School.csprojResolveAssemblyReference.cache
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\School\obj\Debug\School.exe
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\School\obj\Debug\School.pdb

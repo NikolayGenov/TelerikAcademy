@@ -1,5 +1,0 @@
-C:\Users\Nikolay\Dropbox\TelerikAcademy\CSS\LESS\LESS\LESS\bin\LESS.dll
-C:\Users\Nikolay\Dropbox\TelerikAcademy\CSS\LESS\LESS\LESS\bin\LESS.pdb
-C:\Users\Nikolay\Dropbox\TelerikAcademy\CSS\LESS\LESS\LESS\obj\Debug\LESS.csprojResolveAssemblyReference.cache
-C:\Users\Nikolay\Dropbox\TelerikAcademy\CSS\LESS\LESS\LESS\obj\Debug\LESS.dll
-C:\Users\Nikolay\Dropbox\TelerikAcademy\CSS\LESS\LESS\LESS\obj\Debug\LESS.pdb

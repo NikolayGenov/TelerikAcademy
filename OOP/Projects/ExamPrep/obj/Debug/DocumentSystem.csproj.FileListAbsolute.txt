@@ -1,5 +1,0 @@
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\ExamPrep\bin\Debug\DocumentSystem.exe
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\ExamPrep\bin\Debug\DocumentSystem.pdb
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\ExamPrep\obj\Debug\DocumentSystem.csprojResolveAssemblyReference.cache
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\ExamPrep\obj\Debug\DocumentSystem.exe
-C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\ExamPrep\obj\Debug\DocumentSystem.pdb

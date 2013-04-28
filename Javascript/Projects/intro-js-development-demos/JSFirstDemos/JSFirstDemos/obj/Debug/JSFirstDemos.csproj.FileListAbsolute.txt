@@ -1,5 +1,0 @@
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Projects\intro-js-development-demos\JSFirstDemos\JSFirstDemos\bin\JSFirstDemos.dll
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Projects\intro-js-development-demos\JSFirstDemos\JSFirstDemos\bin\JSFirstDemos.pdb
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Projects\intro-js-development-demos\JSFirstDemos\JSFirstDemos\obj\Debug\JSFirstDemos.csprojResolveAssemblyReference.cache
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Projects\intro-js-development-demos\JSFirstDemos\JSFirstDemos\obj\Debug\JSFirstDemos.dll
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Projects\intro-js-development-demos\JSFirstDemos\JSFirstDemos\obj\Debug\JSFirstDemos.pdb

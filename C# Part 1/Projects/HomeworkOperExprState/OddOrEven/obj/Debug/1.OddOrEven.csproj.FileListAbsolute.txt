@@ -1,2 +1,0 @@
-C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 1\Projects\HomeworkOperExprState\OddOrEven\bin\Debug\OddOrEven.exe.config
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 1\Projects\HomeworkOperExprState\OddOrEven\bin\Debug\OddOrEven.exe.config

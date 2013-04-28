@@ -1,5 +1,0 @@
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\DogMeeting\bin\Debug\DogMeeting.exe
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\DogMeeting\bin\Debug\DogMeeting.pdb
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\DogMeeting\obj\Debug\1. Dog Meeting.csprojResolveAssemblyReference.cache
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\DogMeeting\obj\Debug\DogMeeting.exe
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\DogMeeting\obj\Debug\DogMeeting.pdb

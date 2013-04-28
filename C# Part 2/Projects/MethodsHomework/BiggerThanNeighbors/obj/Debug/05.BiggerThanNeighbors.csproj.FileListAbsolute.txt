@@ -1,1 +1,0 @@
-C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Projects\MethodsHomework\BiggerThanNeighbors\bin\Debug\BiggerThanNeighbors.exe.config

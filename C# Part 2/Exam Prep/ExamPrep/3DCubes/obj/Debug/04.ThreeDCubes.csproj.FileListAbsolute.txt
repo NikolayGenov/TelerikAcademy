@@ -1,6 +1,0 @@
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\3DCubes\bin\Debug\3DCubes.exe.config
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\3DCubes\bin\Debug\3DCubes.exe
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\3DCubes\bin\Debug\3DCubes.pdb
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\3DCubes\obj\Debug\04.ThreeDCubes.csprojResolveAssemblyReference.cache
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\3DCubes\obj\Debug\3DCubes.exe
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\3DCubes\obj\Debug\3DCubes.pdb

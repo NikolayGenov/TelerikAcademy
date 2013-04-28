@@ -1,5 +1,0 @@
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task5\bin\Debug\Task5.exe.config
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task5\bin\Debug\Task5.exe
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task5\bin\Debug\Task5.pdb
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task5\obj\Debug\Task5.exe
-C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task5\obj\Debug\Task5.pdb
