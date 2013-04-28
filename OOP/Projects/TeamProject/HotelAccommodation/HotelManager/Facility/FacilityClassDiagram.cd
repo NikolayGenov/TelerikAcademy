@@ -97,26 +97,4 @@
       <FileName>Facility\GolfFacility.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Interface Name="HotelManager.Facility.IAccommodate" Collapsed="true">
-    <Position X="8.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAIAAAAAAAAAAAAQAAgAEAAAEAA=</HashCode>
-      <FileName>Facility\IAccommodate.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Enum Name="HotelManager.Facility.Category" Collapsed="true">
-    <Position X="10" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIAABAAAAAAAAAAAAAAIAAAAQAAAAAAAAAAQAAAAA=</HashCode>
-      <FileName>Facility\Category.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="HotelManager.Facility.RoomKind" Collapsed="true">
-    <Position X="10" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAACAAAAAAEAQAAAAAA=</HashCode>
-      <FileName>Facility\RoomKind.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Font Name="Segoe UI" Size="9" />
-</ClassDiagram>
+  <Interface Name="HotelManager.Facility.IAccommodate" Collapsed

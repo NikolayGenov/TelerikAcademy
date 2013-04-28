@@ -1,0 +1,5 @@
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Exam\obj\Debug\SoftwareAcademy.csprojResolveAssemblyReference.cache
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Exam\bin\Debug\SoftwareAcademy.exe
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Exam\bin\Debug\SoftwareAcademy.pdb
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Exam\obj\Debug\SoftwareAcademy.exe
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Exam\obj\Debug\SoftwareAcademy.pdb

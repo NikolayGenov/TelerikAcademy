@@ -101,48 +101,4 @@ namespace HotelManager.Person
                     webClient.Encoding = System.Text.Encoding.GetEncoding(codePage);
                     result = webClient.DownloadString(url);
                     result = result.Substring(result.IndexOf(test));
-                    result = result.Substring(result.IndexOf(">") + 1, result.IndexOf("</span") - result.IndexOf(">") - 1);
-                }
-                catch (WebException we)
-                {
-                    throw new PersonException("No connection to brain!", we);
-                }
-            }
-            return result;
-        }
-
-        public void AddLanguages(params Languages[] lang)
-        {
-            //AddingLanguages
-            foreach (var langueage in lang)
-            {
-                this.CollOfLanguages.Add(langueage);
-            }
-        }
-
-        public string Speak(Languages langCode)
-        {
-            StringBuilder text = new StringBuilder();
-            text.AppendLine(Welcome(langCode));
-            text.AppendLine(SayIt(langCode, PhraseToTranslate));
-            text.AppendLine(GoodBye(langCode));
-            return text.ToString();
-        }
-
-        public ICollection<Languages> IsAbleToSpeakIn()
-        {
-            return this.CollOfLanguages;
-        }
-        
-        public string CanSpeak()
-        {
-            StringBuilder infoLang = new StringBuilder();
-            infoLang.Append("Press :");
-            foreach (var lang in CollOfLanguages)
-            {
-                infoLang.AppendFormat(" {0} for {1} ", (int)lang, lang);
-            }
-            return infoLang.ToString();
-        }
-    }
-}
+                    result = result.Substring(result.IndexOf(">") + 1, res

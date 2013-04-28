@@ -105,28 +105,4 @@ namespace Events
             int lastPipeIndex = commandForExecution.LastIndexOf('|');
             if (firstPipeIndex == lastPipeIndex)
             {
-                eventTitle = commandForExecution.Substring(firstPipeIndex + 1).Trim();
-                eventLocation = string.Empty;
-            }
-            else
-            {
-                eventTitle = commandForExecution.Substring(firstPipeIndex + 1, lastPipeIndex - firstPipeIndex - 1).Trim();
-                eventLocation = commandForExecution.Substring(lastPipeIndex + 1).Trim();
-            }
-        }
-        
-        /// <summary>
-        /// Get a date by parsing it to DateTime
-        /// </summary>
-        /// <param name="command">The user command.</param>
-        /// <param name="commandType">The command type - (methods from above)</param>
-        /// <returns>The date and time itself.</returns>
-        private static DateTime GetDate(string command, string commandType)
-        {
-            DateTime date = DateTime.Parse(command.Substring(commandType.Length + 1, 20));
-            return date;
-        }
-    
-        #endregion
-    }
-}
+ 

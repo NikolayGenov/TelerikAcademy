@@ -131,34 +131,4 @@ namespace Problem_4_3D_Lines
                     linesCount = 1;
                 }
                 w -= stepW;
-                h -= stepH;
-                d -= stepD;
-            }
-        }
-
-        private static bool IsProcessed(
-            int w, int h, int d, int stepW, int stepH, int stepD)
-        {
-            bool isProcessed =
-                processed[w, h, d, stepW + 1, stepH + 1, stepD + 1] ||
-                processed[w, h, d, -stepW + 1, -stepH + 1, -stepD + 1];
-            return isProcessed;
-        }
-
-        private static void MarkAsProcessed(
-            int w, int h, int d, int stepW, int stepH, int stepD)
-        {
-            processed[w, h, d, stepW + 1, stepH + 1, stepD + 1] = true;
-            processed[w, h, d, -stepW + 1, -stepH + 1, -stepD + 1] = true;
-        }
-
-        private static bool IsInsideTheCuboid(int w, int h, int d)
-        {
-            bool inside =
-                w >= 0 && w < width &&
-                h >= 0 && h < height &&
-                d >= 0 && d < depth;
-            return inside;
-        }
-    }
-}
+                h -=

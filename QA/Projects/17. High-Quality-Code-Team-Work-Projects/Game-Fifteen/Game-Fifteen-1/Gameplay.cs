@@ -126,28 +126,4 @@ namespace GameFifteenProject
         private static bool AreValidNeighbourTiles(Tile freeTile, Tile tile)
         {
             int tilesDistance = freeTile.Position - tile.Position;
-            int tilesAbsoluteDistance = Math.Abs(tilesDistance);
-            bool isValidHorizontalNeighbour =
-                (tilesAbsoluteDistance == HORIZONTAL_NEIGHBOUR_TILE && !(((tile.Position + 1) % MATRIX_SIZE == 1 && tilesDistance == -1) || ((tile.Position + 1) % MATRIX_SIZE == 0 && tilesDistance == 1)));
-            bool isValidVerticalNeighbour = (tilesAbsoluteDistance == VERTICAL_NEIGHBOUR_TILE);
-            bool validNeigbour = isValidHorizontalNeighbour || isValidVerticalNeighbour;
-
-            return validNeigbour;
-        }
-
-        private static int GetFreeTilePosition(List<Tile> tiles)
-        {
-            int result = 0;
-            for (int index = 0; index < tiles.Count; index++)
-            {
-                if (tiles[index].Label == String.Empty)
-                {
-                    result = index;
-                }
-            }
-            return result;
-        }
-
-
-    }
-}
+            int tilesAbso

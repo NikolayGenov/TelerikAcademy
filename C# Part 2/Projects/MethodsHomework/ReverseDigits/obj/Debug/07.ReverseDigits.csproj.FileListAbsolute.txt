@@ -1,0 +1,1 @@
+C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Projects\MethodsHomework\ReverseDigits\bin\Debug\ReverseDigits.exe.config

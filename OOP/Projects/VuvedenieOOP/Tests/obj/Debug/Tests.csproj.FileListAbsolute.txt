@@ -1,0 +1,7 @@
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\VuvedenieOOP\Tests\bin\Debug\Tests.exe.config
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\Tests\bin\Debug\Tests.exe.config
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\Tests\bin\Debug\Tests.exe
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\Tests\bin\Debug\Tests.pdb
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\Tests\obj\Debug\Tests.exe
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\OOP\Projects\VuvedenieOOP\Tests\obj\Debug\Tests.pdb

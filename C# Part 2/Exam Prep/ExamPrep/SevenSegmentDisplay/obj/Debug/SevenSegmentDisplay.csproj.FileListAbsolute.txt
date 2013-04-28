@@ -1,0 +1,6 @@
+C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\SevenSegmentDisplay\bin\Debug\SevenSegmentDisplay.exe.config
+C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\SevenSegmentDisplay\bin\Debug\SevenSegmentDisplay.exe
+C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\SevenSegmentDisplay\bin\Debug\SevenSegmentDisplay.pdb
+C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\SevenSegmentDisplay\obj\Debug\SevenSegmentDisplay.csprojResolveAssemblyReference.cache
+C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\SevenSegmentDisplay\obj\Debug\SevenSegmentDisplay.exe
+C:\Users\Nikolay\Dropbox\TelerikAcademy\C# Part 2\Exam Prep\ExamPrep\SevenSegmentDisplay\obj\Debug\SevenSegmentDisplay.pdb

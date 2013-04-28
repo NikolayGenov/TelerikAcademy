@@ -1,0 +1,5 @@
+C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\HumanProject\bin\Debug\HumanProject.exe.config
+C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\HumanProject\bin\Debug\HumanProject.exe
+C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\HumanProject\bin\Debug\HumanProject.pdb
+C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\HumanProject\obj\Debug\HumanProject.exe
+C:\Users\Nikolay\Dropbox\TelerikAcademy\OOP\Projects\Fundamental-Principles-1\OOP-Princip-I-Homework\HumanProject\obj\Debug\HumanProject.pdb

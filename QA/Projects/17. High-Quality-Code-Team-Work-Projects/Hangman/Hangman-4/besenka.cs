@@ -119,31 +119,4 @@ namespace HangMan
 
         public void ShowScoreboard() 
         {
-            Console.WriteLine();
-            for (int i = 0; i < scoreBoard.Length; i++)
-            {
-                if (scoreBoard[i] != default(ScoreBoardPosition))
-                {
-
-
-                    Console.WriteLine("{0} --> {1} - {2} mistakes", i+1, scoreBoard[i].Name, scoreBoard[i].Mistakes);
-                }
-            }
-            Console.WriteLine();
-        }
-
-        public void restart() 
-        {
-            int wordNumber = random.Next(0, 11);
-            this.currentWord = words[wordNumber];
-            this.PlayersWord = new char[currentWord.Length];
-            for (int i = 0; i < PlayersWord.Length; i++)
-            {
-                PlayersWord[i] = '_';
-            }
-            this.cheated = false;
-            this.mistakes = 0;
-            this.lettersLeft = PlayersWord.Length;
-        }
-    }
-}
+          

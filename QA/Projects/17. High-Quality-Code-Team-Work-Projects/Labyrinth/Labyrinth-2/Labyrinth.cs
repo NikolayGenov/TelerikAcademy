@@ -144,47 +144,4 @@ namespace Labyrinth
                 }
 
                 premestvane(currentCell, Direction.Down, cellsOrder,visitedCells);
-                premestvane(currentCell, Direction.Up, cellsOrder, visitedCells);
-
-
-
-                premestvane(currentCell, Direction.Left, cellsOrder, visitedCells);
-                premestvane(currentCell, Direction.Right, cellsOrder, visitedCells);
-            }
-
-            return pathExists;
-        }
-        private void GenerateLabyrinth(Random rand)
-        {
-            this.labyrinth = new Cell[LABYRINTH_SIZE, LABYRINTH_SIZE];
-
-            for (int row = 0; row < LABYRINTH_SIZE; row++)
-            {
-                for (int col = 0; col < LABYRINTH_SIZE; col++)
-                {
-                    int cellRandomValue = rand.Next(0, 2);
-
-                    char charValue;
-                    if (cellRandomValue == 0)
-                    {
-                        charValue = Cell.CELL_EMPTY_VALUE;
-                    }
-                    else
-                    {
-                        charValue = Cell.CELL_WALL_VALUE;
-                    }
-                    this.labyrinth[row,col] = new Cell(row, col, charValue);
-                }
-            }
-            this.labyrinth[LabyrintStartRow, LabyrinthStartCol ].ValueChar = '*';
-
-            bool exitPathExists = ExitPathExists();
-            if (!exitPathExists)
-            {
-                GenerateLabyrinth(rand);
-            }
-        }
-    }
-
-    public enum Direction {Up, Down, Left, Right};
-}
+                premestvane(currentCell, Directio

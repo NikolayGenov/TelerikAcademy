@@ -1,0 +1,6 @@
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task2\bin\Debug\Task2.exe.config
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task2\bin\Debug\Task2.exe
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task2\bin\Debug\Task2.pdb
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task2\obj\Debug\Task2.csprojResolveAssemblyReference.cache
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task2\obj\Debug\Task2.exe
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\C# Part 2\Final Exam\Task2\obj\Debug\Task2.pdb

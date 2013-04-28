@@ -1,0 +1,5 @@
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Exam\Exam\bin\Exam.dll
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Exam\Exam\bin\Exam.pdb
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Exam\Exam\obj\Debug\Exam.csprojResolveAssemblyReference.cache
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Exam\Exam\obj\Debug\Exam.dll
+C:\Users\Nikolay Genov\Dropbox\TelerikAcademy\Javascript\Exam\Exam\obj\Debug\Exam.pdb
