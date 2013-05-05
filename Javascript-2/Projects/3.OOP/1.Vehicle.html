@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicles</title>
+</head>
+<body>
+	<strong>Check the console log.</strong>
+    <script type="text/javascript" src="vehicle.js"></script>
+    <script type="text/javascript">
+		var landVehicle = new LandVehicle(4,20);
+		console.log("The speed of the land Vehicle is " + landVehicle.getSpeed());
+
+		var aircraft = new Aircraft ();
+		aircraft.addNozzle(true,50);
+		aircraft.addNozzle(true,30);
+		aircraft.addNozzle(false,25);
+
+		console.log("The speed of the aircraft is " + aircraft.getSpeed());
+
+		var waterMobile = new WaterVehicle();
+		waterMobile.addPropeller(20,true);
+		waterMobile.addPropeller(30,true);
+
+		console.log("The speed of the waterMobile is " + waterMobile.getSpeed());
+
+		var superCoolVehicle = new AmphibiousVehicle('water');
+		superCoolVehicle.addPropeller(20,false);
+		superCoolVehicle.addPropeller(50,true);
+		console.log("The speed of the superCoolVehicle is " + superCoolVehicle.getSpeed());
+
+		var superCoolAircraft = new AmphibiousVehicle('air');
+		superCoolAircraft.addNozzle(true,10);
+		superCoolAircraft.addNozzle(false,35);
+		console.log("The speed of the superCoolAircraft is " + superCoolAircraft.getSpeed());
+    </script>
+</body>
+</html>
