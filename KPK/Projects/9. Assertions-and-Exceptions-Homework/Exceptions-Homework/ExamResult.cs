@@ -2,33 +2,85 @@
 
 public class ExamResult
 {
-    public int Grade { get; private set; }
-    public int MinGrade { get; private set; }
-    public int MaxGrade { get; private set; }
-    public string Comments { get; private set; }
+    private int grade;
+    private int minGrade;
+    private int maxGrade;
+    private string comments;
 
     public ExamResult(int grade, int minGrade, int maxGrade, string comments)
     {
-        if (grade < 0)
-        {
-            throw new Exception();
-        }
-        if (minGrade < 0)
-        {
-            throw new Exception();
-        }
-        if (maxGrade <= minGrade)
-        {
-            throw new Exception();
-        }
-        if (comments == null || comments == "")
-        {
-            throw new Exception();
-        }
-
         this.Grade = grade;
         this.MinGrade = minGrade;
         this.MaxGrade = maxGrade;
         this.Comments = comments;
+    }
+
+    public int Grade
+    {
+        get
+        {
+            return this.grade;
+        }
+        private set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException("Grade must be positive.");
+            }
+            this.grade = value;
+        }
+    }
+
+    public int MinGrade
+    {
+        get
+        {
+            return this.minGrade;
+        }
+        private set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException("Min grade must be positive.");
+            }
+            this.minGrade = value;
+        }
+    }
+
+    public int MaxGrade
+    {
+        get
+        {
+            return this.maxGrade;
+        }
+        private set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException("Max grade must be positive.");
+            }
+            if (value < this.minGrade)
+            { 
+                throw new ArgumentException("Max grade must be higher than min grade");
+            }
+            this.maxGrade = value;
+        }
+    }
+
+    public string Comments
+    {
+        get
+        {
+            return this.comments;
+        }
+        private set
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentException("Comments must not be null.");
+            }
+
+            this.comments = value;
+        }
     }
 }
