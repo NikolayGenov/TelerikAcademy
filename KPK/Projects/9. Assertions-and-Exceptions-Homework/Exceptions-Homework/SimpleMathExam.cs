@@ -2,19 +2,27 @@
 
 public class SimpleMathExam : Exam
 {
-    public int ProblemsSolved { get; private set; }
+    private const int MAX_PROBLEMS_SOLVED = 10;
+    private int problemsSolved;
+    
+    public int ProblemsSolved
+    {
+        get
+        {
+            return this.problemsSolved;
+        }
+        private set
+        {
+            if (value < 0 || value > MAX_PROBLEMS_SOLVED)
+            {
+                throw new ArgumentOutOfRangeException("Problems solved are out of range - (0,10)");
+            }
+            this.problemsSolved = value;
+        }
+    }
 
     public SimpleMathExam(int problemsSolved)
     {
-        if (problemsSolved < 0)
-        {
-            problemsSolved = 0;
-        }
-        if (problemsSolved > 10)
-        {
-            problemsSolved = 10;
-        }
-
         this.ProblemsSolved = problemsSolved;
     }
 
@@ -30,7 +38,7 @@ public class SimpleMathExam : Exam
         }
         else if (ProblemsSolved == 2)
         {
-            return new ExamResult(6, 2, 6, "Average result: nothing done.");
+            return new ExamResult(6, 2, 6, "Good result: nothing done.");
         }
 
         return new ExamResult(0, 0, 0, "Invalid number of problems solved!");
