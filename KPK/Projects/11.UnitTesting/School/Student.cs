@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
 
-namespace School
+namespace SchoolModule
 {
     public class Student
     {
-        private const int MinIdNumber = 100000;
-        private const int MaxIdNumber = 999999;
+        public const int MinIdNumber = 100000;
+        public const int MaxIdNumber = 999999;
         private static int studentCurrentId = MinIdNumber;
 
         private string name;
@@ -40,7 +40,7 @@ namespace School
             {
                 return this.name;
             }
-            set
+            private set
             {
                 if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
                 { 
@@ -52,6 +52,10 @@ namespace School
 
         private int GetId()
         {
+            if (studentCurrentId > MaxIdNumber + 1)
+            {
+                studentCurrentId = MinIdNumber;
+            }
             return studentCurrentId++;
         }
         

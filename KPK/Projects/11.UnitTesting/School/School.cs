@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace School
+namespace SchoolModule
 {
     public class School
     {
         private string name;
 
-        private IList<Course> courses;
+        private readonly IList<Course> courses;
 
         public School(string name)
         {
@@ -21,7 +21,7 @@ namespace School
             {
                 return this.name;
             }
-            set
+           private set
             {
                 if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
                 { 

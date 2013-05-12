@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace School
+namespace SchoolModule
 {
     public class Course
     {
-        private const int MaxStudentsInClass = 30;
+        public const int MaxStudentsInClass = 30;
 
         private string name;
         private string teacherName;
@@ -25,7 +25,7 @@ namespace School
             {
                 return this.name;
             }
-            set
+            private set
             {
                 if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
                 { 
@@ -41,7 +41,7 @@ namespace School
             {
                 return this.teacherName;
             }
-            set
+            private set
             {
                 if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
                 {
