@@ -1,0 +1,72 @@
+.trash {
+	position: absolute;
+	width: 75px;
+}
+.trashBin
+{
+	width: 200px;
+	height: 350px;
+}
+
+#startButton,
+#newGameButton {
+	position: absolute;
+	padding: 5px 15px;
+	margin: 0 auto;
+	font-size: 20px;
+	background-color: #888888;
+	color: white;
+	border-radius: 20px;
+	}
+
+#newGameButton {
+	display: none;
+}
+
+#startButton:hover,
+#newGameButton:hover{
+	background-color: #111111;
+}
+
+#nick h1 {
+	display: block;
+	color: #3FD1E8;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+#user,
+#statistic {
+	position: fixed;
+	
+	border: 5px solid #999;
+	border-radius: 10px;
+	background-color: white;
+	display: none;
+}
+
+#score {
+	color: blue;
+}
+
+#submitScore {
+	display: block;
+	padding: 10px 20px;
+	margin: 0;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	background-color: #eee;
+	color: #666;
+	font-weight: bold;
+}
+
+#submitScore:hover {
+	background-color: #ccc;
+}
+
+#statistic ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
