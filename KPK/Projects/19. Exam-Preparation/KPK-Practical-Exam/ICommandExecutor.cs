@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
-namespace Problem04_Free_Content
+namespace FreeContentCatalog
 {
     public interface ICommandExecutor
     {

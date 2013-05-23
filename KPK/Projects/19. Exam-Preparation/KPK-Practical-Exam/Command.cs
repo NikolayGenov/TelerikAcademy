@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Problem04_Free_Content;
+using System.Collections.Generic;
 
-namespace KPK_Practical_Exam
+namespace FreeContentCatalog
 {
     public class Command : ICommand
     {
@@ -44,7 +41,7 @@ namespace KPK_Practical_Exam
         {
             CommandType type;
 
-            if (commandName.Contains(':') || commandName.Contains(';'))
+            if (commandName.Contains(":") || commandName.Contains(";"))
             {
                 throw new FormatException();
             }

@@ -1,12 +1,8 @@
-﻿using Problem04_Free_Content;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Wintellect.PowerCollections;
 
-namespace KPK_Practical_Exam
+namespace FreeContentCatalog
 {
     class Catalog : ICatalog
     {
@@ -23,7 +19,7 @@ namespace KPK_Practical_Exam
         public void Add(IContent content)
         {
             this.title.Add(content.Title, content);
-            this.url.Add(content.URL, content);
+            this.url.Add(content.Url, content);
         }
 
         public IEnumerable<IContent> GetListContent(string title, int numberOfContentElementsToList)
@@ -48,14 +44,14 @@ namespace KPK_Practical_Exam
 
             foreach (IContent content in contentToList)
             {
-                content.URL = newUrl;
+                content.Url = newUrl;
             }
 
             //again
             foreach (IContent content in contentToList)
             {
                 this.title.Add(content.Title, content);
-                this.url.Add(content.URL, content);
+                this.url.Add(content.Url, content);
             }
 
             return theElements;

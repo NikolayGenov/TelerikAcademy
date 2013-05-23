@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 
-namespace Problem04_Free_Content
+
+namespace FreeContentCatalog
 {
     public interface IContent : IComparable
     {
@@ -10,7 +12,7 @@ namespace Problem04_Free_Content
 
         Int64 Size { get; set; }
 
-        string URL { get; set; }
+        string Url { get; set; }
 
         ContentType Type { get; set; }
 

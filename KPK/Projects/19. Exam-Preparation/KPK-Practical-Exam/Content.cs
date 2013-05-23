@@ -1,11 +1,7 @@
-﻿using Problem04_Free_Content;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace KPK_Practical_Exam
+namespace FreeContentCatalog
 {
     public class Content : IComparable, IContent
     {
@@ -17,7 +13,7 @@ namespace KPK_Practical_Exam
 
         private string url;
 
-        public string URL
+        public string Url
         {
             get
             {
@@ -38,10 +34,10 @@ namespace KPK_Practical_Exam
         public Content(ContentType type, string[] commandParams)
         {
             this.Type = type;
-            this.Title = commandParams[(int)acpi.Title];
-            this.Author = commandParams[(int)acpi.Author];
-            this.Size = Int64.Parse(commandParams[(int)acpi.Size]);
-            this.URL = commandParams[(int)acpi.Url];
+            this.Title = commandParams[(int)ContentPosition.Title];
+            this.Author = commandParams[(int)ContentPosition.Author];
+            this.Size = Int64.Parse(commandParams[(int)ContentPosition.Size]);
+            this.Url = commandParams[(int)ContentPosition.Url];
         }
 
         public int CompareTo(object obj)
@@ -71,7 +67,7 @@ namespace KPK_Practical_Exam
             output.AppendFormat("{0}; ", this.Title);
             output.AppendFormat("{0}; ", this.Author);
             output.AppendFormat("{0}; ", this.Size);
-            output.AppendFormat("{0}", this.URL);
+            output.AppendFormat("{0}", this.Url);
 
             return output.ToString();
         }

@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using KPK_Practical_Exam;
 
-namespace Problem04_Free_Content
+namespace FreeContentCatalog
 {
-    public class Program
+    public class CatalogManager
     {
         public static void Main()
         {
             StringBuilder output = new StringBuilder();
-            ICatalog cat = new Catalog();
+            ICatalog catalog = new Catalog();
             ICommandExecutor commandExecutor = new CommandExecutor();
             IList<ICommand> listOfCommands = ParseCommands();
             foreach (ICommand item in listOfCommands)
             {
-                commandExecutor.ExecuteCommand(cat, item, output);
+                commandExecutor.ExecuteCommand(catalog, item, output);
             }
             Console.Write(output); 
         }

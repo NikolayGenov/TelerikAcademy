@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Problem04_Free_Content
+namespace FreeContentCatalog
 {
     public enum CommandType
     {
@@ -14,21 +14,5 @@ namespace Problem04_Free_Content
         AddApplication,
         Update,
         Find,
-    }
-
-    public enum ContentType
-    {
-        Book,
-        Movie,
-        Music,
-        Application,
-    }
-
-    public enum acpi
-    {
-        Title = 0,
-        Author,
-        Size,
-        Url,
     }
 }

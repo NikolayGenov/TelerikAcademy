@@ -1,9 +1,6 @@
-using System;
-using System.Linq;
-using System.Text;
-
-namespace Problem04_Free_Content
+namespace FreeContentCatalog
 {
+    using System.Collections.Generic;
     public interface ICommand
     {
         CommandType Type { get; set; }
