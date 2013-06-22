@@ -16,6 +16,9 @@
 *.tfb
 *.db
 *.rar
+*.vcxproj
+*.idb
+
 
 # Packages #
 ############
